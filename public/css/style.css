@@ -1,0 +1,2942 @@
+/* =========================
+   Variáveis e Reset Básico
+   ========================= */
+
+/* Keeping the same variables as before */
+:root {
+    --primary-color: #FC4813;       /* Main vibrant orange */
+    --accent-color: #FFFFFF;        /* White for text and icons */
+    --hover-bg-color: #F97316;      /* Slightly lighter orange for hover */
+    --active-bg-color: #EA580C;     /* Darker orange for active state */
+    --submenu-bg-color: #F97316;    /* Lighter orange for submenu */
+    --divider-color: rgba(255, 255, 255, 0.15); /* Subtle divider color */
+    --gray-bg: #F9FAFB;             /* Light gray background */
+    --text-primary: #1F2937;        /* Dark gray for text */
+    --text-secondary: #4B5563;      /* Lighter gray for secondary text */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-bg);
+    transition: background-color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, button {
+    font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   Menu Lateral (Previous Updates Kept)
+   ========================= */
+
+.sidebar {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: var(--primary-color);
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 110px;
+    height: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--accent-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(5px);
+}
+
+.sidebar ul li a.active {
+    background-color: var(--active-bg-color);
+    font-weight: 600;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    font-size: 22px;
+    width: 30px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.sidebar ul li a span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar ul li a.logout {
+    margin-top: auto;
+    margin-bottom: 30px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: calc(100% - 60px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a.logout:hover {
+    background-color: #F3F4F6;
+    color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+/* =========================
+   SubMenus
+   ========================= */
+
+.menu-relatorios {
+    position: relative;
+}
+
+.menu-relatorios .submenu {
+    display: none;
+    background-color: var(--submenu-bg-color);
+    list-style: none;
+}
+
+.menu-relatorios .submenu li {
+    width: 100%;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.menu-relatorios .submenu li a {
+    padding: 12px 30px 12px 60px;
+    display: block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 15px;
+    background-color: var(--submenu-bg-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-relatorios .submenu li a:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(3px);
+}
+
+.menu-relatorios:hover .submenu {
+    display: block;
+}
+
+/* =========================
+   Conteúdo Principal
+   ========================= */
+
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    transition: margin-left 0.3s ease;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   Estilos Atualizados para Tabelas
+   ========================= */
+
+.tabela-container {
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.tabela-generica {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+}
+
+.tabela-generica thead {
+    background-color: var(--primary-color);
+}
+
+.tabela-generica th,
+.tabela-generica td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.tabela-generica th {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tabela-generica tbody tr:nth-child(even) {
+    background-color: #F9FAFB;
+}
+
+.tabela-generica tbody tr:hover {
+    background-color: rgba(252, 72, 19, 0.15);
+    cursor: pointer;
+}
+
+.tabela-generica tbody tr:hover td {
+    border-bottom: 1px solid transparent; /* Remove a borda inferior visível durante o hover */
+}
+
+.tabela-generica tbody tr.selected {
+    background-color: rgba(252, 72, 19, 0.25);
+}
+
+.tabela-generica tbody tr td:last-child {
+    border-bottom: none;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .tabela-generica th,
+    .tabela-generica td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   Botões de Ação
+   ========================= */
+
+.btn {
+    padding: 6px 10px; /* Diminuímos o padding */
+    border: none;
+    border-radius: 6px; /* Ajustamos o border-radius se desejado */
+    font-size: 12px;    /* Diminuímos o tamanho da fonte */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 5px;  /* Reduzimos o espaçamento entre botões */
+}
+
+.btn i {
+    margin-right: 0px; /* Ajustamos o espaçamento entre o ícone e o texto */
+}
+
+/* =========================
+   Botões de Ação (Unified Styling)
+   ========================= */
+
+.tabela-generica .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 6px;
+    position: relative;
+}
+
+.tabela-generica .btn i {
+    font-size: 16px;
+    color: #FFFFFF !important; /* Força a cor branca para os ícones, sobrescrevendo estilos inline */
+}
+
+/* View Button */
+.tabela-generica .btn-view.detalhesPedido {
+    background-color: #6B7280; /* Cinza neutro */
+}
+
+.tabela-generica .btn-view.detalhesPedido:hover {
+    background-color: #4B5563;
+    transform: scale(1.1);
+}
+
+/* Alert Button */
+.tabela-generica .btn-alerta {
+    background-color: #F97316; /* Laranja mais claro, alinhado com a paleta */
+}
+
+.tabela-generica .btn-alerta:hover {
+    background-color: #EA580C;
+    transform: scale(1.1);
+}
+
+/* Observation Button */
+.tabela-generica .btn-observacao {
+    background-color: #EA580C; /* Laranja mais escuro */
+}
+
+.tabela-generica .btn-observacao:hover {
+    background-color: #C2410C;
+    transform: scale(1.1);
+}
+
+/* Delete Button */
+.tabela-generica .btn-delete.excluirPedido {
+    background-color: #F87171; /* Vermelho mais suave */
+}
+
+.tabela-generica .btn-delete.excluirPedido:hover {
+    background-color: #EF4444;
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   Botões de Ação Dentro da Tabela
+   ========================= */
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 5px;
+}
+
+.btn i {
+    margin-right: 0px;
+    font-size: 14px;
+}
+
+/* Botão de Editar */
+.btn-edit {
+    background-color: #FC4813;
+    color: #fff;
+    
+}
+
+.btn-edit:hover {
+    background-color: #E04012;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo normal para o botão "Excluir" */
+.btn-delete {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    vertical-align: middle;
+}
+
+/* Estilo do ícone dentro do botão "Excluir" */
+.btn-delete i {
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover para o botão "Excluir" */
+.btn-delete:hover {
+    background-color: #bd2130; /* Cor de fundo mais clara ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o botão no hover */
+}
+
+
+
+/* Estilo para garantir que os botões fiquem alinhados horizontalmente */
+td .btn {
+    display: inline-block; /* Exibir os botões lado a lado */
+    margin-right: 5px; /* Espaço entre os botões */
+    vertical-align: middle; /* Alinhar verticalmente ao centro */
+}
+
+
+/* Estilo para o botão "Marcar como Pago" verde */
+.btn-success {
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave na cor */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Cor ao passar o mouse (hover) */
+}
+
+/* Desabilitar o botão, se necessário */
+.btn-success:disabled {
+    background-color: #6c757d; /* Cor cinza ao desabilitar */
+    cursor: not-allowed; /* Cursor de bloqueio */
+}
+
+/* Ajuste de altura e espaçamento entre o ícone e o texto */
+.pagamento-btn {
+    width: 100%;
+    padding: 12px 20px; /* Aumente o padding para maior altura */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Afastar o ícone do texto */
+.pagamento-btn i {
+    margin-right: 8px; /* Ajuste a margem conforme necessário */
+}
+
+/* Botão de Visualizar (Ver Mais) */
+.btn-view {
+    background-color: #FC4813;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 13px; /* Aumentar o tamanho da fonte/ícone */
+    width: 26px; /* Aumentar a largura */
+    height: 26px; /* Aumentar a altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5px; /* Espaço entre os botões */
+    vertical-align: middle; /* Alinhar verticalmente */
+}
+
+.btn-view i {
+    font-size: 15px; /* Aumentar o tamanho do ícone */
+}
+
+.btn-view:hover {
+    background-color: #218838;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   Campo de Busca (Ajustes se necessário)
+   ========================= */
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #17a2b8;
+    box-shadow: 0px 0px 6px rgba(23, 162, 184, 0.5);
+}
+
+
+/* =========================
+   Botão Flutuante
+   ========================= */
+
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10; /* Diminuindo o z-index para garantir que ele fique atrás do container */
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.floating-button:hover {
+    background-color: #ff6a00;
+}
+.floating-button:focus {
+    outline: none; /* Remove o outline ao focar no botão */
+}
+
+/* =========================
+   Estilos Específicos (se necessário)
+   ========================= */
+
+/* Estilos específicos para a página de clientes, se necessário */
+.clientes-page {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.clientes-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clientes-header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilos para o contêiner do filtro */
+.filter-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos para o seletor de status */
+#statusFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Efeito de seleção na linha da tabela */
+.tabela-generica tbody tr.selected {
+    background-color: rgba(23, 162, 184, 0.1);
+}
+
+
+/* =========================
+   Slider Editar Conteúdo
+   ========================= */
+
+.edit-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.edit-container.active {
+    display: block; /* Mostra o painel quando ativo */
+    right: 0; /* Faz o painel aparecer à direita */
+}
+
+/* =========================
+    Painel de edição (cliente) 
+   ========================= */
+
+
+/* Painel deslizante (Edição de Cliente) */
+#editClienteContainer {
+    position: fixed;
+    right: -25%; /* Mantém o container fora da tela inicialmente */
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Estilo quando o painel está ativo */
+#editClienteContainer.active {
+    right: 0; /* Desliza o painel para dentro da tela */
+}
+
+/* Fechar botão no topo */
+#editClienteContainer .close-btn {
+    
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Estilo do título */
+#editClienteContainer h2 {
+    font-size: 20px;
+    margin-bottom: 20px; /* Aumenta o espaço entre o título e o formulário */
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Mantém os elementos próximos, mas sem sobrecarregar */
+}
+
+/* Estilo dos labels */
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* Aproxima os labels dos inputs */
+}
+
+/* Estilo dos inputs */
+form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Foco nos inputs */
+form input:focus {
+    border-color: #FC4813;
+    box-shadow: 0 0 5px rgba(252, 72, 19, 0.2);
+    outline: none;
+}
+
+/* Botão de Salvar (Agora em laranja) */
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #FC4813; /* Cor laranja */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #E04012; /* Cor laranja mais escura ao passar o mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+    Adicionar novo cliente (cliente) 
+   ========================= */
+
+
+
+.novo-cliente-container {
+    position: fixed;
+    top: 0;
+    right: -25%; /* Mantido fora da tela inicialmente */
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.novo-cliente-container.active {
+    right: 0; /* Quando ativo, o painel aparece na tela */
+}
+
+.novo-cliente-container .panel-content {
+    padding: 20px;
+}
+
+.novo-cliente-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Botão de adicionar cliente */
+.btn-submit {
+    background-color: #FC4813;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #E04012;
+}
+
+.ui-autocomplete {
+    z-index: 2000 !important; /* Certifica-se que o dropdown aparece acima dos painéis */
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    position: absolute;
+}
+
+/* =========================
+    Adicionar novo produto (produto) 
+   ========================= */
+
+#novoProdutoContainer {
+    width: 25%; /* Ajuste o tamanho para 25% */
+    right: 0;
+    top: 0;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Aumente o z-index */
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Estilo para o container lateral de produto */
+.edit-produto-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.edit-produto-container.active {
+    display: block;
+    right: 0;
+}
+
+.panel-content {
+    padding: 20px;
+}
+
+.close-btn {
+    visibility: hidden;
+    font-size: 1.5rem;
+    color: #333;
+    float: right;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #FC4813;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #E33D10;
+}
+
+.form-produto label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-produto input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+    Adicionar novo pedido (pedido) 
+   ========================= */
+   
+   .edit-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%; /* Ajuste conforme necessário */
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.edit-container.active {
+    transform: translateX(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Ajuste do botão "Adicionar Novo Pedido" */
+#btnNovoPedido {
+    background-color: #FC4813; /* Laranja */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Ajusta o padding para a formatação correta */
+    border-radius: 50px; /* Deixa o botão mais oval */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Mantém o botão no topo da maioria dos elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Ajuste para o tamanho do texto */
+}
+
+#btnNovoPedido:hover {
+    background-color: #E33D10; /* Cor no hover */
+}
+
+
+/* =========================
+    Adicionar novo pedido (container) 
+   ========================= */
+   
+/* Estilos para o Modal Personalizado */
+.custom-modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.custom-modal-content {
+    overflow: visible;
+    background-color: #fff;
+    margin: 5% auto; /* Centraliza verticalmente */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-modal {
+    visibility: hidden;
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos do Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group-inline .form-group {
+    flex: 1;
+}
+
+.custom-modal-content h2 {
+    margin-bottom: 20px; /* Aumenta o espaço entre o título e o primeiro campo */
+}
+
+.input-icon {
+    display: flex; /* Mantém o ícone e o input lado a lado */
+    align-items: center; /* Alinha verticalmente o ícone e o input */
+}
+
+.input-icon input {
+    flex-grow: 1; /* O input cresce para ocupar o espaço restante */
+    padding: 8px 12px; /* Padding interno para o input */
+    font-size: 1em; /* Tamanho da fonte */
+    border: 1px solid #ddd; /* Borda do input */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+.input-icon i {
+    margin-right: 20px; /* Espaço entre o ícone e o input */
+    font-size: 1.2em; /* Ajuste o tamanho do ícone conforme necessário */
+    color: #333; /* Cor do ícone */
+}
+
+.input-icon input,
+.input-icon select {
+    padding-left: 45px; /* Aumente o padding-left para acomodar o ícone */
+}
+
+.input-icon input::placeholder {
+    color: #aaa;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FC4813;
+    box-shadow: 0 0 5px rgba(252, 72, 19, 0.3);
+}
+
+/* Botão de Submit */
+.btn-submit {
+    background-color: #FC4813;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #E33D10;
+}
+
+/* Lista de Autocomplete */
+.autocomplete-list {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1050;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+}
+
+.autocomplete-list div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-list div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para os produtos selecionados */
+.produtos-selecionados {
+    margin-top: 20px;
+}
+
+.produto-selecionado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.produto-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.produto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.produto-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.produto-nome {
+    flex: 2;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.produto-selecionado input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.removerProduto {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.removerProduto:hover {
+    color: #bd2130;
+}
+
+.removerProduto i {
+    pointer-events: none; /* Permite que o clique seja registrado no botão */
+}
+
+.produto-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.produto-quantidade input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-remover {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-remover:hover {
+    color: #bd2130;
+}
+
+/* Estilo do botão de alerta */
+.btn-alerta {
+    background-color: #F59E0B; /* Amber for alerts */
+    data-tooltip: "Alerta";
+}
+
+.btn-alerta:hover {
+    background-color: #D97706;
+    transform: scale(1.1);
+}
+/* Delete Button */
+.btn-delete.excluirPedido {
+    background-color: #EF4444; /* Red for delete */
+    data-tooltip: "Excluir";
+}
+
+.btn-delete.excluirPedido:hover {
+    background-color: #DC2626;
+    transform: scale(1.1);
+}
+
+/* Observation Button */
+.btn-observacao {
+    background-color: #3B82F6; /* Blue for observations */
+    data-tooltip: "Observações";
+}
+
+.btn-observacao:hover {
+    background-color: #2563EB;
+    transform: scale(1.1);
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1020;
+}
+
+.floating-button:hover {
+    background-color: var(--active-bg-color);
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+    }
+    
+    .form-group-inline {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   PEDIDOS LABELS
+   ========================= */
+
+.status-label {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.status-label.novo-pedido {
+    background-color: #A3A356;
+}
+
+.status-label.concluido {
+    background-color: #2ECC71;
+}
+
+.status-label.aguardando-retirada {
+    background-color: #F4D03F;
+}
+
+.status-label.em-separacao {
+    background-color: #3498DB;
+}
+
+.status-label.pedido-separado {
+    background-color: #E74C3C;
+}
+
+.status-label.aguardando-cliente {
+    background-color: #E67E22;
+}
+
+.status-label.pagamento-na-retirada {
+    background-color: #9B59B6;
+}
+
+.payment-status {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-yes i {
+    color: #2ECC71;
+}
+
+.payment-no i {
+    color: #E74C3C;
+}
+
+
+/* Estilo para o botão de observações (balão de conversa) */
+.btn-observacoes {
+    background-color: #00000080;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    vertical-align: middle;
+}
+
+
+/* =========================
+    Ver detalhes do pedido (container) 
+   ========================= */
+   
+   /* Estilos para o modal de ver pedido */
+.custom-modal-ver-pedido {
+    position: fixed;
+    top: 0;
+    right: -40%; /* Inicialmente fora da tela à direita */
+    width: 40%; /* O modal ocupa 40% da largura da tela */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.3s ease; /* Transição suave para o movimento */
+}
+
+/* Classe para ativar o modal */
+.modal-ver-pedido.active {
+    right: 0; /* Move o modal para dentro da tela */
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-ver-pedido .modal-content {
+    padding: 20px;
+}
+
+/* Botão de fechar modal */
+.modal-ver-pedido .close-modal-ver {
+    position: absolute;
+    top: 15px;
+    left: 20px; /* Botão de fechar no lado esquerdo */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para os detalhes do pedido */
+.detalhes-pedido {
+    padding: 20px;
+    color: #333;
+}
+
+.detalhes-pedido h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #444;
+}
+
+.pedido-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pedido-info .info-cliente,
+.pedido-info .info-pedido {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.pedido-info h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #555;
+}
+
+.pedido-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.itens-pedido {
+    margin-bottom: 30px;
+}
+
+.itens-pedido h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #555;
+}
+
+.itens-pedido table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.itens-pedido table th,
+.itens-pedido table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.itens-pedido table th {
+    background-color: #f0f0f0;
+}
+
+.observacoes {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.observacoes h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.observacoes p {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .pedido-info {
+        flex-direction: column;
+    }
+}
+
+.acoes-pedido {
+    margin-bottom: 20px;
+}
+
+.acoes-pedido .btn {
+    margin-right: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.acoes-pedido .btn-primary {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.acoes-pedido .btn-secondary {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.acoes-pedido .btn i {
+    margin-right: 5px;
+}
+
+
+
+/* =========================
+   Nota Fiscal
+   ========================= */
+   
+/* Geral */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Nota Fiscal */
+.nota-fiscal {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 15px; /* Diminui o padding geral */
+    margin: 0; /* Remove margens extras */
+}
+
+.nota-fiscal h1 {
+    text-align: center;
+    margin-bottom: 15px; /* Diminui o espaçamento */
+}
+
+.nf-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Menor margem entre o cabeçalho e conteúdo */
+}
+
+.nf-logo {
+    max-width: 80px; /* Ajuste da logo */
+}
+
+.nf-info-pedido p,
+.nf-info-cliente p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 2px 0; /* Diminui o espaçamento entre os parágrafos */
+}
+
+/* Dados do cliente */
+.nf-info-cliente {
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    padding: 10px; /* Reduz o padding */
+    border-radius: 8px;
+}
+
+/* Itens do Pedido */
+.nf-itens {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.nf-itens th,
+.nf-itens td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Reduz o padding nas células */
+    text-align: left;
+}
+
+.nf-itens th {
+    background-color: #FC4813;
+    font-weight: bold;
+}
+
+.nf-total {
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+}
+
+.nf-total p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 3px 0; /* Reduz o espaçamento */
+}
+
+.nf-observacoes {
+    background-color: #f9f9f9;
+    padding: 10px; /* Diminui o padding */
+    border-radius: 8px;
+    margin-top: 10px; /* Diminui o espaçamento superior */
+}
+
+.nf-observacoes p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+/* Botões de Ação */
+.nf-acoes {
+    width: 100%;
+    margin-top: 15px; /* Reduz o espaçamento superior */
+    text-align: center;
+}
+
+button i {
+    margin-right: 5px; /* Adiciona espaço entre o ícone e o texto */
+}
+
+
+/* =========================
+   Painel Expedição - Estilo Profissional e Responsivo
+   ========================= */
+   
+.exp-pedidos-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco elegante */
+    border-radius: 12px; /* Bordas arredondadas no container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.exp-pedidos-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em; /* Título maior e mais destacado */
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    border: none;
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+}
+
+table th {
+    background-color: #ff5722;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #fafafa;
+    color: #555;
+    font-weight: normal;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+table tbody tr:hover {
+    background-color: #ffccbc;
+    cursor: pointer;
+}
+
+input[type="number"], input[type="checkbox"] {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="checkbox"]:focus {
+    border-color: #ff5722;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.3);
+}
+
+button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #e64a19;
+    box-shadow: 0 4px 12px rgba(230, 74, 25, 0.3);
+}
+
+button:active {
+    background-color: #d84315;
+    box-shadow: none;
+}
+
+#btnBaixarPedido {
+    width: 100%; /* Ocupar toda a largura do contêiner pai */
+    padding: 15px; /* Aumentar o tamanho do botão */
+    font-size: 18px; /* Aumentar o tamanho da fonte */
+    background-color: #fc4813; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    text-align: center; /* Centralizar texto */
+    display: block; /* Tornar o botão um bloco para ocupar toda a largura */
+}
+
+#btnBaixarPedido i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+#btnBaixarPedido:hover {
+    background-color: #e04312; /* Cor de fundo ao passar o mouse */
+}
+
+#btnMarcarComoPago {
+    width: 100%; /* Ocupar toda a largura do contêiner pai */
+    padding: 15px; /* Aumentar o tamanho do botão */
+    font-size: 18px; /* Aumentar o tamanho da fonte */
+    background-color: #28a745; /* Cor verde para o botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    text-align: center; /* Centralizar o texto */
+    display: block; /* Tornar o botão um bloco para ocupar toda a largura */
+}
+
+#btnMarcarComoPago i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+#btnMarcarComoPago:hover {
+    background-color: #218838; /* Cor verde mais escura ao passar o mouse */
+}
+
+/* =========================
+   Estilos Responsivos
+   ========================= */
+
+@media (max-width: 1024px) {
+    /* Ajustes para tablets */
+    
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .exp-pedidos-container h1 {
+        font-size: 1.8em; /* Título um pouco menor */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para tablets menores e dispositivos móveis */
+
+    .exp-pedidos-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    /* Ajuste dos inputs e botões */
+    input[type="number"], input[type="checkbox"], button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9em;
+        width: 100%; /* Botões ocupam 100% da largura em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para smartphones e telas pequenas */
+
+    table th, table td {
+        padding: 5px;
+        font-size: 0.8em;
+    }
+
+    .exp-pedidos-container h1 {
+        font-size: 1.5em; /* Título ainda menor */
+    }
+
+    input[type="number"], input[type="checkbox"], button {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    /* Deixa as colunas mais empilhadas em telas menores */
+    table td, table th {
+        display: block;
+        text-align: right;
+        position: relative;
+    }
+
+    table td::before, table th::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #ff5722;
+    }
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.notificacao {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1000;
+}
+.notificacao.success {
+    background-color: #28a745;
+}
+.notificacao.error {
+    background-color: #dc3545;
+}
+
+#notificacao {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: top 0.5s;
+}
+
+#notificacao.error {
+  background-color: red;
+}
+
+#notificacao.success {
+  background-color: green;
+}
+
+  /* Centraliza o título do modal */
+    .modal-title {
+        font-weight: bold;
+    }
+
+    /* Ajusta os ícones dentro dos inputs */
+    .input-group-text {
+        background-color: #e9ecef;
+    }
+
+    /* Estiliza as listas de autocomplete */
+    #listaClientes, #listaProdutos {
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    /* Estiliza os itens selecionados */
+    #produtosSelecionados .card {
+        margin-bottom: 10px;
+    }
+
+    /* Outros estilos personalizados */
+    .form-group-inline {
+        display: flex;
+        gap: 20px;
+    }
+
+    .form-group-inline .form-group {
+        flex: 1;
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .filter-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+    
+.filter-container.full-width {
+    width: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+    .filter-dates {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.filter-item {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .filter-container label, .filter-item label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.filter-container select:focus, 
+.filter-item input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(252, 72, 19, 0.3);
+    outline: none;
+}
+
+   .filter-container select, 
+.filter-item input {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .filter-container select {
+        width: 100%;
+    }
+
+    /* Estilos para a notificação */
+    #notificacao {
+        display: none;
+        position: fixed;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        z-index: 1000;
+        transition: top 0.5s;
+    }
+    #notificacao.error {
+        background-color: red;
+    }
+    #notificacao.success {
+        background-color: green;
+    }
+
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1020;
+}
+
+.floating-button:hover {
+    background-color: var(--active-bg-color);
+    transform: scale(1.1);
+}
+
+.custom-modal-header {
+  background-color: #FC4813;
+  color: #fff;
+}
+
+.custom-modal-header .modal-title {
+  font-weight: bold;
+  color: white;
+}
+
+.btn-custom {
+  background-color: #FC4813;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-custom:hover {
+  background-color: #E04012;
+}
+
+.modal.fade .modal-dialog {
+  transform: translate(0, -50px);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: translate(0, 0);
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+}
+
+.form-control:focus {
+  border-color: #FC4813;
+  box-shadow: none;
+}
+
+.btn-custom:focus, .btn-custom:hover {
+  background-color: #E04012;
+  outline: none;
+}
+
+
+/* modals.css */
+
+/* Estilos para o fundo do modal */
+.pedido-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o conteúdo do modal */
+.pedido-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Ajuste conforme necessário */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Estilos para o botão de fechar */
+.pedido-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pedido-close:hover,
+.pedido-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list-group {
+  position: absolute; /* se estiver usando absolute, verifique isso */
+  background-color: #fff;
+  z-index: 9999; /* maior que o do modal-backdrop */
+}
+
+.list-group {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cliente-sugestao, .produto-sugestao {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.cliente-sugestao:hover, .produto-sugestao:hover {
+    background-color: #f5f5f5;
+}
+
+.cliente-sugestao:last-child, .produto-sugestao:last-child {
+    border-bottom: none;
+}
+
+.produto-selecionado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.produto-selecionado .produto-nome {
+    flex-grow: 1;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.produto-selecionado .quantidade-produto {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.produto-selecionado .removerProduto {
+    padding: 5px 10px;
+}
+
+#notificacao {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1060 !important;
+    transition: all 0.3s ease;
+}
+#notificacao.success {
+    background-color: #28a745;
+}
+#notificacao.error {
+    background-color: #dc3545;
+}
+
+.tipo-label {
+    font-size: 0.9em;
+    color: #6c757d; /* Cor cinza suave do text-muted */
+    margin-left: 8px; /* Equivalente a ml-2 */
+}
+
+.pedido-info p.caixas {
+    color: #FC4813; /* Mesma cor do título */
+    font-weight: bold;
+}
+
+.tabela-generica tbody tr td:last-child {
+    border-bottom: none;
+}
+
+/* =========================
+   Variáveis e Reset Básico
+   ========================= */
+
+/* Mantendo as mesmas variáveis */
+:root {
+    --primary-color: #FC4813;       /* Main vibrant orange */
+    --accent-color: #FFFFFF;        /* White for text and icons */
+    --hover-bg-color: #F97316;      /* Slightly lighter orange for hover */
+    --active-bg-color: #EA580C;     /* Darker orange for active state */
+    --submenu-bg-color: #F97316;    /* Lighter orange for submenu */
+    --divider-color: rgba(255, 255, 255, 0.15); /* Subtle divider color */
+    --gray-bg: #F9FAFB;             /* Light gray background */
+    --text-primary: #1F2937;        /* Dark gray for text */
+    --text-secondary: #4B5563;      /* Lighter gray for secondary text */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-bg);
+    transition: background-color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, button {
+    font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   Menu Lateral (Mantido como estava)
+   ========================= */
+
+.sidebar {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: var(--primary-color);
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 110px;
+    height: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--accent-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(5px);
+}
+
+.sidebar ul li a.active {
+    background-color: var(--active-bg-color);
+    font-weight: 600;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    font-size: 22px;
+    width: 30px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.sidebar ul li a span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar ul li a.logout {
+    margin-top: auto;
+    margin-bottom: 30px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: calc(100% - 60px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a.logout:hover {
+    background-color: #F3F4F6;
+    color: var(--primary-color);
+    transform: scale(1.02);
+}
+
+/* =========================
+   SubMenus
+   ========================= */
+
+.menu-relatorios {
+    position: relative;
+}
+
+.menu-relatorios .submenu {
+    display: none;
+    background-color: var(--submenu-bg-color);
+    list-style: none;
+}
+
+.menu-relatorios .submenu li {
+    width: 100%;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.menu-relatorios .submenu li a {
+    padding: 12px 30px 12px 60px;
+    display: block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 15px;
+    background-color: var(--submenu-bg-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-relatorios .submenu li a:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(3px);
+}
+
+.menu-relatorios:hover .submenu {
+    display: block;
+}
+
+/* =========================
+   Conteúdo Principal
+   ========================= */
+
+.content {
+    margin-left: 260px;
+    padding: 40px;
+    transition: margin-left 0.3s ease;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   Filter Section
+   ========================= */
+
+.filter-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.filter-container.full-width {
+    width: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.filter-container label, .filter-item label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.filter-container select, 
+.filter-item input {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-container select:focus, 
+.filter-item input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(252, 72, 19, 0.3);
+    outline: none;
+}
+
+.filter-dates {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.filter-item {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Campo de Busca
+   ========================= */
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(252, 72, 19, 0.3);
+}
+
+/* =========================
+   Estilos Atualizados para Tabelas
+   ========================= */
+
+.tabela-container {
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.tabela-generica {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+}
+
+.tabela-generica thead {
+    background-color: var(--primary-color);
+}
+
+.tabela-generica th,
+.tabela-generica td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.tabela-generica th {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tabela-generica tbody tr:nth-child(even) {
+    background-color: #F9FAFB;
+}
+
+.tabela-generica tbody tr:hover {
+    background-color: rgba(252, 72, 19, 0.15);
+    cursor: pointer;
+}
+
+.tabela-generica tbody tr:hover td {
+    border-bottom: 1px solid transparent;
+}
+
+.tabela-generica tbody tr.selected {
+    background-color: rgba(252, 72, 19, 0.25);
+}
+
+.tabela-generica tbody tr td:last-child {
+    border-bottom: none;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .tabela-generica th,
+    .tabela-generica td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   PEDIDOS LABELS
+   ========================= */
+
+.status-label {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.status-label.novo-pedido {
+    background-color: #A3A356;
+}
+
+.status-label.concluido {
+    background-color: #2ECC71;
+}
+
+.status-label.aguardando-retirada {
+    background-color: #F4D03F;
+}
+
+.status-label.em-separacao {
+    background-color: #3498DB;
+}
+
+.status-label.pedido-separado {
+    background-color: #E74C3C;
+}
+
+.status-label.aguardando-cliente {
+    background-color: #E67E22;
+}
+
+.status-label.pagamento-na-retirada {
+    background-color: #9B59B6;
+}
+
+.payment-status {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-yes i {
+    color: #2ECC71;
+}
+
+.payment-no i {
+    color: #E74C3C;
+}
+
+/* =========================
+   Botões de Ação
+   ========================= */
+
+.tabela-generica .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 6px;
+    position: relative;
+}
+
+.tabela-generica .btn i {
+    font-size: 16px;
+    color: #FFFFFF !important;
+}
+
+/* View Button (usado em Pedidos) */
+.tabela-generica .btn-view.detalhesPedido {
+    background-color: #6B7280;
+}
+
+.tabela-generica .btn-view.detalhesPedido:hover {
+    background-color: #4B5563;
+    transform: scale(1.1);
+}
+
+/* Alert Button (usado em Pedidos) */
+.tabela-generica .btn-alerta {
+    background-color: #F97316;
+}
+
+.tabela-generica .btn-alerta:hover {
+    background-color: #EA580C;
+    transform: scale(1.1);
+}
+
+/* Observation Button (usado em Pedidos) */
+.tabela-generica .btn-observacao {
+    background-color: #EA580C;
+}
+
+.tabela-generica .btn-observacao:hover {
+    background-color: #C2410C;
+    transform: scale(1.1);
+}
+
+/* Edit Button (usado em Produtos e Clientes) */
+.tabela-generica .btn-edit {
+    background-color: #EA580C;
+}
+
+.tabela-generica .btn-edit:hover {
+    background-color: #C2410C;
+    transform: scale(1.1);
+}
+
+/* Add Stock Button (usado em Produtos) */
+.tabela-generica .btn-add-stock.btnAddStock {
+    background-color: #F97316;
+}
+
+.tabela-generica .btn-add-stock.btnAddStock:hover {
+    background-color: #EA580C;
+    transform: scale(1.1);
+}
+
+/* Delete Button (usado em Pedidos, Produtos e Clientes) */
+.tabela-generica .btn-delete {
+    background-color: #F87171;
+}
+
+.tabela-generica .btn-delete:hover {
+    background-color: #EF4444;
+    transform: scale(1.1);
+}
+
+/* =========================
+   Botão Flutuante
+   ========================= */
+
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1020;
+}
+
+.floating-button:hover {
+    background-color: var(--active-bg-color);
+    transform: scale(1.1);
+}
+
+/* =========================
+   Modal de Adicionar Estoque (Produtos)
+   ========================= */
+
+.modal-add-stock {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-add-stock-content {
+    background-color: #FFFFFF;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-modal-add-stock {
+    color: #6B7280;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal-add-stock:hover,
+.close-modal-add-stock:focus {
+    color: #1F2937;
+}
+
+.modal-add-stock-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.modal-add-stock-content .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-add-stock-content .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.modal-add-stock-content .form-group input,
+.modal-add-stock-content .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-add-stock-content .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal-add-stock-content .form-group input:focus,
+.modal-add-stock-content .form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(252, 72, 19, 0.3);
+    outline: none;
+}
+
+.modal-add-stock-content .btn-submit {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.modal-add-stock-content .btn-submit:hover {
+    background-color: #E33D10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Modal de Criar Produto
+   ========================= */
+
+#novoProdutoContainer {
+    width: 25%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.edit-produto-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.edit-produto-container.active {
+    display: block;
+    right: 0;
+}
+
+.panel-content {
+    padding: 20px;
+    position: relative;
+}
+
+.close-btn {
+    color: #6B7280;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #1F2937;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.form-produto .form-group {
+    margin-bottom: 15px;
+}
+
+.form-produto .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-produto .form-group input,
+.form-produto .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-produto .form-group input:focus,
+.form-produto .form-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(252, 72, 19, 0.3);
+    outline: none;
+}
+
+.form-produto .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-produto .form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(252, 72, 19, 0.3);
+    outline: none;
+}
+
+.form-produto .btn-submit {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.form-produto .btn-submit:hover {
+    background-color: #E33D10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para mensagens de feedback */
+.mensagem {
+    opacity: 0;
+    position: relative;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.mensagem.success {
+    opacity: 1;
+    background-color: #2ECC71;
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mensagem.error {
+    opacity: 1;
+    background-color: #EF4444;
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para Clientes (Modais de Adicionar/Editar) */
+.novo-cliente-container {
+    position: fixed;
+    top: 0;
+    right: -25%;
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.novo-cliente-container.active {
+    right: 0;
+}
+
+.edit-cliente-container {
+    position: fixed;
+    right: -25%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.edit-cliente-container.active {
+    right: 0;
+}

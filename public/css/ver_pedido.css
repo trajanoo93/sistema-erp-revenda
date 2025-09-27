@@ -1,0 +1,205 @@
+.pedido-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}
+
+.pedido-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pedido-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.pedido-close:hover {
+    color: #555;
+}
+
+.nf-itens.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nf-itens.custom-table th,
+.nf-itens.custom-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nf-itens.custom-table th {
+    background-color: #FC4813;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Resetar estilos do Bootstrap que podem interferir */
+.nf-itens.custom-table,
+.nf-itens.custom-table tbody,
+.nf-itens.custom-table tr,
+.nf-itens.custom-table td {
+    background: none !important;
+}
+
+/* Highlight para linhas com divergência */
+#notaFiscal .nf-itens.custom-table tbody tr.highlight-divergencia {
+    background: #FFF3CD !important;
+    border: 2px solid #FD7E14 !important;
+}
+
+/* Estilo para a lista de comprovantes */
+.comprovantes-list {
+    margin-top: 20px;
+}
+
+.comprovantes-list h3 {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.comprovantes-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.comprovantes-list li {
+    margin-bottom: 8px;
+}
+
+.comprovantes-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.comprovantes-list a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a lista de arquivos selecionados */
+.file-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.file-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.file-list .remove-file {
+    background-color: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.file-list .remove-file:hover {
+    background-color: #dc2626;
+}
+
+/* Estilo para o botão Editar Pedido */
+.edit-pedido-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.btn-edit-pedido {
+    background-color: #6c757d; /* Cinza neutro e profissional */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit-pedido:hover {
+    background-color: #5a6268; /* Cinza mais escuro no hover */
+}
+
+/* Estilo para o modo de edição */
+.produto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.produto-item span {
+    flex: 2;
+}
+
+.produto-item .quantidade-input {
+    flex: 1;
+    max-width: 150px;
+}
+
+.produto-item .quantidade-separada-input {
+    flex: 1;
+    max-width: 150px;
+}
+
+.produto-item .remove-produto {
+    background-color: #ef4444;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto-item .remove-produto:hover {
+    background-color: #dc2626;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}

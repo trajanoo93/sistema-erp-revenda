@@ -1,0 +1,105 @@
+/* Estilo geral com background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://aogosto.com.br/atacado/uploads/background.jpg') no-repeat center center fixed; /* Fundo da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+}
+
+/* Container principal com estilo glassmorphism */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+    border-radius: 16px;
+    padding: 40px 30px;
+    margin: 0 20px;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Borda leve */
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2)); /* Leve brilho na logo */
+}
+
+/* Título */
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #fff; /* Cor do texto branca */
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Efeito de brilho suave no título */
+}
+
+/* Estilo do grupo de entrada */
+.input-group {
+    margin-bottom: 25px;
+}
+
+/* Labels */
+.input-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff; /* Texto branco */
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Estilo dos campos de input */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2); /* Fundo translúcido dos inputs */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda leve e translúcida */
+    font-size: 16px;
+    color: #fff; /* Texto branco */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Leve desfoque no fundo do input */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: rgba(252, 72, 19, 0.8); /* Cor de foco laranja brilhante */
+    box-shadow: 0 0 5px rgba(252, 72, 19, 0.5); /* Efeito de brilho ao focar */
+}
+
+/* Botão de submit */
+.btn-submit {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(252, 72, 19, 0.8); /* Fundo laranja translúcido */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(252, 72, 19, 0.4); /* Sombra com brilho laranja */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: rgba(252, 72, 19, 1); /* Fundo laranja sólido ao hover */
+    box-shadow: 0 6px 20px rgba(252, 72, 19, 0.7); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+}

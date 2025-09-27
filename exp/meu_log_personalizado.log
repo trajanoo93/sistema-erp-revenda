@@ -1,0 +1,61 @@
+Conteúdo bruto recebido: {"id":294,"status":"Em Separação","quantidade_caixas":1,"observacoes":"Atualização","itens_quantidades":{"155":"10"}}
+Dados processados - ID: , Status: Em Separação
+[06-Nov-2024 17:31:06 America/Sao_Paulo] Pedido atualizado com sucesso no banco de dados.
+[06-Nov-2024 17:31:07 America/Sao_Paulo] Status da resposta do FCM: 200
+[06-Nov-2024 17:31:07 America/Sao_Paulo] Corpo da resposta do FCM: {
+  "name": "projects/ao-gosto-app-2/messages/1730925067222291"
+}
+
+[06-Nov-2024 17:46:39 America/Sao_Paulo] Pedido atualizado com sucesso no banco de dados.
+[06-Nov-2024 17:46:40 America/Sao_Paulo] Status da resposta do FCM: 200
+[06-Nov-2024 17:46:40 America/Sao_Paulo] Corpo da resposta do FCM: {
+  "name": "projects/ao-gosto-app-2/messages/1730926000412371"
+}
+
+[06-Nov-2024 17:47:14 America/Sao_Paulo] Pedido atualizado com sucesso no banco de dados.
+[06-Nov-2024 17:47:15 America/Sao_Paulo] Status da resposta do FCM: 200
+[06-Nov-2024 17:47:15 America/Sao_Paulo] Corpo da resposta do FCM: {
+  "name": "projects/ao-gosto-app-2/messages/1730926034820979"
+}
+
+[11-Nov-2024 11:31:45 America/Sao_Paulo] Pedido atualizado com sucesso no banco de dados.
+[11-Nov-2024 11:31:46 America/Sao_Paulo] Status da resposta do FCM: 200
+[11-Nov-2024 11:31:46 America/Sao_Paulo] Corpo da resposta do FCM: {
+  "name": "projects/ao-gosto-app-2/messages/1731335505753491"
+}
+
+[11-Nov-2024 12:29:38 America/Sao_Paulo] Pedido atualizado com sucesso no banco de dados.
+[11-Nov-2024 12:29:39 America/Sao_Paulo] Status da resposta do FCM: 200
+[11-Nov-2024 12:29:39 America/Sao_Paulo] Corpo da resposta do FCM: {
+  "name": "projects/ao-gosto-app-2/messages/1731338979336059"
+}
+
+[19-Dec-2024 09:54:19 America/Sao_Paulo] Pedido atualizado com sucesso no banco de dados.
+[19-Dec-2024 09:54:20 America/Sao_Paulo] Status da resposta do FCM: 200
+[19-Dec-2024 09:54:20 America/Sao_Paulo] Corpo da resposta do FCM: {
+  "name": "projects/ao-gosto-app-2/messages/1734612860093674"
+}
+
+[26-Dec-2024 14:50:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type int in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 175
+[26-Dec-2024 14:50:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type int in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 176
+[26-Dec-2024 15:35:19 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type int in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 158
+[26-Dec-2024 15:35:19 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type int in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 159
+[27-Dec-2024 08:23:22 America/Sao_Paulo] PHP Warning:  Undefined array key "quantidade" in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 159
+[02-Apr-2025 12:11:39 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-Apr-2025 12:56:56 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-Apr-2025 13:04:19 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[16-Apr-2025 16:16:53 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[30-Apr-2025 14:44:03 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-May-2025 11:13:37 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-May-2025 11:15:15 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-May-2025 11:48:43 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-May-2025 11:55:09 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-May-2025 12:07:07 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[02-May-2025 15:16:00 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 11:22:29 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 11:26:38 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 13:48:15 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 13:55:10 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 14:34:45 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 14:35:39 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53
+[06-May-2025 15:00:49 America/Sao_Paulo] PHP Warning:  foreach() argument must be of type array|object, null given in /home/u991329655/domains/aogosto.com.br/public_html/atacado/exp/atualizar_pedido.php on line 53

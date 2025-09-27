@@ -1,0 +1,113 @@
+/* Estilo geral do dashboard */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card h2 i {
+    margin-right: 10px;
+    color: #ff7e5f;
+}
+
+.card p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #28a745;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.card p:hover {
+    color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    padding: 10px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.card ul li:hover {
+    background-color: #f9f9f9;
+}
+
+.card ul li span {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.card ul li i {
+    color: #ff7e5f;
+    font-size: 1.2em;
+}
+
+canvas {
+    display: block;
+    width: 100% !important;
+    height: 300px !important; /* Ajuste conforme necessário */
+}
+
+#statusChart, #vendasChart {
+    width: 400px;
+    height: 400px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

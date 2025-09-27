@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ao-gosto-app-2",
+  "private_key_id": "27a6c6ace1dbbf2004d6b777760ca1c00e6d611f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCRh1JMt1XDqzWR\nOz67ndPgZ1heRf5cJ32yhGtQGjc0+2nQrNHsYSKGDsJ4+gQ0eesK8GL1aSS75va9\n+oNB1sMYdofocchwS6GoRsn+GbpI7C7ijxlNrQzmcImSYOhGvQ2QK73fsttTH8yu\n2Qgoat33pknhIvpMCUtt5YGsx4HfrLMpLLvHReOPx+6islM8MRJVn1zMt8AS8kAr\n9MDHQ5UDbiKxWA0zJ/bIWS9bvTtPWF7+XBZG7OaO1j4MtDEHdPgWuooMc4xSbfoe\n+VzLRkvt8LigfUvml/xPKia7nenEBVey7bPU8HnPFCeLq7kVHzfZFY+GfVsDgctA\n1RvsV/rtAgMBAAECggEAAspF5SukrM41BjZNExrJC6Xfl1sfL9QgAFKyngQKp+zk\nD/ioQ7BvEYPp7ZjZiMoHnBuUwiDEcAfTFjxd1N7Rub/YBjhcP+7rSAcna0RCApDo\nqzZUJV2agDaLJK/P9D8+qdN03fuXYeYbrgSCOAgofk2FYBgkFV4eQJqkXFQs5MVq\n9qgUZe02sOKrBgpOBUG2BU9ZQKhElE9HcvfHSJo263XqpU2Vk+QxOwDEJkr6CL3b\niyXh/xE320vJXHb2gcTRL+gpQ4FoHfGCMunAjaR3BBGHjgpVtC7ir7cvk29U4h8i\n5J0gqmljY0CUS0K9NnLc23P4Q4i4iHy9rsxsB+9bkQKBgQDLTm4iKKpVFaAEuiVd\nrlx66339/t8gcEVZ36TteuhXFmww/BKsWprgIyVkNP+H+r/ovZbQewvCExtCNUoI\nl0l0EGThze44YepSwmRZvd+ID1HC5rq8bdo72GVT98c+bfH3x9dnj7GvxygdTKWe\n+Ivpke8X2xMBbk5NoRQk+PIVhQKBgQC3P0gdIf9djyt/aVmAmCyNBP/xsybp4hFK\nfPWec63AlvXm3XaBCrfZYam6brzRpLAJqH1SpGl13/ELenFlg1uBbq4/5SVXVO7K\n1BX8jdsrqyrNeP4058L5SXZs+NR3FhjfaLBe552RxRoTcnYqKzq32mNXelEsnZm7\n29X8Esv4SQKBgG5v3EOR83Tkmlf3BfUtke7znS0sFeh5FDMN2XlnGm60L3EsfLhD\nP34hmV4lq+khvL2gvxvguzJhTp1YdS7Vf4EcprBCPPVDuxXZoslc6t/t8mv9CdLx\nmWqI0gIaxpCTCK2gUNJgrBTgClpgGFeSi+4E5+v9hQVx9fcVWOv8jwRBAoGAIRG/\nftpqzkSPEgA+EbHkoFJdqg2toRmWCz4/ySeRHKdhmxcuUp1PjmBMlAN1+dNhnWyV\nqTtYeNhAFNU075/j/Jivw4Ij2f3O1jWt/hTPj7LlF42VOpD0o645O/MvzInlVTP8\nWDQuQGc0jHvkjTmd8B3uPZQqYAXU/4ztsf7mZlkCgYAc5evPkUsfgOwIG8Va2m3v\n5Ewom75GxUJ6cHCQb89qjC8wEYlvHAHQicBZmN2xiounVS6NU853cXF3usU4DWDd\n5cxOP3NdbdL4sxrnqbh3XCAWZejQFNrAhPLIk1Agz5EMrpt/BeJFLt156kn3h+VG\nB9Ep08LfsX3uwZuSZbiQYA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-t2sxi@ao-gosto-app-2.iam.gserviceaccount.com",
+  "client_id": "113949962899319332408",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-t2sxi%40ao-gosto-app-2.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

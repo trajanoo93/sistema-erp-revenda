@@ -1,0 +1,2 @@
+[2025-09-26 14:57:23] [INFO] [IP: 177.174.111.250] [Usuário ID: 1] Carregando detalhes do pedido ID: 541 em exp/detalhes_pedido.php
+[2025-09-26 14:57:23] [INFO] [IP: 177.174.111.250] [Usuário ID: 1] Detalhes do pedido carregados. ID: 541, Itens: 3
