@@ -244,19 +244,21 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
     }
 
     function carregarConteudo(page) {
-        if (page === 'dashboard.php') {
-            $("#conteudo").html(`
-                <h1>Bem-vindo, <?= htmlspecialchars($nome_usuario) ?>!</h1>
-                <p>Escolha uma das opções no menu ao lado para continuar.</p>
-            `);
-            return;
-        }
-        $.ajax({
-            url: page,
-            method: "GET",
-            success: function(data) {
-                console.log(`Conteúdo de ${page} carregado com sucesso.`);
-                $("#conteudo").html(data);
+    if (page === 'dashboard.php') {
+        $("#conteudo").html(`
+            <h1>Bem-vindo, <?= htmlspecialchars($nome_usuario) ?>!</h1>
+            <p>Escolha uma das opções no menu ao lado para continuar.</p>
+        `);
+        return;
+    }
+    $.ajax({
+        url: page,
+        method: "GET",
+        dataType: "html", // Explicitly set dataType to html
+        success: function(data) {
+            console.log(`Conteúdo de ${page} carregado com sucesso.`);
+            try {
+                $("#conteudo").html(data); // Linha ~364
                 carregarCSS('/atacado/public/css/' + page.replace('.php', '') + '.css?v=<?= time() ?>');
                 setTimeout(function() {
                     if (page === 'inicio.php') {
@@ -273,7 +275,7 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
                         }
                     } else if (page === 'pedidos.php') {
                         let attempt = 1;
-                        const maxAttempts = 20;
+                        const maxAttempts = 50;
                         const retryInterval = setInterval(function() {
                             if (typeof bindNovoPedidoEvent === 'function' && typeof bindFilterEvents === 'function') {
                                 bindNovoPedidoEvent();
@@ -288,7 +290,7 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
                                     clearInterval(retryInterval);
                                 }
                             }
-                        }, 500);
+                        }, 1000);
                     } else if (page === 'clientes.php') {
                         if (typeof bindEvents === 'function' && typeof reapplyClientButtonEvents === 'function') {
                             bindEvents();
@@ -300,7 +302,7 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
                     } else if (page === 'produtos.php') {
                         if (typeof reapplyButtonEvents === 'function') {
                             let attempt = 1;
-                            const maxAttempts = 20;
+                            const maxAttempts = 50;
                             const retryInterval = setInterval(function() {
                                 if ($('#btnNovoProduto').length || attempt >= maxAttempts) {
                                     reapplyButtonEvents();
@@ -310,19 +312,25 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
                                     console.log(`Tentativa ${attempt}/${maxAttempts} de reaplicar eventos para produtos... Elemento #btnNovoProduto ainda não encontrado.`);
                                     attempt++;
                                 }
-                            }, 500);
+                            }, 1000);
                         } else {
                             console.error("Função reapplyButtonEvents não encontrada.");
                         }
                     }
-                }, 5000); // Aumentado para 5000ms
-            },
-            error: function(xhr, status, error) {
-                console.error(`Erro ao carregar ${page}:`, error);
-                $("#conteudo").html('<p>Erro ao carregar conteúdo.</p>');
+                }, 5000);
+            } catch (e) {
+                console.error("Erro ao inserir conteúdo em #conteudo:", e);
+                $("#conteudo").html('<p>Erro ao carregar conteúdo: ' + e.message + '</p>');
             }
-        });
-    }
+        },
+        error: function(xhr, status, error) {
+            console.error(`Erro ao carregar ${page}:`, error);
+            console.error("Status:", status);
+            console.error("Response Text:", xhr.responseText);
+            $("#conteudo").html('<p>Erro ao carregar conteúdo: ' + error + '</p>');
+        }
+    });
+}
 
     function configurarMenu() {
         $(".menu-relatorios > a").click(function(e) {
@@ -348,37 +356,47 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
             console.error("Método modal do Bootstrap NÃO está disponível.");
         }
         setTimeout(function() {
-            if (typeof bindNovoPedidoEvent === 'function' && typeof bindFilterEvents === 'function') {
-                bindNovoPedidoEvent();
-                bindFilterEvents();
-                console.log("Funções bindNovoPedidoEvent e bindFilterEvents encontradas.");
-            } else {
-                console.error("Funções bindNovoPedidoEvent ou bindFilterEvents NÃO encontradas após a carga inicial.");
-            }
-            if (typeof reapplyButtonEvents === 'function') {
-                let attempt = 1;
-                const maxAttempts = 20;
-                const retryInterval = setInterval(function() {
-                    if ($('#btnNovoProduto').length || attempt >= maxAttempts) {
-                        reapplyButtonEvents();
-                        console.log("Eventos de produtos reaplicados na carga inicial.");
+            let attempt = 1;
+            const maxAttempts = 30;
+            const retryInterval = setInterval(function() {
+                if (typeof bindNovoPedidoEvent === 'function' && typeof bindFilterEvents === 'function') {
+                    bindNovoPedidoEvent();
+                    bindFilterEvents();
+                    console.log("Funções bindNovoPedidoEvent e bindFilterEvents encontradas.");
+                    clearInterval(retryInterval);
+                } else {
+                    console.log(`Tentativa ${attempt}/${maxAttempts} de encontrar funções bindNovoPedidoEvent e bindFilterEvents...`);
+                    attempt++;
+                    if (attempt >= maxAttempts) {
+                        console.error("Funções bindNovoPedidoEvent ou bindFilterEvents NÃO encontradas após tentativas.");
                         clearInterval(retryInterval);
-                    } else {
-                        console.log(`Tentativa ${attempt}/${maxAttempts} de reaplicar eventos na carga inicial... Elemento #btnNovoProduto ainda não encontrado.`);
-                        attempt++;
                     }
-                }, 500);
-            } else {
-                console.error("Função reapplyButtonEvents NÃO encontrada após a carga inicial.");
-            }
-            if (typeof bindEvents === 'function' && typeof reapplyClientButtonEvents === 'function') {
-                bindEvents();
-                reapplyClientButtonEvents();
-                console.log("Eventos de clientes reaplicados na carga inicial.");
-            } else {
-                console.error("Funções bindEvents ou reapplyClientButtonEvents NÃO encontradas após a carga inicial.");
-            }
-        }, 5000); // Aumentado para 5000ms
+                }
+            }, 1000); // Intervalo de 1000ms
+        }, 10000); // Atraso inicial de 10000ms
+        if (typeof reapplyButtonEvents === 'function') {
+            let attempt = 1;
+            const maxAttempts = 30;
+            const retryInterval = setInterval(function() {
+                if ($('#btnNovoProduto').length || attempt >= maxAttempts) {
+                    reapplyButtonEvents();
+                    console.log("Eventos de produtos reaplicados na carga inicial.");
+                    clearInterval(retryInterval);
+                } else {
+                    console.log(`Tentativa ${attempt}/${maxAttempts} de reaplicar eventos na carga inicial... Elemento #btnNovoProduto ainda não encontrado.`);
+                    attempt++;
+                }
+            }, 1000); // Intervalo de 1000ms
+        } else {
+            console.error("Função reapplyButtonEvents NÃO encontrada após a carga inicial.");
+        }
+        if (typeof bindEvents === 'function' && typeof reapplyClientButtonEvents === 'function') {
+            bindEvents();
+            reapplyClientButtonEvents();
+            console.log("Eventos de clientes reaplicados na carga inicial.");
+        } else {
+            console.error("Funções bindEvents ou reapplyClientButtonEvents NÃO encontradas após a carga inicial.");
+        }
         $(".logout").on("click", function() {
             localStorage.clear();
         });

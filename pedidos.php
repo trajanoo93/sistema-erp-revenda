@@ -1,15 +1,16 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
-    header('Location: login.php');
+    header('Location: /atacado/login.php');
     exit;
 }
 require_once 'backend/config/db.php';
 
-// Captura o status e o intervalo de datas, se fornecido
+// Captura os filtros
 $status = isset($_GET['status']) && $_GET['status'] !== '' ? $_GET['status'] : null;
 $dataInicio = isset($_GET['data_inicio']) ? $_GET['data_inicio'] : null;
 $dataFim = isset($_GET['data_fim']) ? $_GET['data_fim'] : null;
+$busca = isset($_GET['busca']) ? trim($_GET['busca']) : null;
 
 // Definir a data inicial e final para o mês atual se não houver intervalo selecionado
 if (!$dataInicio && !$dataFim) {
@@ -24,14 +25,27 @@ $query = "
     JOIN clientes c ON p.cliente_id = c.id
     WHERE DATE(p.data_pedido) BETWEEN :data_inicio AND :data_fim
 ";
+$params = [
+    ':data_inicio' => $dataInicio,
+    ':data_fim' => $dataFim
+];
 if ($status) {
     $query .= " AND p.status = :status";
+    $params[':status'] = $status;
 }
+if ($busca) {
+    if (is_numeric($busca)) {
+        $query .= " AND p.id = :id_busca";
+        $params[':id_busca'] = $busca;
+    } else {
+        $query .= " AND c.nome LIKE :busca";
+        $params[':busca'] = '%' . $busca . '%';
+    }
+}
+
 $stmtPedidos = $conn->prepare($query);
-$stmtPedidos->bindParam(':data_inicio', $dataInicio);
-$stmtPedidos->bindParam(':data_fim', $dataFim);
-if ($status) {
-    $stmtPedidos->bindParam(':status', $status);
+foreach ($params as $key => $value) {
+    $stmtPedidos->bindValue($key, $value);
 }
 try {
     $stmtPedidos->execute();
@@ -111,115 +125,128 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Estilizar os filtros para ficarem em uma única linha */
-        .filter-row {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        .filter-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-            flex: 1;
-            min-width: 0;
-        }
-        .filter-item label {
-            font-weight: 500;
-            white-space: nowrap;
-        }
-        .filter-item select,
-        .filter-item input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .filter-item:nth-child(1) {
-            flex: 2;
-            min-width: 200px;
-        }
-        .filter-item:nth-child(2),
-        .filter-item:nth-child(3) {
-            flex: 1;
-            min-width: 150px;
-        }
-        .floating-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
-        .floating-button:hover {
-            background-color: #0056b3;
-        }
-        .custom-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1050;
-            max-width: 500px;
-            width: 100%;
-        }
-        .custom-modal .modal-content {
-            position: relative;
-        }
-        .close-modal-observacoes {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        #notificacao {
-            position: fixed;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: white;
-            z-index: 1060;
-            transition: all 0.3s ease;
-        }
-        #notificacao.success {
-            background-color: #28a745;
-        }
-        #notificacao.error {
-            background-color: #dc3545;
-        }
-    </style>
+   <style>
+    /* Estilizar os filtros para ficarem em uma única linha */
+    .filter-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .filter-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        min-width: 150px;
+    }
+    .filter-item label {
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    .filter-item select,
+    .filter-item input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .filter-item:nth-child(1) {
+        flex: 1.5;
+        min-width: 180px;
+    }
+    .filter-item:nth-child(2) {
+        flex: 1.5;
+        min-width: 180px;
+    }
+    .filter-item:nth-child(3),
+    .filter-item:nth-child(4) {
+        flex: 1;
+        min-width: 150px;
+    }
+    .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+    .floating-button:hover {
+        background-color: #0056b3;
+    }
+    .custom-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1050;
+        max-width: 500px;
+        width: 100%;
+    }
+    .custom-modal .modal-content {
+        position: relative;
+    }
+    .close-modal-observacoes {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #notificacao {
+        position: fixed;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        z-index: 1060;
+        transition: all 0.3s ease;
+    }
+    #notificacao.success {
+        background-color: #28a745;
+    }
+    #notificacao.error {
+        background-color: #dc3545;
+    }
+    /* Correção para o datepicker */
+    .ui-datepicker {
+        z-index: 1070 !important; /* Acima do modal (1050) e backdrop (1060) */
+    }
+</style>
 </head>
 <body>
     <div id="notificacao"></div>
     <h1>Pedidos</h1>
     <!-- Filtro de pedidos -->
     <div class="filter-row">
+        <!-- Filtro por Busca (Cliente ou ID) -->
+        <div class="filter-item">
+            <label for="busca">Buscar por Cliente ou ID:</label>
+            <input type="text" id="busca" name="busca" value="<?= htmlspecialchars($busca ?? '') ?>" placeholder="Nome do cliente ou ID">
+        </div>
         <!-- Filtro por Status -->
         <div class="filter-item">
             <label for="statusFilter">Filtrar por Status:</label>
@@ -302,9 +329,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
                             <textarea name="observacoes" id="observacoes" class="form-control" placeholder="Adicionar observações..."></textarea>
                         </div>
                         <!-- Botão de Salvar Pedido -->
-                        <div class="text-right">
-                            <button type="submit" id="btnSalvarPedido" class="btn btn-primary">Salvar Pedido</button>
-                        </div>
+                  <div class="text-right">
+    <button type="button" id="btnSalvarPedido" class="btn btn-primary">Salvar Pedido</button>
+</div>
                     </form>
                 </div>
             </div>
@@ -346,40 +373,6 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script>
-        // Função para atualizar a tabela de pedidos com base nos filtros
-        function atualizarTabela() {
-            var status = $('#statusFilter').val();
-            var dataInicio = $('#data_inicio').val();
-            var dataFim = $('#data_fim').val();
-            $.ajax({
-                url: '/atacado/pedidos.php',
-                method: 'GET',
-                data: {
-                    ajax: 1,
-                    status: status,
-                    data_inicio: dataInicio,
-                    data_fim: dataFim
-                },
-                success: function(data) {
-                    $('#pedidosContainer').html(data);
-                },
-                error: function(xhr, status, error) {
-                    console.error('Erro ao atualizar tabela:', error);
-                    alert('Erro ao atualizar a tabela de pedidos.');
-                }
-            });
-        }
-
-        // Função para associar eventos aos filtros
-        function bindFilterEvents() {
-            $('#statusFilter').off('change').on('change', atualizarTabela);
-            $('#data_inicio').off('change').on('change', atualizarTabela);
-            $('#data_fim').off('change').on('change', atualizarTabela);
-        }
-
-        // Expor a função para ser chamada após carregamento AJAX
-        window.bindFilterEvents = bindFilterEvents;
-    </script>
+    <script src="/atacado/public/js/pedidos.js?v=<?= time() ?>"></script>
 </body>
 </html>

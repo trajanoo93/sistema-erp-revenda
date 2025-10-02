@@ -2056,20 +2056,22 @@ button:active {
 }
 
 .list-group {
-  position: absolute; /* se estiver usando absolute, verifique isso */
-  background-color: #fff;
-  z-index: 9999; /* maior que o do modal-backdrop */
-}
-
-.list-group {
     max-height: 200px;
     overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-top: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: absolute;
+    width: 100%;
+    z-index: 1100; /* Aumentado para evitar sobreposição */
+    display: none !important; /* Forçar display: none inicialmente */
 }
+
+.list-group.show {
+    display: block !important; /* Forçar display: block quando visível */
+}
+
 
 .cliente-sugestao, .produto-sugestao {
     padding: 10px;
