@@ -125,6 +125,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
    <style>
     /* Estilizar os filtros para ficarem em uma única linha */
     .filter-row {
@@ -286,7 +287,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="formPedido" method="POST" action="/atacado/criar_pedido.php">
+                    <form id="formPedido" method="POST">
                         <!-- Seção Selecionar Cliente -->
                         <div class="form-group">
                             <label for="buscarCliente">Cliente <span class="text-danger">*</span></label>
@@ -372,7 +373,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
     <script src="/atacado/public/js/pedidos.js?v=<?= time() ?>"></script>
 </body>
 </html>

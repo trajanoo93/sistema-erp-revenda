@@ -16472,3 +16472,2921 @@
 [2025-09-26 10:29:22] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 532, Novo Status: Concluído
 [2025-09-26 10:29:23] atualizar_pedido.php - Notificação FCM enviada com sucesso para token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
 [2025-09-26 10:29:23] atualizar_pedido.php - Notificações enviadas. Sucesso: true
+[2025-09-30 09:00:12] atualizar_pedido.php - Dados brutos recebidos: {"id":545,"status":"Em Separação"}
+[2025-09-30 09:00:12] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 545
+    [status] => Em Separação
+)
+
+[2025-09-30 09:00:12] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 545: 0
+[2025-09-30 09:00:12] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 545, Novo Status: Em Separação
+[2025-09-30 09:00:12] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 09:00:12] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 09:00:12] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 09:00:16] atualizar_pedido.php - Dados brutos recebidos: {"id":545,"status":"Em Separação"}
+[2025-09-30 09:00:16] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 545
+    [status] => Em Separação
+)
+
+[2025-09-30 09:00:16] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 545: 0
+[2025-09-30 09:00:16] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 545, Novo Status: Em Separação
+[2025-09-30 09:00:16] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 09:00:16] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 09:00:16] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 10:05:28] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:28] Valor convertido para float: 25
+[2025-09-30 10:05:28] Valor formatado: 25.000
+[2025-09-30 10:05:28] Atualização bem-sucedida para item ID 2968
+[2025-09-30 10:05:29] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:29] Valor convertido para float: 25
+[2025-09-30 10:05:29] Valor formatado: 25.000
+[2025-09-30 10:05:29] Atualização bem-sucedida para item ID 2969
+[2025-09-30 10:05:30] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:30] Valor convertido para float: 50
+[2025-09-30 10:05:30] Valor formatado: 50.000
+[2025-09-30 10:05:30] Atualização bem-sucedida para item ID 2970
+[2025-09-30 10:05:31] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:31] Valor convertido para float: 25
+[2025-09-30 10:05:31] Valor formatado: 25.000
+[2025-09-30 10:05:31] Atualização bem-sucedida para item ID 2971
+[2025-09-30 10:05:31] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:31] Valor convertido para float: 25
+[2025-09-30 10:05:31] Valor formatado: 25.000
+[2025-09-30 10:05:31] Atualização bem-sucedida para item ID 2972
+[2025-09-30 10:05:32] Valor recebido para quantidade_separada: 70
+[2025-09-30 10:05:32] Valor convertido para float: 70
+[2025-09-30 10:05:32] Valor formatado: 70.000
+[2025-09-30 10:05:32] Atualização bem-sucedida para item ID 2973
+[2025-09-30 10:05:33] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:33] Valor convertido para float: 50
+[2025-09-30 10:05:33] Valor formatado: 50.000
+[2025-09-30 10:05:33] Atualização bem-sucedida para item ID 2974
+[2025-09-30 10:05:34] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:34] Valor convertido para float: 50
+[2025-09-30 10:05:34] Valor formatado: 50.000
+[2025-09-30 10:05:34] Atualização bem-sucedida para item ID 2975
+[2025-09-30 10:05:35] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:35] Valor convertido para float: 50
+[2025-09-30 10:05:35] Valor formatado: 50.000
+[2025-09-30 10:05:35] Atualização bem-sucedida para item ID 2976
+[2025-09-30 10:05:35] atualizar_pedido.php - Dados brutos recebidos: {"id":545,"status":"Pedido Separado","quantidade_caixas":17}
+[2025-09-30 10:05:35] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 545
+    [status] => Pedido Separado
+    [quantidade_caixas] => 17
+)
+
+[2025-09-30 10:05:35] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 545: 5422.2
+[2025-09-30 10:05:35] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 545, Novo Status: Pedido Separado
+[2025-09-30 10:05:35] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 10:05:35] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 10:05:35] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 10:05:46] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:46] Valor convertido para float: 25
+[2025-09-30 10:05:46] Valor formatado: 25.000
+[2025-09-30 10:05:46] Atualização bem-sucedida para item ID 2968
+[2025-09-30 10:05:47] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:47] Valor convertido para float: 25
+[2025-09-30 10:05:47] Valor formatado: 25.000
+[2025-09-30 10:05:47] Atualização bem-sucedida para item ID 2969
+[2025-09-30 10:05:48] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:48] Valor convertido para float: 50
+[2025-09-30 10:05:48] Valor formatado: 50.000
+[2025-09-30 10:05:48] Atualização bem-sucedida para item ID 2970
+[2025-09-30 10:05:48] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:48] Valor convertido para float: 25
+[2025-09-30 10:05:48] Valor formatado: 25.000
+[2025-09-30 10:05:48] Atualização bem-sucedida para item ID 2971
+[2025-09-30 10:05:49] Valor recebido para quantidade_separada: 25
+[2025-09-30 10:05:49] Valor convertido para float: 25
+[2025-09-30 10:05:49] Valor formatado: 25.000
+[2025-09-30 10:05:49] Atualização bem-sucedida para item ID 2972
+[2025-09-30 10:05:50] Valor recebido para quantidade_separada: 70
+[2025-09-30 10:05:50] Valor convertido para float: 70
+[2025-09-30 10:05:50] Valor formatado: 70.000
+[2025-09-30 10:05:50] Atualização bem-sucedida para item ID 2973
+[2025-09-30 10:05:51] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:51] Valor convertido para float: 50
+[2025-09-30 10:05:51] Valor formatado: 50.000
+[2025-09-30 10:05:51] Atualização bem-sucedida para item ID 2974
+[2025-09-30 10:05:52] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:52] Valor convertido para float: 50
+[2025-09-30 10:05:52] Valor formatado: 50.000
+[2025-09-30 10:05:52] Atualização bem-sucedida para item ID 2975
+[2025-09-30 10:05:52] Valor recebido para quantidade_separada: 50
+[2025-09-30 10:05:52] Valor convertido para float: 50
+[2025-09-30 10:05:52] Valor formatado: 50.000
+[2025-09-30 10:05:52] Atualização bem-sucedida para item ID 2976
+[2025-09-30 10:05:53] atualizar_pedido.php - Dados brutos recebidos: {"id":545,"status":"Pedido Separado","quantidade_caixas":17}
+[2025-09-30 10:05:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 545
+    [status] => Pedido Separado
+    [quantidade_caixas] => 17
+)
+
+[2025-09-30 10:05:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 545: 5422.2
+[2025-09-30 10:05:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 545, Novo Status: Pedido Separado
+[2025-09-30 10:05:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 10:05:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 10:05:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 10:15:13] atualizar_pedido.php - Dados brutos recebidos: {"id":547,"status":"Em Separação"}
+[2025-09-30 10:15:13] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 547
+    [status] => Em Separação
+)
+
+[2025-09-30 10:15:13] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 547: 0
+[2025-09-30 10:15:13] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 547, Novo Status: Em Separação
+[2025-09-30 10:15:13] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 10:15:13] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 10:15:13] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 10:44:01] atualizar_pedido.php - Dados brutos recebidos: {"id":551,"status":"Em Separação"}
+[2025-09-30 10:44:01] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 551
+    [status] => Em Separação
+)
+
+[2025-09-30 10:44:01] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 551: 0
+[2025-09-30 10:44:01] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 551, Novo Status: Em Separação
+[2025-09-30 10:44:01] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 10:44:01] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 10:44:01] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 10:44:02] atualizar_pedido.php - Dados brutos recebidos: {"id":551,"status":"Em Separação"}
+[2025-09-30 10:44:02] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 551
+    [status] => Em Separação
+)
+
+[2025-09-30 10:44:02] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 551: 0
+[2025-09-30 10:44:02] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 551, Novo Status: Em Separação
+[2025-09-30 10:44:02] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 10:44:02] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 10:44:02] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 11:19:14] Valor recebido para quantidade_separada: 100
+[2025-09-30 11:19:14] Valor convertido para float: 100
+[2025-09-30 11:19:14] Valor formatado: 100.000
+[2025-09-30 11:19:14] Atualização bem-sucedida para item ID 3024
+[2025-09-30 11:19:15] Valor recebido para quantidade_separada: 100
+[2025-09-30 11:19:15] Valor convertido para float: 100
+[2025-09-30 11:19:15] Valor formatado: 100.000
+[2025-09-30 11:19:15] Atualização bem-sucedida para item ID 3025
+[2025-09-30 11:19:15] Valor recebido para quantidade_separada: 25
+[2025-09-30 11:19:15] Valor convertido para float: 25
+[2025-09-30 11:19:15] Valor formatado: 25.000
+[2025-09-30 11:19:15] Atualização bem-sucedida para item ID 3026
+[2025-09-30 11:19:16] Valor recebido para quantidade_separada: 25
+[2025-09-30 11:19:16] Valor convertido para float: 25
+[2025-09-30 11:19:16] Valor formatado: 25.000
+[2025-09-30 11:19:16] Atualização bem-sucedida para item ID 3027
+[2025-09-30 11:19:17] Valor recebido para quantidade_separada: 25
+[2025-09-30 11:19:17] Valor convertido para float: 25
+[2025-09-30 11:19:17] Valor formatado: 25.000
+[2025-09-30 11:19:17] Atualização bem-sucedida para item ID 3028
+[2025-09-30 11:19:18] atualizar_pedido.php - Dados brutos recebidos: {"id":551,"status":"Pedido Separado","quantidade_caixas":11}
+[2025-09-30 11:19:18] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 551
+    [status] => Pedido Separado
+    [quantidade_caixas] => 11
+)
+
+[2025-09-30 11:19:18] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 551: 4907.5
+[2025-09-30 11:19:18] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 551, Novo Status: Pedido Separado
+[2025-09-30 11:19:18] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 11:19:18] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 11:19:18] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 11:44:45] atualizar_pedido.php - Dados brutos recebidos: {"id":547,"status":"Pedido Separado","quantidade_caixas":4,"itens_quantidades":[{"produto_id":123,"quantidade":7.6},{"produto_id":158,"quantidade":10.0},{"produto_id":155,"quantidade":10.0},{"produto_id":156,"quantidade":10.0},{"produto_id":116,"quantidade":8.0},{"produto_id":150,"quantidade":6.0},{"produto_id":175,"quantidade":3.0},{"produto_id":179,"quantidade":3.0},{"produto_id":259,"quantidade":3.0},{"produto_id":276,"quantidade":3.0},{"produto_id":124,"quantidade":2.0}]}
+[2025-09-30 11:44:45] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 547
+    [status] => Pedido Separado
+    [quantidade_caixas] => 4
+    [itens_quantidades] => Array
+        (
+            [0] => Array
+                (
+                    [produto_id] => 123
+                    [quantidade] => 7.6
+                )
+
+            [1] => Array
+                (
+                    [produto_id] => 158
+                    [quantidade] => 10
+                )
+
+            [2] => Array
+                (
+                    [produto_id] => 155
+                    [quantidade] => 10
+                )
+
+            [3] => Array
+                (
+                    [produto_id] => 156
+                    [quantidade] => 10
+                )
+
+            [4] => Array
+                (
+                    [produto_id] => 116
+                    [quantidade] => 8
+                )
+
+            [5] => Array
+                (
+                    [produto_id] => 150
+                    [quantidade] => 6
+                )
+
+            [6] => Array
+                (
+                    [produto_id] => 175
+                    [quantidade] => 3
+                )
+
+            [7] => Array
+                (
+                    [produto_id] => 179
+                    [quantidade] => 3
+                )
+
+            [8] => Array
+                (
+                    [produto_id] => 259
+                    [quantidade] => 3
+                )
+
+            [9] => Array
+                (
+                    [produto_id] => 276
+                    [quantidade] => 3
+                )
+
+            [10] => Array
+                (
+                    [produto_id] => 124
+                    [quantidade] => 2
+                )
+
+        )
+
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 547: 0
+[2025-09-30 11:44:45] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 547, Novo Status: Pedido Separado
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 123
+    [quantidade] => 7.6
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 158
+    [quantidade] => 10
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 155
+    [quantidade] => 10
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 156
+    [quantidade] => 10
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 116
+    [quantidade] => 8
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 150
+    [quantidade] => 6
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 175
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 179
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 259
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 276
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 124
+    [quantidade] => 2
+)
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 11:44:45] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 11:44:45] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 11:44:49] atualizar_pedido.php - Dados brutos recebidos: {"id":547,"status":"Pedido Separado","quantidade_caixas":4,"itens_quantidades":[{"produto_id":123,"quantidade":7.6},{"produto_id":158,"quantidade":10.0},{"produto_id":155,"quantidade":10.0},{"produto_id":156,"quantidade":10.0},{"produto_id":116,"quantidade":8.0},{"produto_id":150,"quantidade":6.0},{"produto_id":175,"quantidade":3.0},{"produto_id":179,"quantidade":3.0},{"produto_id":259,"quantidade":3.0},{"produto_id":276,"quantidade":3.0},{"produto_id":124,"quantidade":2.0}]}
+[2025-09-30 11:44:49] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 547
+    [status] => Pedido Separado
+    [quantidade_caixas] => 4
+    [itens_quantidades] => Array
+        (
+            [0] => Array
+                (
+                    [produto_id] => 123
+                    [quantidade] => 7.6
+                )
+
+            [1] => Array
+                (
+                    [produto_id] => 158
+                    [quantidade] => 10
+                )
+
+            [2] => Array
+                (
+                    [produto_id] => 155
+                    [quantidade] => 10
+                )
+
+            [3] => Array
+                (
+                    [produto_id] => 156
+                    [quantidade] => 10
+                )
+
+            [4] => Array
+                (
+                    [produto_id] => 116
+                    [quantidade] => 8
+                )
+
+            [5] => Array
+                (
+                    [produto_id] => 150
+                    [quantidade] => 6
+                )
+
+            [6] => Array
+                (
+                    [produto_id] => 175
+                    [quantidade] => 3
+                )
+
+            [7] => Array
+                (
+                    [produto_id] => 179
+                    [quantidade] => 3
+                )
+
+            [8] => Array
+                (
+                    [produto_id] => 259
+                    [quantidade] => 3
+                )
+
+            [9] => Array
+                (
+                    [produto_id] => 276
+                    [quantidade] => 3
+                )
+
+            [10] => Array
+                (
+                    [produto_id] => 124
+                    [quantidade] => 2
+                )
+
+        )
+
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 547: 1470.19
+[2025-09-30 11:44:49] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 547, Novo Status: Pedido Separado
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 123
+    [quantidade] => 7.6
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 158
+    [quantidade] => 10
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 155
+    [quantidade] => 10
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 156
+    [quantidade] => 10
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 116
+    [quantidade] => 8
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 150
+    [quantidade] => 6
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 175
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 179
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 259
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 276
+    [quantidade] => 3
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 124
+    [quantidade] => 2
+)
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 11:44:49] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 11:44:49] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 11:45:19] atualizar_pedido.php - Dados brutos recebidos: {"id":548,"status":"Em Separação"}
+[2025-09-30 11:45:19] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 548
+    [status] => Em Separação
+)
+
+[2025-09-30 11:45:19] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 548: 0
+[2025-09-30 11:45:19] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 548, Novo Status: Em Separação
+[2025-09-30 11:45:19] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 11:45:19] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 11:45:19] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 12:04:34] atualizar_pedido.php - Dados brutos recebidos: {"id":548,"status":"Pedido Separado","quantidade_caixas":4,"itens_quantidades":[{"produto_id":176,"quantidade":10.0},{"produto_id":259,"quantidade":10.0},{"produto_id":175,"quantidade":10.0},{"produto_id":179,"quantidade":10.0},{"produto_id":123,"quantidade":9.3},{"produto_id":150,"quantidade":10.0},{"produto_id":155,"quantidade":10.0}]}
+[2025-09-30 12:04:34] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 548
+    [status] => Pedido Separado
+    [quantidade_caixas] => 4
+    [itens_quantidades] => Array
+        (
+            [0] => Array
+                (
+                    [produto_id] => 176
+                    [quantidade] => 10
+                )
+
+            [1] => Array
+                (
+                    [produto_id] => 259
+                    [quantidade] => 10
+                )
+
+            [2] => Array
+                (
+                    [produto_id] => 175
+                    [quantidade] => 10
+                )
+
+            [3] => Array
+                (
+                    [produto_id] => 179
+                    [quantidade] => 10
+                )
+
+            [4] => Array
+                (
+                    [produto_id] => 123
+                    [quantidade] => 9.3
+                )
+
+            [5] => Array
+                (
+                    [produto_id] => 150
+                    [quantidade] => 10
+                )
+
+            [6] => Array
+                (
+                    [produto_id] => 155
+                    [quantidade] => 10
+                )
+
+        )
+
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 548: 0
+[2025-09-30 12:04:34] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 548, Novo Status: Pedido Separado
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 176
+    [quantidade] => 10
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 259
+    [quantidade] => 10
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 175
+    [quantidade] => 10
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 179
+    [quantidade] => 10
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 123
+    [quantidade] => 9.3
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 150
+    [quantidade] => 10
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 155
+    [quantidade] => 10
+)
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 12:04:34] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 12:04:34] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 12:21:05] atualizar_pedido.php - Dados brutos recebidos: {"id":549,"status":"Em Separação"}
+[2025-09-30 12:21:05] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 549
+    [status] => Em Separação
+)
+
+[2025-09-30 12:21:05] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 549: 0
+[2025-09-30 12:21:05] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 549, Novo Status: Em Separação
+[2025-09-30 12:21:05] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 12:21:05] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 12:21:05] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 12:53:16] Valor recebido para quantidade_separada: 11.9
+[2025-09-30 12:53:16] Valor convertido para float: 11.9
+[2025-09-30 12:53:16] Valor formatado: 11.900
+[2025-09-30 12:53:16] Atualização bem-sucedida para item ID 2997
+[2025-09-30 12:53:18] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:18] Valor convertido para float: 10
+[2025-09-30 12:53:18] Valor formatado: 10.000
+[2025-09-30 12:53:18] Atualização bem-sucedida para item ID 2998
+[2025-09-30 12:53:19] Valor recebido para quantidade_separada: 4.35
+[2025-09-30 12:53:19] Valor convertido para float: 4.35
+[2025-09-30 12:53:19] Valor formatado: 4.350
+[2025-09-30 12:53:19] Atualização bem-sucedida para item ID 2999
+[2025-09-30 12:53:22] Valor recebido para quantidade_separada: 5
+[2025-09-30 12:53:22] Valor convertido para float: 5
+[2025-09-30 12:53:22] Valor formatado: 5.000
+[2025-09-30 12:53:22] Atualização bem-sucedida para item ID 3000
+[2025-09-30 12:53:23] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:23] Valor convertido para float: 10
+[2025-09-30 12:53:23] Valor formatado: 10.000
+[2025-09-30 12:53:23] Atualização bem-sucedida para item ID 3001
+[2025-09-30 12:53:26] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:26] Valor convertido para float: 10
+[2025-09-30 12:53:26] Valor formatado: 10.000
+[2025-09-30 12:53:26] Atualização bem-sucedida para item ID 3002
+[2025-09-30 12:53:29] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:29] Valor convertido para float: 10
+[2025-09-30 12:53:29] Valor formatado: 10.000
+[2025-09-30 12:53:29] Atualização bem-sucedida para item ID 3003
+[2025-09-30 12:53:33] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:33] Valor convertido para float: 10
+[2025-09-30 12:53:33] Valor formatado: 10.000
+[2025-09-30 12:53:33] Atualização bem-sucedida para item ID 3004
+[2025-09-30 12:53:34] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:34] Valor convertido para float: 10
+[2025-09-30 12:53:34] Valor formatado: 10.000
+[2025-09-30 12:53:34] Atualização bem-sucedida para item ID 3005
+[2025-09-30 12:53:44] Valor recebido para quantidade_separada: 11.9
+[2025-09-30 12:53:44] Valor convertido para float: 11.9
+[2025-09-30 12:53:44] Valor formatado: 11.900
+[2025-09-30 12:53:44] Atualização bem-sucedida para item ID 2997
+[2025-09-30 12:53:44] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:44] Valor convertido para float: 10
+[2025-09-30 12:53:44] Valor formatado: 10.000
+[2025-09-30 12:53:44] Atualização bem-sucedida para item ID 2998
+[2025-09-30 12:53:45] Valor recebido para quantidade_separada: 4.35
+[2025-09-30 12:53:45] Valor convertido para float: 4.35
+[2025-09-30 12:53:45] Valor formatado: 4.350
+[2025-09-30 12:53:45] Atualização bem-sucedida para item ID 2999
+[2025-09-30 12:53:46] Valor recebido para quantidade_separada: 5
+[2025-09-30 12:53:46] Valor convertido para float: 5
+[2025-09-30 12:53:46] Valor formatado: 5.000
+[2025-09-30 12:53:46] Atualização bem-sucedida para item ID 3000
+[2025-09-30 12:53:46] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:46] Valor convertido para float: 10
+[2025-09-30 12:53:46] Valor formatado: 10.000
+[2025-09-30 12:53:46] Atualização bem-sucedida para item ID 3001
+[2025-09-30 12:53:47] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:47] Valor convertido para float: 10
+[2025-09-30 12:53:47] Valor formatado: 10.000
+[2025-09-30 12:53:47] Atualização bem-sucedida para item ID 3002
+[2025-09-30 12:53:48] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:48] Valor convertido para float: 10
+[2025-09-30 12:53:48] Valor formatado: 10.000
+[2025-09-30 12:53:48] Atualização bem-sucedida para item ID 3003
+[2025-09-30 12:53:49] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:49] Valor convertido para float: 10
+[2025-09-30 12:53:49] Valor formatado: 10.000
+[2025-09-30 12:53:49] Atualização bem-sucedida para item ID 3004
+[2025-09-30 12:53:49] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:49] Valor convertido para float: 10
+[2025-09-30 12:53:49] Valor formatado: 10.000
+[2025-09-30 12:53:49] Atualização bem-sucedida para item ID 3005
+[2025-09-30 12:53:50] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:50] Valor convertido para float: 10
+[2025-09-30 12:53:50] Valor formatado: 10.000
+[2025-09-30 12:53:50] Atualização bem-sucedida para item ID 3006
+[2025-09-30 12:53:51] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:51] Valor convertido para float: 10
+[2025-09-30 12:53:51] Valor formatado: 10.000
+[2025-09-30 12:53:51] Atualização bem-sucedida para item ID 3007
+[2025-09-30 12:53:51] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:51] Valor convertido para float: 10
+[2025-09-30 12:53:51] Valor formatado: 10.000
+[2025-09-30 12:53:51] Atualização bem-sucedida para item ID 3008
+[2025-09-30 12:53:52] Valor recebido para quantidade_separada: 10
+[2025-09-30 12:53:52] Valor convertido para float: 10
+[2025-09-30 12:53:52] Valor formatado: 10.000
+[2025-09-30 12:53:52] Atualização bem-sucedida para item ID 3009
+[2025-09-30 12:53:52] atualizar_pedido.php - Dados brutos recebidos: {"id":549,"status":"Pedido Separado","quantidade_caixas":6}
+[2025-09-30 12:53:52] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 549
+    [status] => Pedido Separado
+    [quantidade_caixas] => 6
+)
+
+[2025-09-30 12:53:52] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 549: 3304.275
+[2025-09-30 12:53:52] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 549, Novo Status: Pedido Separado
+[2025-09-30 12:53:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 12:53:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 12:53:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 14:06:37] atualizar_pedido.php - Dados brutos recebidos: {"id":550,"status":"Em Separação"}
+[2025-09-30 14:06:37] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 550
+    [status] => Em Separação
+)
+
+[2025-09-30 14:06:37] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 550: 0
+[2025-09-30 14:06:37] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 550, Novo Status: Em Separação
+[2025-09-30 14:06:37] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 14:06:37] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 14:06:37] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-09-30 14:49:18] Valor recebido para quantidade_separada: 10.9
+[2025-09-30 14:49:18] Valor convertido para float: 10.9
+[2025-09-30 14:49:18] Valor formatado: 10.900
+[2025-09-30 14:49:18] Atualização bem-sucedida para item ID 3010
+[2025-09-30 14:49:19] Valor recebido para quantidade_separada: 20
+[2025-09-30 14:49:19] Valor convertido para float: 20
+[2025-09-30 14:49:19] Valor formatado: 20.000
+[2025-09-30 14:49:19] Atualização bem-sucedida para item ID 3011
+[2025-09-30 14:49:19] Valor recebido para quantidade_separada: 4.3
+[2025-09-30 14:49:19] Valor convertido para float: 4.3
+[2025-09-30 14:49:19] Valor formatado: 4.300
+[2025-09-30 14:49:19] Atualização bem-sucedida para item ID 3012
+[2025-09-30 14:49:20] Valor recebido para quantidade_separada: 4.85
+[2025-09-30 14:49:20] Valor convertido para float: 4.85
+[2025-09-30 14:49:20] Valor formatado: 4.850
+[2025-09-30 14:49:20] Atualização bem-sucedida para item ID 3013
+[2025-09-30 14:49:21] Valor recebido para quantidade_separada: 5
+[2025-09-30 14:49:21] Valor convertido para float: 5
+[2025-09-30 14:49:21] Valor formatado: 5.000
+[2025-09-30 14:49:21] Atualização bem-sucedida para item ID 3014
+[2025-09-30 14:49:21] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:21] Valor convertido para float: 10
+[2025-09-30 14:49:21] Valor formatado: 10.000
+[2025-09-30 14:49:21] Atualização bem-sucedida para item ID 3015
+[2025-09-30 14:49:22] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:22] Valor convertido para float: 10
+[2025-09-30 14:49:22] Valor formatado: 10.000
+[2025-09-30 14:49:22] Atualização bem-sucedida para item ID 3016
+[2025-09-30 14:49:22] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:22] Valor convertido para float: 10
+[2025-09-30 14:49:22] Valor formatado: 10.000
+[2025-09-30 14:49:22] Atualização bem-sucedida para item ID 3017
+[2025-09-30 14:49:23] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:23] Valor convertido para float: 10
+[2025-09-30 14:49:23] Valor formatado: 10.000
+[2025-09-30 14:49:23] Atualização bem-sucedida para item ID 3018
+[2025-09-30 14:49:24] Valor recebido para quantidade_separada: 5
+[2025-09-30 14:49:24] Valor convertido para float: 5
+[2025-09-30 14:49:24] Valor formatado: 5.000
+[2025-09-30 14:49:24] Atualização bem-sucedida para item ID 3019
+[2025-09-30 14:49:24] Valor recebido para quantidade_separada: 15
+[2025-09-30 14:49:24] Valor convertido para float: 15
+[2025-09-30 14:49:24] Valor formatado: 15.000
+[2025-09-30 14:49:24] Atualização bem-sucedida para item ID 3020
+[2025-09-30 14:49:25] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:25] Valor convertido para float: 10
+[2025-09-30 14:49:25] Valor formatado: 10.000
+[2025-09-30 14:49:25] Atualização bem-sucedida para item ID 3021
+[2025-09-30 14:49:26] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:26] Valor convertido para float: 10
+[2025-09-30 14:49:26] Valor formatado: 10.000
+[2025-09-30 14:49:26] Atualização bem-sucedida para item ID 3022
+[2025-09-30 14:49:26] Valor recebido para quantidade_separada: 10
+[2025-09-30 14:49:26] Valor convertido para float: 10
+[2025-09-30 14:49:26] Valor formatado: 10.000
+[2025-09-30 14:49:26] Atualização bem-sucedida para item ID 3023
+[2025-09-30 14:49:27] atualizar_pedido.php - Dados brutos recebidos: {"id":550,"status":"Pedido Separado","quantidade_caixas":7}
+[2025-09-30 14:49:27] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 550
+    [status] => Pedido Separado
+    [quantidade_caixas] => 7
+)
+
+[2025-09-30 14:49:27] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 550: 3621.895
+[2025-09-30 14:49:27] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 550, Novo Status: Pedido Separado
+[2025-09-30 14:49:27] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-09-30 14:49:27] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-09-30 14:49:27] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-01 07:51:04] atualizar_pedido.php - Dados brutos recebidos: {"id":517,"status":"Concluído","observacoes":"","quantidade_caixas":0}
+[2025-10-01 07:51:04] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 517
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 0
+)
+
+[2025-10-01 07:51:04] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 517: 2960.83
+[2025-10-01 07:51:04] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 517, Novo Status: Concluído
+[2025-10-01 07:51:04] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-01 07:51:04] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-01 07:51:04] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-01 14:02:24] atualizar_pedido.php - Dados brutos recebidos: {"id":554,"status":"Em Separação"}
+[2025-10-01 14:02:24] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 554
+    [status] => Em Separação
+)
+
+[2025-10-01 14:02:24] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 554: 0
+[2025-10-01 14:02:24] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 554, Novo Status: Em Separação
+[2025-10-01 14:02:24] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-01 14:02:24] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-01 14:02:24] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-01 14:02:25] atualizar_pedido.php - Dados brutos recebidos: {"id":554,"status":"Em Separação"}
+[2025-10-01 14:02:25] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 554
+    [status] => Em Separação
+)
+
+[2025-10-01 14:02:25] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 554: 0
+[2025-10-01 14:02:25] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 554, Novo Status: Em Separação
+[2025-10-01 14:02:25] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-01 14:02:25] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-01 14:02:25] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-01 15:28:04] atualizar_pedido.php - Dados brutos recebidos: {"id":554,"status":"Pedido Separado","quantidade_caixas":3,"itens_quantidades":[{"produto_id":150,"quantidade":0.0},{"produto_id":148,"quantidade":25.0},{"produto_id":156,"quantidade":25.0},{"produto_id":123,"quantidade":6.45}]}
+[2025-10-01 15:28:04] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 554
+    [status] => Pedido Separado
+    [quantidade_caixas] => 3
+    [itens_quantidades] => Array
+        (
+            [0] => Array
+                (
+                    [produto_id] => 150
+                    [quantidade] => 0
+                )
+
+            [1] => Array
+                (
+                    [produto_id] => 148
+                    [quantidade] => 25
+                )
+
+            [2] => Array
+                (
+                    [produto_id] => 156
+                    [quantidade] => 25
+                )
+
+            [3] => Array
+                (
+                    [produto_id] => 123
+                    [quantidade] => 6.45
+                )
+
+        )
+
+)
+
+[2025-10-01 15:28:04] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 554: 0
+[2025-10-01 15:28:04] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 554, Novo Status: Pedido Separado
+[2025-10-01 15:28:04] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 150
+    [quantidade] => 0
+)
+
+[2025-10-01 15:28:04] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 148
+    [quantidade] => 25
+)
+
+[2025-10-01 15:28:04] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 156
+    [quantidade] => 25
+)
+
+[2025-10-01 15:28:04] atualizar_pedido.php - Quantidade separada recebida: Array
+(
+    [produto_id] => 123
+    [quantidade] => 6.45
+)
+
+[2025-10-01 15:28:04] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-01 15:28:04] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-01 15:28:04] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-02 09:07:28] atualizar_pedido.php - Dados brutos recebidos: {"id":471,"status":"Concluído","observacoes":"","quantidade_caixas":16}
+[2025-10-02 09:07:28] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 471
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 16
+)
+
+[2025-10-02 09:07:28] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 471: 7175
+[2025-10-02 09:07:28] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 471, Novo Status: Concluído
+[2025-10-02 09:07:28] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-02 09:07:28] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-02 09:07:28] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-02 14:39:29] atualizar_pedido.php - Dados brutos recebidos: {"id":571,"status":"Em Separação"}
+[2025-10-02 14:39:29] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 571
+    [status] => Em Separação
+)
+
+[2025-10-02 14:39:29] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 571: 0
+[2025-10-02 14:39:29] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 571, Novo Status: Em Separação
+[2025-10-02 14:39:29] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-02 14:39:29] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-02 14:39:29] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 10:26:28] Valor recebido para quantidade_separada: 30
+[2025-10-06 10:26:28] Valor convertido para float: 30
+[2025-10-06 10:26:28] Valor formatado: 30.000
+[2025-10-06 10:26:28] Atualização bem-sucedida para item ID 3208
+[2025-10-06 10:26:28] Valor recebido para quantidade_separada: 25
+[2025-10-06 10:26:28] Valor convertido para float: 25
+[2025-10-06 10:26:28] Valor formatado: 25.000
+[2025-10-06 10:26:28] Atualização bem-sucedida para item ID 3209
+[2025-10-06 10:26:29] Valor recebido para quantidade_separada: 23.3
+[2025-10-06 10:26:29] Valor convertido para float: 23.3
+[2025-10-06 10:26:29] Valor formatado: 23.300
+[2025-10-06 10:26:29] Atualização bem-sucedida para item ID 3210
+[2025-10-06 10:26:30] Valor recebido para quantidade_separada: 25
+[2025-10-06 10:26:30] Valor convertido para float: 25
+[2025-10-06 10:26:30] Valor formatado: 25.000
+[2025-10-06 10:26:30] Atualização bem-sucedida para item ID 3211
+[2025-10-06 10:26:30] Valor recebido para quantidade_separada: 30
+[2025-10-06 10:26:30] Valor convertido para float: 30
+[2025-10-06 10:26:30] Valor formatado: 30.000
+[2025-10-06 10:26:30] Atualização bem-sucedida para item ID 3212
+[2025-10-06 10:26:31] Valor recebido para quantidade_separada: 10
+[2025-10-06 10:26:31] Valor convertido para float: 10
+[2025-10-06 10:26:31] Valor formatado: 10.000
+[2025-10-06 10:26:31] Atualização bem-sucedida para item ID 3213
+[2025-10-06 10:26:32] Valor recebido para quantidade_separada: 15
+[2025-10-06 10:26:32] Valor convertido para float: 15
+[2025-10-06 10:26:32] Valor formatado: 15.000
+[2025-10-06 10:26:32] Atualização bem-sucedida para item ID 3214
+[2025-10-06 10:26:32] atualizar_pedido.php - Dados brutos recebidos: {"id":571,"status":"Pedido Separado","quantidade_caixas":8}
+[2025-10-06 10:26:32] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 571
+    [status] => Pedido Separado
+    [quantidade_caixas] => 8
+)
+
+[2025-10-06 10:26:32] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 571: 0
+[2025-10-06 10:26:32] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 571, Novo Status: Pedido Separado
+[2025-10-06 10:26:32] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 10:26:32] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 10:26:32] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 13:36:35] atualizar_pedido.php - Dados brutos recebidos: {"id":576,"status":"Em Separação"}
+[2025-10-06 13:36:35] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 576
+    [status] => Em Separação
+)
+
+[2025-10-06 13:36:35] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 576: 0
+[2025-10-06 13:36:35] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 576, Novo Status: Em Separação
+[2025-10-06 13:36:35] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 13:36:35] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 13:36:35] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 13:36:36] atualizar_pedido.php - Dados brutos recebidos: {"id":576,"status":"Em Separação"}
+[2025-10-06 13:36:36] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 576
+    [status] => Em Separação
+)
+
+[2025-10-06 13:36:36] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 576: 0
+[2025-10-06 13:36:36] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 576, Novo Status: Em Separação
+[2025-10-06 13:36:36] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 13:36:36] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 13:36:36] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 13:55:24] Valor recebido para quantidade_separada: 12.7
+[2025-10-06 13:55:24] Valor convertido para float: 12.7
+[2025-10-06 13:55:24] Valor formatado: 12.700
+[2025-10-06 13:55:24] Atualização bem-sucedida para item ID 3233
+[2025-10-06 13:55:25] Valor recebido para quantidade_separada: 13
+[2025-10-06 13:55:25] Valor convertido para float: 13
+[2025-10-06 13:55:25] Valor formatado: 13.000
+[2025-10-06 13:55:25] Atualização bem-sucedida para item ID 3234
+[2025-10-06 13:55:26] Valor recebido para quantidade_separada: 13
+[2025-10-06 13:55:26] Valor convertido para float: 13
+[2025-10-06 13:55:26] Valor formatado: 13.000
+[2025-10-06 13:55:26] Atualização bem-sucedida para item ID 3235
+[2025-10-06 13:55:26] Valor recebido para quantidade_separada: 13
+[2025-10-06 13:55:26] Valor convertido para float: 13
+[2025-10-06 13:55:26] Valor formatado: 13.000
+[2025-10-06 13:55:26] Atualização bem-sucedida para item ID 3236
+[2025-10-06 13:55:27] Valor recebido para quantidade_separada: 25
+[2025-10-06 13:55:27] Valor convertido para float: 25
+[2025-10-06 13:55:27] Valor formatado: 25.000
+[2025-10-06 13:55:27] Atualização bem-sucedida para item ID 3237
+[2025-10-06 13:55:28] Valor recebido para quantidade_separada: 13
+[2025-10-06 13:55:28] Valor convertido para float: 13
+[2025-10-06 13:55:28] Valor formatado: 13.000
+[2025-10-06 13:55:28] Atualização bem-sucedida para item ID 3238
+[2025-10-06 13:55:29] atualizar_pedido.php - Dados brutos recebidos: {"id":576,"status":"Pedido Separado","quantidade_caixas":4}
+[2025-10-06 13:55:29] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 576
+    [status] => Pedido Separado
+    [quantidade_caixas] => 4
+)
+
+[2025-10-06 13:55:29] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 576: 2204.03
+[2025-10-06 13:55:29] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 576, Novo Status: Pedido Separado
+[2025-10-06 13:55:29] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 13:55:29] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 13:55:29] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 13:55:41] atualizar_pedido.php - Dados brutos recebidos: {"id":577,"status":"Em Separação"}
+[2025-10-06 13:55:41] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 577
+    [status] => Em Separação
+)
+
+[2025-10-06 13:55:41] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 577: 0
+[2025-10-06 13:55:41] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 577, Novo Status: Em Separação
+[2025-10-06 13:55:41] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 13:55:41] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 13:55:41] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 14:17:52] Valor recebido para quantidade_separada: 40
+[2025-10-06 14:17:52] Valor convertido para float: 40
+[2025-10-06 14:17:52] Valor formatado: 40.000
+[2025-10-06 14:17:52] Atualização bem-sucedida para item ID 3239
+[2025-10-06 14:17:52] Valor recebido para quantidade_separada: 20
+[2025-10-06 14:17:52] Valor convertido para float: 20
+[2025-10-06 14:17:52] Valor formatado: 20.000
+[2025-10-06 14:17:52] Atualização bem-sucedida para item ID 3240
+[2025-10-06 14:17:53] Valor recebido para quantidade_separada: 60
+[2025-10-06 14:17:53] Valor convertido para float: 60
+[2025-10-06 14:17:53] Valor formatado: 60.000
+[2025-10-06 14:17:53] Atualização bem-sucedida para item ID 3241
+[2025-10-06 14:17:53] atualizar_pedido.php - Dados brutos recebidos: {"id":577,"status":"Pedido Separado","quantidade_caixas":5}
+[2025-10-06 14:17:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 577
+    [status] => Pedido Separado
+    [quantidade_caixas] => 5
+)
+
+[2025-10-06 14:17:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 577: 1972
+[2025-10-06 14:17:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 577, Novo Status: Pedido Separado
+[2025-10-06 14:17:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 14:17:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 14:17:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 14:55:44] atualizar_pedido.php - Dados brutos recebidos: {"id":578,"status":"Em Separação"}
+[2025-10-06 14:55:44] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 578
+    [status] => Em Separação
+)
+
+[2025-10-06 14:55:44] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 578: 0
+[2025-10-06 14:55:44] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 578, Novo Status: Em Separação
+[2025-10-06 14:55:44] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 14:55:44] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 14:55:44] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-06 15:27:43] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:43] Valor convertido para float: 10
+[2025-10-06 15:27:43] Valor formatado: 10.000
+[2025-10-06 15:27:43] Atualização bem-sucedida para item ID 3242
+[2025-10-06 15:27:44] Valor recebido para quantidade_separada: 8.2
+[2025-10-06 15:27:44] Valor convertido para float: 8.2
+[2025-10-06 15:27:44] Valor formatado: 8.200
+[2025-10-06 15:27:44] Atualização bem-sucedida para item ID 3243
+[2025-10-06 15:27:44] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:44] Valor convertido para float: 10
+[2025-10-06 15:27:44] Valor formatado: 10.000
+[2025-10-06 15:27:44] Atualização bem-sucedida para item ID 3244
+[2025-10-06 15:27:45] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:45] Valor convertido para float: 10
+[2025-10-06 15:27:45] Valor formatado: 10.000
+[2025-10-06 15:27:45] Atualização bem-sucedida para item ID 3245
+[2025-10-06 15:27:46] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:46] Valor convertido para float: 10
+[2025-10-06 15:27:46] Valor formatado: 10.000
+[2025-10-06 15:27:46] Atualização bem-sucedida para item ID 3246
+[2025-10-06 15:27:46] Valor recebido para quantidade_separada: 20
+[2025-10-06 15:27:46] Valor convertido para float: 20
+[2025-10-06 15:27:46] Valor formatado: 20.000
+[2025-10-06 15:27:46] Atualização bem-sucedida para item ID 3247
+[2025-10-06 15:27:47] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:47] Valor convertido para float: 10
+[2025-10-06 15:27:47] Valor formatado: 10.000
+[2025-10-06 15:27:47] Atualização bem-sucedida para item ID 3248
+[2025-10-06 15:27:48] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:48] Valor convertido para float: 10
+[2025-10-06 15:27:48] Valor formatado: 10.000
+[2025-10-06 15:27:48] Atualização bem-sucedida para item ID 3249
+[2025-10-06 15:27:48] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:48] Valor convertido para float: 10
+[2025-10-06 15:27:48] Valor formatado: 10.000
+[2025-10-06 15:27:48] Atualização bem-sucedida para item ID 3250
+[2025-10-06 15:27:49] Valor recebido para quantidade_separada: 10
+[2025-10-06 15:27:49] Valor convertido para float: 10
+[2025-10-06 15:27:49] Valor formatado: 10.000
+[2025-10-06 15:27:49] Atualização bem-sucedida para item ID 3251
+[2025-10-06 15:27:50] atualizar_pedido.php - Dados brutos recebidos: {"id":578,"status":"Pedido Separado","quantidade_caixas":6}
+[2025-10-06 15:27:50] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 578
+    [status] => Pedido Separado
+    [quantidade_caixas] => 6
+)
+
+[2025-10-06 15:27:50] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 578: 2047.68
+[2025-10-06 15:27:50] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 578, Novo Status: Pedido Separado
+[2025-10-06 15:27:50] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-06 15:27:50] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-06 15:27:50] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-07 09:36:51] atualizar_pedido.php - Dados brutos recebidos: {"id":579,"status":"Em Separação"}
+[2025-10-07 09:36:51] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 579
+    [status] => Em Separação
+)
+
+[2025-10-07 09:36:51] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 579: 0
+[2025-10-07 09:36:51] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 579, Novo Status: Em Separação
+[2025-10-07 09:36:51] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-07 09:36:51] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-07 09:36:51] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-07 10:19:00] Valor recebido para quantidade_separada: 100
+[2025-10-07 10:19:00] Valor convertido para float: 100
+[2025-10-07 10:19:00] Valor formatado: 100.000
+[2025-10-07 10:19:00] Atualização bem-sucedida para item ID 3252
+[2025-10-07 10:19:01] Valor recebido para quantidade_separada: 100
+[2025-10-07 10:19:01] Valor convertido para float: 100
+[2025-10-07 10:19:01] Valor formatado: 100.000
+[2025-10-07 10:19:02] Atualização bem-sucedida para item ID 3253
+[2025-10-07 10:19:03] Valor recebido para quantidade_separada: 25
+[2025-10-07 10:19:03] Valor convertido para float: 25
+[2025-10-07 10:19:03] Valor formatado: 25.000
+[2025-10-07 10:19:03] Atualização bem-sucedida para item ID 3254
+[2025-10-07 10:19:04] Valor recebido para quantidade_separada: 25
+[2025-10-07 10:19:04] Valor convertido para float: 25
+[2025-10-07 10:19:04] Valor formatado: 25.000
+[2025-10-07 10:19:04] Atualização bem-sucedida para item ID 3255
+[2025-10-07 10:19:05] Valor recebido para quantidade_separada: 25
+[2025-10-07 10:19:05] Valor convertido para float: 25
+[2025-10-07 10:19:05] Valor formatado: 25.000
+[2025-10-07 10:19:05] Atualização bem-sucedida para item ID 3256
+[2025-10-07 10:19:06] atualizar_pedido.php - Dados brutos recebidos: {"id":579,"status":"Pedido Separado","quantidade_caixas":11}
+[2025-10-07 10:19:06] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 579
+    [status] => Pedido Separado
+    [quantidade_caixas] => 11
+)
+
+[2025-10-07 10:19:06] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 579: 4882.5
+[2025-10-07 10:19:06] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 579, Novo Status: Pedido Separado
+[2025-10-07 10:19:06] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-07 10:19:06] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-07 10:19:06] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-07 15:23:33] atualizar_pedido.php - Dados brutos recebidos: {"id":580,"status":"Em Separação"}
+[2025-10-07 15:23:33] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 580
+    [status] => Em Separação
+)
+
+[2025-10-07 15:23:33] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 580: 0
+[2025-10-07 15:23:33] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 580, Novo Status: Em Separação
+[2025-10-07 15:23:33] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-07 15:23:33] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-07 15:23:33] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-07 15:42:33] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:33] Valor convertido para float: 10
+[2025-10-07 15:42:33] Valor formatado: 10.000
+[2025-10-07 15:42:33] Atualização bem-sucedida para item ID 3264
+[2025-10-07 15:42:34] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:34] Valor convertido para float: 10
+[2025-10-07 15:42:34] Valor formatado: 10.000
+[2025-10-07 15:42:34] Atualização bem-sucedida para item ID 3265
+[2025-10-07 15:42:34] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:34] Valor convertido para float: 10
+[2025-10-07 15:42:34] Valor formatado: 10.000
+[2025-10-07 15:42:34] Atualização bem-sucedida para item ID 3266
+[2025-10-07 15:42:35] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:35] Valor convertido para float: 10
+[2025-10-07 15:42:35] Valor formatado: 10.000
+[2025-10-07 15:42:35] Atualização bem-sucedida para item ID 3267
+[2025-10-07 15:42:36] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:36] Valor convertido para float: 10
+[2025-10-07 15:42:36] Valor formatado: 10.000
+[2025-10-07 15:42:36] Atualização bem-sucedida para item ID 3268
+[2025-10-07 15:42:36] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:36] Valor convertido para float: 10
+[2025-10-07 15:42:36] Valor formatado: 10.000
+[2025-10-07 15:42:36] Atualização bem-sucedida para item ID 3269
+[2025-10-07 15:42:37] Valor recebido para quantidade_separada: 5.05
+[2025-10-07 15:42:37] Valor convertido para float: 5.05
+[2025-10-07 15:42:37] Valor formatado: 5.050
+[2025-10-07 15:42:37] Atualização bem-sucedida para item ID 3270
+[2025-10-07 15:42:38] Valor recebido para quantidade_separada: 10
+[2025-10-07 15:42:38] Valor convertido para float: 10
+[2025-10-07 15:42:38] Valor formatado: 10.000
+[2025-10-07 15:42:38] Atualização bem-sucedida para item ID 3271
+[2025-10-07 15:42:38] Valor recebido para quantidade_separada: 5
+[2025-10-07 15:42:38] Valor convertido para float: 5
+[2025-10-07 15:42:38] Valor formatado: 5.000
+[2025-10-07 15:42:38] Atualização bem-sucedida para item ID 3272
+[2025-10-07 15:42:39] atualizar_pedido.php - Dados brutos recebidos: {"id":580,"status":"Pedido Separado","quantidade_caixas":3}
+[2025-10-07 15:42:39] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 580
+    [status] => Pedido Separado
+    [quantidade_caixas] => 3
+)
+
+[2025-10-07 15:42:39] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 580: 1485.095
+[2025-10-07 15:42:39] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 580, Novo Status: Pedido Separado
+[2025-10-07 15:42:39] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-07 15:42:39] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-07 15:42:39] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 08:09:35] atualizar_pedido.php - Dados brutos recebidos: {"id":477,"status":"Concluído","observacoes":"","quantidade_caixas":3}
+[2025-10-08 08:09:35] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 477
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 3
+)
+
+[2025-10-08 08:09:35] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 477: 1355.2
+[2025-10-08 08:09:35] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 477, Novo Status: Concluído
+[2025-10-08 08:09:35] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 08:09:35] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 08:09:35] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 08:09:50] atualizar_pedido.php - Dados brutos recebidos: {"id":578,"status":"Concluído","observacoes":"","quantidade_caixas":6}
+[2025-10-08 08:09:50] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 578
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 6
+)
+
+[2025-10-08 08:09:50] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 578: 2047.68
+[2025-10-08 08:09:50] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 578, Novo Status: Concluído
+[2025-10-08 08:09:50] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 08:09:50] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 08:09:50] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 08:34:25] atualizar_pedido.php - Dados brutos recebidos: {"id":581,"status":"Em Separação"}
+[2025-10-08 08:34:25] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 581
+    [status] => Em Separação
+)
+
+[2025-10-08 08:34:25] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 581: 0
+[2025-10-08 08:34:25] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 581, Novo Status: Em Separação
+[2025-10-08 08:34:25] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 08:34:25] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 08:34:25] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 08:34:28] atualizar_pedido.php - Dados brutos recebidos: {"id":581,"status":"Em Separação"}
+[2025-10-08 08:34:28] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 581
+    [status] => Em Separação
+)
+
+[2025-10-08 08:34:28] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 581: 0
+[2025-10-08 08:34:28] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 581, Novo Status: Em Separação
+[2025-10-08 08:34:28] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 08:34:28] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 08:34:28] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 10:12:32] Valor recebido para quantidade_separada: 25
+[2025-10-08 10:12:32] Valor convertido para float: 25
+[2025-10-08 10:12:32] Valor formatado: 25.000
+[2025-10-08 10:12:32] Atualização bem-sucedida para item ID 3273
+[2025-10-08 10:12:33] Valor recebido para quantidade_separada: 25
+[2025-10-08 10:12:33] Valor convertido para float: 25
+[2025-10-08 10:12:33] Valor formatado: 25.000
+[2025-10-08 10:12:33] Atualização bem-sucedida para item ID 3274
+[2025-10-08 10:12:34] Valor recebido para quantidade_separada: 50
+[2025-10-08 10:12:34] Valor convertido para float: 50
+[2025-10-08 10:12:34] Valor formatado: 50.000
+[2025-10-08 10:12:34] Atualização bem-sucedida para item ID 3275
+[2025-10-08 10:12:35] Valor recebido para quantidade_separada: 75
+[2025-10-08 10:12:35] Valor convertido para float: 75
+[2025-10-08 10:12:35] Valor formatado: 75.000
+[2025-10-08 10:12:35] Atualização bem-sucedida para item ID 3276
+[2025-10-08 10:12:35] Valor recebido para quantidade_separada: 50
+[2025-10-08 10:12:35] Valor convertido para float: 50
+[2025-10-08 10:12:35] Valor formatado: 50.000
+[2025-10-08 10:12:35] Atualização bem-sucedida para item ID 3277
+[2025-10-08 10:12:36] Valor recebido para quantidade_separada: 50
+[2025-10-08 10:12:36] Valor convertido para float: 50
+[2025-10-08 10:12:36] Valor formatado: 50.000
+[2025-10-08 10:12:36] Atualização bem-sucedida para item ID 3278
+[2025-10-08 10:12:37] Valor recebido para quantidade_separada: 200
+[2025-10-08 10:12:37] Valor convertido para float: 200
+[2025-10-08 10:12:37] Valor formatado: 200.000
+[2025-10-08 10:12:37] Atualização bem-sucedida para item ID 3279
+[2025-10-08 10:12:38] Valor recebido para quantidade_separada: 75
+[2025-10-08 10:12:38] Valor convertido para float: 75
+[2025-10-08 10:12:38] Valor formatado: 75.000
+[2025-10-08 10:12:38] Atualização bem-sucedida para item ID 3280
+[2025-10-08 10:12:39] Valor recebido para quantidade_separada: 75
+[2025-10-08 10:12:39] Valor convertido para float: 75
+[2025-10-08 10:12:39] Valor formatado: 75.000
+[2025-10-08 10:12:39] Atualização bem-sucedida para item ID 3281
+[2025-10-08 10:12:39] atualizar_pedido.php - Dados brutos recebidos: {"id":581,"status":"Pedido Separado","quantidade_caixas":26}
+[2025-10-08 10:12:39] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 581
+    [status] => Pedido Separado
+    [quantidade_caixas] => 26
+)
+
+[2025-10-08 10:12:40] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 581: 11490
+[2025-10-08 10:12:40] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 581, Novo Status: Pedido Separado
+[2025-10-08 10:12:40] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 10:12:40] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 10:12:40] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 10:13:03] atualizar_pedido.php - Dados brutos recebidos: {"id":582,"status":"Em Separação"}
+[2025-10-08 10:13:03] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 582
+    [status] => Em Separação
+)
+
+[2025-10-08 10:13:03] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 582: 0
+[2025-10-08 10:13:03] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 582, Novo Status: Em Separação
+[2025-10-08 10:13:03] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 10:13:03] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 10:13:03] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 10:45:28] Valor recebido para quantidade_separada: 25
+[2025-10-08 10:45:28] Valor convertido para float: 25
+[2025-10-08 10:45:28] Valor formatado: 25.000
+[2025-10-08 10:45:28] Atualização bem-sucedida para item ID 3282
+[2025-10-08 10:45:29] Valor recebido para quantidade_separada: 15
+[2025-10-08 10:45:29] Valor convertido para float: 15
+[2025-10-08 10:45:29] Valor formatado: 15.000
+[2025-10-08 10:45:29] Atualização bem-sucedida para item ID 3283
+[2025-10-08 10:45:30] Valor recebido para quantidade_separada: 12.45
+[2025-10-08 10:45:30] Valor convertido para float: 12.45
+[2025-10-08 10:45:30] Valor formatado: 12.450
+[2025-10-08 10:45:30] Atualização bem-sucedida para item ID 3284
+[2025-10-08 10:45:31] Valor recebido para quantidade_separada: 10
+[2025-10-08 10:45:31] Valor convertido para float: 10
+[2025-10-08 10:45:31] Valor formatado: 10.000
+[2025-10-08 10:45:31] Atualização bem-sucedida para item ID 3285
+[2025-10-08 10:45:32] Valor recebido para quantidade_separada: 6
+[2025-10-08 10:45:32] Valor convertido para float: 6
+[2025-10-08 10:45:32] Valor formatado: 6.000
+[2025-10-08 10:45:32] Atualização bem-sucedida para item ID 3286
+[2025-10-08 10:45:34] atualizar_pedido.php - Dados brutos recebidos: {"id":582,"status":"Pedido Separado","quantidade_caixas":3}
+[2025-10-08 10:45:34] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 582
+    [status] => Pedido Separado
+    [quantidade_caixas] => 3
+)
+
+[2025-10-08 10:45:34] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 582: 1501.4
+[2025-10-08 10:45:34] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 582, Novo Status: Pedido Separado
+[2025-10-08 10:45:34] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 10:45:34] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 10:45:34] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 10:46:14] atualizar_pedido.php - Dados brutos recebidos: {"id":584,"status":"Em Separação"}
+[2025-10-08 10:46:14] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 584
+    [status] => Em Separação
+)
+
+[2025-10-08 10:46:14] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 584: 0
+[2025-10-08 10:46:14] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 584, Novo Status: Em Separação
+[2025-10-08 10:46:14] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 10:46:14] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 10:46:14] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 11:24:00] Valor recebido para quantidade_separada: 25
+[2025-10-08 11:24:00] Valor convertido para float: 25
+[2025-10-08 11:24:00] Valor formatado: 25.000
+[2025-10-08 11:24:00] Atualização bem-sucedida para item ID 3293
+[2025-10-08 11:24:00] Valor recebido para quantidade_separada: 15
+[2025-10-08 11:24:00] Valor convertido para float: 15
+[2025-10-08 11:24:00] Valor formatado: 15.000
+[2025-10-08 11:24:00] Atualização bem-sucedida para item ID 3294
+[2025-10-08 11:24:01] Valor recebido para quantidade_separada: 9.3
+[2025-10-08 11:24:01] Valor convertido para float: 9.3
+[2025-10-08 11:24:01] Valor formatado: 9.300
+[2025-10-08 11:24:01] Atualização bem-sucedida para item ID 3295
+[2025-10-08 11:24:03] Valor recebido para quantidade_separada: 6
+[2025-10-08 11:24:03] Valor convertido para float: 6
+[2025-10-08 11:24:03] Valor formatado: 6.000
+[2025-10-08 11:24:03] Atualização bem-sucedida para item ID 3296
+[2025-10-08 11:24:04] Valor recebido para quantidade_separada: 10
+[2025-10-08 11:24:04] Valor convertido para float: 10
+[2025-10-08 11:24:04] Valor formatado: 10.000
+[2025-10-08 11:24:04] Atualização bem-sucedida para item ID 3297
+[2025-10-08 11:24:06] Valor recebido para quantidade_separada: 6
+[2025-10-08 11:24:06] Valor convertido para float: 6
+[2025-10-08 11:24:06] Valor formatado: 6.000
+[2025-10-08 11:24:06] Atualização bem-sucedida para item ID 3298
+[2025-10-08 11:24:07] Valor recebido para quantidade_separada: 6
+[2025-10-08 11:24:07] Valor convertido para float: 6
+[2025-10-08 11:24:07] Valor formatado: 6.000
+[2025-10-08 11:24:07] Atualização bem-sucedida para item ID 3299
+[2025-10-08 11:24:08] Valor recebido para quantidade_separada: 6
+[2025-10-08 11:24:08] Valor convertido para float: 6
+[2025-10-08 11:24:08] Valor formatado: 6.000
+[2025-10-08 11:24:08] Atualização bem-sucedida para item ID 3300
+[2025-10-08 11:24:10] Valor recebido para quantidade_separada: 6
+[2025-10-08 11:24:10] Valor convertido para float: 6
+[2025-10-08 11:24:10] Valor formatado: 6.000
+[2025-10-08 11:24:10] Atualização bem-sucedida para item ID 3301
+[2025-10-08 11:24:13] atualizar_pedido.php - Dados brutos recebidos: {"id":584,"status":"Pedido Separado","quantidade_caixas":4}
+[2025-10-08 11:24:13] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 584
+    [status] => Pedido Separado
+    [quantidade_caixas] => 4
+)
+
+[2025-10-08 11:24:13] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 584: 1955.33
+[2025-10-08 11:24:13] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 584, Novo Status: Pedido Separado
+[2025-10-08 11:24:13] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 11:24:13] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 11:24:13] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 13:24:29] atualizar_pedido.php - Dados brutos recebidos: {"id":583,"status":"Em Separação"}
+[2025-10-08 13:24:29] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 583
+    [status] => Em Separação
+)
+
+[2025-10-08 13:24:29] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 583: 0
+[2025-10-08 13:24:29] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 583, Novo Status: Em Separação
+[2025-10-08 13:24:29] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 13:24:29] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 13:24:29] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 13:42:59] Valor recebido para quantidade_separada: 10
+[2025-10-08 13:42:59] Valor convertido para float: 10
+[2025-10-08 13:42:59] Valor formatado: 10.000
+[2025-10-08 13:42:59] Atualização bem-sucedida para item ID 3287
+[2025-10-08 13:43:00] Valor recebido para quantidade_separada: 15
+[2025-10-08 13:43:00] Valor convertido para float: 15
+[2025-10-08 13:43:00] Valor formatado: 15.000
+[2025-10-08 13:43:00] Atualização bem-sucedida para item ID 3288
+[2025-10-08 13:43:01] Valor recebido para quantidade_separada: 15
+[2025-10-08 13:43:01] Valor convertido para float: 15
+[2025-10-08 13:43:01] Valor formatado: 15.000
+[2025-10-08 13:43:01] Atualização bem-sucedida para item ID 3289
+[2025-10-08 13:43:02] Valor recebido para quantidade_separada: 25
+[2025-10-08 13:43:02] Valor convertido para float: 25
+[2025-10-08 13:43:02] Valor formatado: 25.000
+[2025-10-08 13:43:02] Atualização bem-sucedida para item ID 3290
+[2025-10-08 13:43:02] Valor recebido para quantidade_separada: 30
+[2025-10-08 13:43:02] Valor convertido para float: 30
+[2025-10-08 13:43:02] Valor formatado: 30.000
+[2025-10-08 13:43:02] Atualização bem-sucedida para item ID 3291
+[2025-10-08 13:43:03] Valor recebido para quantidade_separada: 10
+[2025-10-08 13:43:03] Valor convertido para float: 10
+[2025-10-08 13:43:03] Valor formatado: 10.000
+[2025-10-08 13:43:03] Atualização bem-sucedida para item ID 3292
+[2025-10-08 13:43:03] atualizar_pedido.php - Dados brutos recebidos: {"id":583,"status":"Pedido Separado","quantidade_caixas":6}
+[2025-10-08 13:43:03] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 583
+    [status] => Pedido Separado
+    [quantidade_caixas] => 6
+)
+
+[2025-10-08 13:43:03] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 583: 1592.15
+[2025-10-08 13:43:03] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 583, Novo Status: Pedido Separado
+[2025-10-08 13:43:03] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 13:43:03] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 13:43:03] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 15:39:57] atualizar_pedido.php - Dados brutos recebidos: {"id":576,"status":"Concluído","observacoes":"","quantidade_caixas":4}
+[2025-10-08 15:39:57] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 576
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 4
+)
+
+[2025-10-08 15:39:57] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 576: 2204.03
+[2025-10-08 15:39:57] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 576, Novo Status: Concluído
+[2025-10-08 15:39:57] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 15:39:57] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 15:39:57] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 15:40:04] atualizar_pedido.php - Dados brutos recebidos: {"id":493,"status":"Concluído","observacoes":"","quantidade_caixas":6}
+[2025-10-08 15:40:04] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 493
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 6
+)
+
+[2025-10-08 15:40:04] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 493: 3709.655
+[2025-10-08 15:40:04] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 493, Novo Status: Concluído
+[2025-10-08 15:40:04] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 15:40:04] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 15:40:04] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-08 15:40:10] atualizar_pedido.php - Dados brutos recebidos: {"id":492,"status":"Concluído","observacoes":"","quantidade_caixas":17}
+[2025-10-08 15:40:10] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 492
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 17
+)
+
+[2025-10-08 15:40:10] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 492: 8186.5
+[2025-10-08 15:40:10] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 492, Novo Status: Concluído
+[2025-10-08 15:40:10] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-08 15:40:10] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-08 15:40:10] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-09 09:27:13] atualizar_pedido.php - Dados brutos recebidos: {"id":588,"status":"Em Separação"}
+[2025-10-09 09:27:13] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 588
+    [status] => Em Separação
+)
+
+[2025-10-09 09:27:13] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 588: 0
+[2025-10-09 09:27:13] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 588, Novo Status: Em Separação
+[2025-10-09 09:27:13] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-09 09:27:13] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-09 09:27:13] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-09 09:27:38] Valor recebido para quantidade_separada: 8.5
+[2025-10-09 09:27:38] Valor convertido para float: 8.5
+[2025-10-09 09:27:38] Valor formatado: 8.500
+[2025-10-09 09:27:38] Atualização bem-sucedida para item ID 3328
+[2025-10-09 09:27:38] Valor recebido para quantidade_separada: 15
+[2025-10-09 09:27:38] Valor convertido para float: 15
+[2025-10-09 09:27:38] Valor formatado: 15.000
+[2025-10-09 09:27:38] Atualização bem-sucedida para item ID 3329
+[2025-10-09 09:27:39] Valor recebido para quantidade_separada: 10
+[2025-10-09 09:27:39] Valor convertido para float: 10
+[2025-10-09 09:27:39] Valor formatado: 10.000
+[2025-10-09 09:27:39] Atualização bem-sucedida para item ID 3330
+[2025-10-09 09:27:40] Valor recebido para quantidade_separada: 5
+[2025-10-09 09:27:40] Valor convertido para float: 5
+[2025-10-09 09:27:40] Valor formatado: 5.000
+[2025-10-09 09:27:40] Atualização bem-sucedida para item ID 3331
+[2025-10-09 09:27:41] Valor recebido para quantidade_separada: 10
+[2025-10-09 09:27:41] Valor convertido para float: 10
+[2025-10-09 09:27:41] Valor formatado: 10.000
+[2025-10-09 09:27:41] Atualização bem-sucedida para item ID 3332
+[2025-10-09 09:27:41] Valor recebido para quantidade_separada: 5
+[2025-10-09 09:27:41] Valor convertido para float: 5
+[2025-10-09 09:27:41] Valor formatado: 5.000
+[2025-10-09 09:27:41] Atualização bem-sucedida para item ID 3333
+[2025-10-09 09:27:42] atualizar_pedido.php - Dados brutos recebidos: {"id":588,"status":"Pedido Separado","quantidade_caixas":3}
+[2025-10-09 09:27:42] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 588
+    [status] => Pedido Separado
+    [quantidade_caixas] => 3
+)
+
+[2025-10-09 09:27:42] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 588: 1205.65
+[2025-10-09 09:27:42] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 588, Novo Status: Pedido Separado
+[2025-10-09 09:27:42] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-09 09:27:42] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-09 09:27:42] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-09 12:30:46] atualizar_pedido.php - Dados brutos recebidos: {"id":581,"status":"Concluído","observacoes":"","quantidade_caixas":26}
+[2025-10-09 12:30:46] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 581
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 26
+)
+
+[2025-10-09 12:30:46] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 581: 10832
+[2025-10-09 12:30:46] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 581, Novo Status: Concluído
+[2025-10-09 12:30:46] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-09 12:30:46] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-09 12:30:46] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-09 15:32:25] atualizar_pedido.php - Dados brutos recebidos: {"id":580,"status":"Concluído","observacoes":"","quantidade_caixas":3}
+[2025-10-09 15:32:25] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 580
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 3
+)
+
+[2025-10-09 15:32:25] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 580: 1485.095
+[2025-10-09 15:32:25] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 580, Novo Status: Concluído
+[2025-10-09 15:32:25] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-09 15:32:25] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-09 15:32:25] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-10 15:08:44] atualizar_pedido.php - Dados brutos recebidos: {"id":598,"status":"Concluído","observacoes":"","quantidade_caixas":0}
+[2025-10-10 15:08:44] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 598
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 0
+)
+
+[2025-10-10 15:08:44] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 598: 1605
+[2025-10-10 15:08:44] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 598, Novo Status: Concluído
+[2025-10-10 15:08:45] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-10 15:08:45] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-10 15:08:45] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 10:21:58] atualizar_pedido.php - Dados brutos recebidos: {"id":599,"status":"Em Separação"}
+[2025-10-14 10:21:58] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 599
+    [status] => Em Separação
+)
+
+[2025-10-14 10:21:58] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 599: 0
+[2025-10-14 10:21:58] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 599, Novo Status: Em Separação
+[2025-10-14 10:21:58] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 10:21:58] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 10:21:58] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 10:35:12] Valor recebido para quantidade_separada: 21.7
+[2025-10-14 10:35:12] Valor convertido para float: 21.7
+[2025-10-14 10:35:12] Valor formatado: 21.700
+[2025-10-14 10:35:12] Atualização bem-sucedida para item ID 3403
+[2025-10-14 10:35:13] Valor recebido para quantidade_separada: 25
+[2025-10-14 10:35:13] Valor convertido para float: 25
+[2025-10-14 10:35:13] Valor formatado: 25.000
+[2025-10-14 10:35:13] Atualização bem-sucedida para item ID 3404
+[2025-10-14 10:35:15] Valor recebido para quantidade_separada: 25
+[2025-10-14 10:35:15] Valor convertido para float: 25
+[2025-10-14 10:35:15] Valor formatado: 25.000
+[2025-10-14 10:35:15] Atualização bem-sucedida para item ID 3405
+[2025-10-14 10:35:16] Valor recebido para quantidade_separada: 50
+[2025-10-14 10:35:16] Valor convertido para float: 50
+[2025-10-14 10:35:16] Valor formatado: 50.000
+[2025-10-14 10:35:16] Atualização bem-sucedida para item ID 3406
+[2025-10-14 10:35:17] atualizar_pedido.php - Dados brutos recebidos: {"id":599,"status":"Pedido Separado","quantidade_caixas":5}
+[2025-10-14 10:35:17] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 599
+    [status] => Pedido Separado
+    [quantidade_caixas] => 5
+)
+
+[2025-10-14 10:35:17] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 599: 2764.83
+[2025-10-14 10:35:17] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 599, Novo Status: Pedido Separado
+[2025-10-14 10:35:17] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 10:35:17] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 10:35:17] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:26:38] atualizar_pedido.php - Dados brutos recebidos: {"id":600,"status":"Em Separação"}
+[2025-10-14 15:26:38] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 600
+    [status] => Em Separação
+)
+
+[2025-10-14 15:26:38] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 600: 0
+[2025-10-14 15:26:38] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 600, Novo Status: Em Separação
+[2025-10-14 15:26:39] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:26:39] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:26:39] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:26:39] atualizar_pedido.php - Dados brutos recebidos: {"id":600,"status":"Em Separação"}
+[2025-10-14 15:26:39] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 600
+    [status] => Em Separação
+)
+
+[2025-10-14 15:26:39] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 600: 0
+[2025-10-14 15:26:39] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 600, Novo Status: Em Separação
+[2025-10-14 15:26:39] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:26:39] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:26:39] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:26:44] atualizar_pedido.php - Dados brutos recebidos: {"id":601,"status":"Em Separação"}
+[2025-10-14 15:26:44] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 601
+    [status] => Em Separação
+)
+
+[2025-10-14 15:26:44] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 601: 0
+[2025-10-14 15:26:44] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 601, Novo Status: Em Separação
+[2025-10-14 15:26:44] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:26:44] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:26:44] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:26:45] atualizar_pedido.php - Dados brutos recebidos: {"id":601,"status":"Em Separação"}
+[2025-10-14 15:26:45] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 601
+    [status] => Em Separação
+)
+
+[2025-10-14 15:26:45] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 601: 0
+[2025-10-14 15:26:45] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 601, Novo Status: Em Separação
+[2025-10-14 15:26:46] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:26:46] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:26:46] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:27:20] Valor recebido para quantidade_separada: 8.5
+[2025-10-14 15:27:20] Valor convertido para float: 8.5
+[2025-10-14 15:27:20] Valor formatado: 8.500
+[2025-10-14 15:27:20] Atualização bem-sucedida para item ID 3407
+[2025-10-14 15:27:21] Valor recebido para quantidade_separada: 30
+[2025-10-14 15:27:21] Valor convertido para float: 30
+[2025-10-14 15:27:21] Valor formatado: 30.000
+[2025-10-14 15:27:21] Atualização bem-sucedida para item ID 3408
+[2025-10-14 15:27:21] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:21] Valor convertido para float: 10
+[2025-10-14 15:27:21] Valor formatado: 10.000
+[2025-10-14 15:27:21] Atualização bem-sucedida para item ID 3409
+[2025-10-14 15:27:22] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:22] Valor convertido para float: 10
+[2025-10-14 15:27:22] Valor formatado: 10.000
+[2025-10-14 15:27:22] Atualização bem-sucedida para item ID 3410
+[2025-10-14 15:27:23] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:23] Valor convertido para float: 10
+[2025-10-14 15:27:23] Valor formatado: 10.000
+[2025-10-14 15:27:23] Atualização bem-sucedida para item ID 3411
+[2025-10-14 15:27:24] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:24] Valor convertido para float: 10
+[2025-10-14 15:27:24] Valor formatado: 10.000
+[2025-10-14 15:27:24] Atualização bem-sucedida para item ID 3412
+[2025-10-14 15:27:24] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:24] Valor convertido para float: 10
+[2025-10-14 15:27:24] Valor formatado: 10.000
+[2025-10-14 15:27:24] Atualização bem-sucedida para item ID 3413
+[2025-10-14 15:27:25] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:25] Valor convertido para float: 10
+[2025-10-14 15:27:25] Valor formatado: 10.000
+[2025-10-14 15:27:25] Atualização bem-sucedida para item ID 3414
+[2025-10-14 15:27:26] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:26] Valor convertido para float: 10
+[2025-10-14 15:27:26] Valor formatado: 10.000
+[2025-10-14 15:27:26] Atualização bem-sucedida para item ID 3415
+[2025-10-14 15:27:27] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:27] Valor convertido para float: 10
+[2025-10-14 15:27:27] Valor formatado: 10.000
+[2025-10-14 15:27:27] Atualização bem-sucedida para item ID 3416
+[2025-10-14 15:27:27] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:27] Valor convertido para float: 10
+[2025-10-14 15:27:27] Valor formatado: 10.000
+[2025-10-14 15:27:27] Atualização bem-sucedida para item ID 3417
+[2025-10-14 15:27:29] Valor recebido para quantidade_separada: 10
+[2025-10-14 15:27:29] Valor convertido para float: 10
+[2025-10-14 15:27:29] Valor formatado: 10.000
+[2025-10-14 15:27:29] Atualização bem-sucedida para item ID 3418
+[2025-10-14 15:27:30] atualizar_pedido.php - Dados brutos recebidos: {"id":600,"status":"Pedido Separado","quantidade_caixas":8}
+[2025-10-14 15:27:30] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 600
+    [status] => Pedido Separado
+    [quantidade_caixas] => 8
+)
+
+[2025-10-14 15:27:30] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 600: 2699.65
+[2025-10-14 15:27:30] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 600, Novo Status: Pedido Separado
+[2025-10-14 15:27:30] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:27:30] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:27:30] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:27:44] Valor recebido para quantidade_separada: 100
+[2025-10-14 15:27:44] Valor convertido para float: 100
+[2025-10-14 15:27:44] Valor formatado: 100.000
+[2025-10-14 15:27:44] Atualização bem-sucedida para item ID 3419
+[2025-10-14 15:27:45] Valor recebido para quantidade_separada: 100
+[2025-10-14 15:27:45] Valor convertido para float: 100
+[2025-10-14 15:27:45] Valor formatado: 100.000
+[2025-10-14 15:27:45] Atualização bem-sucedida para item ID 3420
+[2025-10-14 15:27:46] Valor recebido para quantidade_separada: 25
+[2025-10-14 15:27:46] Valor convertido para float: 25
+[2025-10-14 15:27:46] Valor formatado: 25.000
+[2025-10-14 15:27:46] Atualização bem-sucedida para item ID 3421
+[2025-10-14 15:27:47] Valor recebido para quantidade_separada: 25
+[2025-10-14 15:27:47] Valor convertido para float: 25
+[2025-10-14 15:27:47] Valor formatado: 25.000
+[2025-10-14 15:27:47] Atualização bem-sucedida para item ID 3422
+[2025-10-14 15:27:48] Valor recebido para quantidade_separada: 25
+[2025-10-14 15:27:48] Valor convertido para float: 25
+[2025-10-14 15:27:48] Valor formatado: 25.000
+[2025-10-14 15:27:48] Atualização bem-sucedida para item ID 3423
+[2025-10-14 15:27:48] atualizar_pedido.php - Dados brutos recebidos: {"id":601,"status":"Pedido Separado","quantidade_caixas":11}
+[2025-10-14 15:27:48] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 601
+    [status] => Pedido Separado
+    [quantidade_caixas] => 11
+)
+
+[2025-10-14 15:27:48] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 601: 4882.5
+[2025-10-14 15:27:48] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 601, Novo Status: Pedido Separado
+[2025-10-14 15:27:48] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:27:48] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:27:48] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-14 15:27:58] atualizar_pedido.php - Dados brutos recebidos: {"id":599,"status":"Concluído","observacoes":"","quantidade_caixas":5}
+[2025-10-14 15:27:59] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 599
+    [status] => Concluído
+    [observacoes] => 
+    [quantidade_caixas] => 5
+)
+
+[2025-10-14 15:27:59] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 599: 2764.83
+[2025-10-14 15:27:59] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 599, Novo Status: Concluído
+[2025-10-14 15:27:59] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-14 15:27:59] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-14 15:27:59] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-15 08:15:42] atualizar_pedido.php - Dados brutos recebidos: {"id":602,"status":"Em Separação"}
+[2025-10-15 08:15:42] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 602
+    [status] => Em Separação
+)
+
+[2025-10-15 08:15:42] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 602: 0
+[2025-10-15 08:15:42] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 602, Novo Status: Em Separação
+[2025-10-15 08:15:42] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-15 08:15:42] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-15 08:15:42] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-15 09:29:02] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:02] Valor convertido para float: 25
+[2025-10-15 09:29:02] Valor formatado: 25.000
+[2025-10-15 09:29:02] Atualização bem-sucedida para item ID 3424
+[2025-10-15 09:29:03] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:03] Valor convertido para float: 25
+[2025-10-15 09:29:03] Valor formatado: 25.000
+[2025-10-15 09:29:03] Atualização bem-sucedida para item ID 3425
+[2025-10-15 09:29:04] Valor recebido para quantidade_separada: 50
+[2025-10-15 09:29:04] Valor convertido para float: 50
+[2025-10-15 09:29:04] Valor formatado: 50.000
+[2025-10-15 09:29:04] Atualização bem-sucedida para item ID 3426
+[2025-10-15 09:29:05] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:05] Valor convertido para float: 25
+[2025-10-15 09:29:05] Valor formatado: 25.000
+[2025-10-15 09:29:05] Atualização bem-sucedida para item ID 3427
+[2025-10-15 09:29:06] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:06] Valor convertido para float: 25
+[2025-10-15 09:29:06] Valor formatado: 25.000
+[2025-10-15 09:29:06] Atualização bem-sucedida para item ID 3428
+[2025-10-15 09:29:07] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:07] Valor convertido para float: 25
+[2025-10-15 09:29:07] Valor formatado: 25.000
+[2025-10-15 09:29:07] Atualização bem-sucedida para item ID 3429
+[2025-10-15 09:29:07] Valor recebido para quantidade_separada: 22.25
+[2025-10-15 09:29:07] Valor convertido para float: 22.25
+[2025-10-15 09:29:07] Valor formatado: 22.250
+[2025-10-15 09:29:07] Atualização bem-sucedida para item ID 3430
+[2025-10-15 09:29:08] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:08] Valor convertido para float: 25
+[2025-10-15 09:29:08] Valor formatado: 25.000
+[2025-10-15 09:29:08] Atualização bem-sucedida para item ID 3431
+[2025-10-15 09:29:09] Valor recebido para quantidade_separada: 1
+[2025-10-15 09:29:09] Valor convertido para float: 1
+[2025-10-15 09:29:09] Valor formatado: 1.000
+[2025-10-15 09:29:09] Atualização bem-sucedida para item ID 3432
+[2025-10-15 09:29:10] Valor recebido para quantidade_separada: 25
+[2025-10-15 09:29:10] Valor convertido para float: 25
+[2025-10-15 09:29:10] Valor formatado: 25.000
+[2025-10-15 09:29:10] Atualização bem-sucedida para item ID 3433
+[2025-10-15 09:29:10] Valor recebido para quantidade_separada: 30
+[2025-10-15 09:29:10] Valor convertido para float: 30
+[2025-10-15 09:29:10] Valor formatado: 30.000
+[2025-10-15 09:29:10] Atualização bem-sucedida para item ID 3434
+[2025-10-15 09:29:11] Valor recebido para quantidade_separada: 30
+[2025-10-15 09:29:11] Valor convertido para float: 30
+[2025-10-15 09:29:11] Valor formatado: 30.000
+[2025-10-15 09:29:11] Atualização bem-sucedida para item ID 3435
+[2025-10-15 09:29:11] Valor recebido para quantidade_separada: 50
+[2025-10-15 09:29:11] Valor convertido para float: 50
+[2025-10-15 09:29:11] Valor formatado: 50.000
+[2025-10-15 09:29:11] Atualização bem-sucedida para item ID 3436
+[2025-10-15 09:29:12] atualizar_pedido.php - Dados brutos recebidos: {"id":602,"status":"Pedido Separado","quantidade_caixas":16}
+[2025-10-15 09:29:12] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 602
+    [status] => Pedido Separado
+    [quantidade_caixas] => 16
+)
+
+[2025-10-15 09:29:12] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 602: 6615.275
+[2025-10-15 09:29:12] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 602, Novo Status: Pedido Separado
+[2025-10-15 09:29:12] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-15 09:29:12] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-15 09:29:12] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-16 10:07:12] atualizar_pedido.php - Dados brutos recebidos: {"id":603,"status":"Em Separação"}
+[2025-10-16 10:07:12] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 603
+    [status] => Em Separação
+)
+
+[2025-10-16 10:07:12] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 603: 0
+[2025-10-16 10:07:12] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 603, Novo Status: Em Separação
+[2025-10-16 10:07:12] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-16 10:07:12] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-16 10:07:12] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-16 10:07:15] atualizar_pedido.php - Dados brutos recebidos: {"id":603,"status":"Em Separação"}
+[2025-10-16 10:07:15] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 603
+    [status] => Em Separação
+)
+
+[2025-10-16 10:07:15] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 603: 0
+[2025-10-16 10:07:15] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 603, Novo Status: Em Separação
+[2025-10-16 10:07:15] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-16 10:07:15] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-16 10:07:15] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-16 10:07:15] atualizar_pedido.php - Dados brutos recebidos: {"id":603,"status":"Em Separação"}
+[2025-10-16 10:07:15] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 603
+    [status] => Em Separação
+)
+
+[2025-10-16 10:07:15] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 603: 0
+[2025-10-16 10:07:15] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 603, Novo Status: Em Separação
+[2025-10-16 10:07:16] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-16 10:07:16] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-16 10:07:16] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-16 10:07:29] Valor recebido para quantidade_separada: 38
+[2025-10-16 10:07:29] Valor convertido para float: 38
+[2025-10-16 10:07:29] Valor formatado: 38.000
+[2025-10-16 10:07:29] Atualização bem-sucedida para item ID 3437
+[2025-10-16 10:07:30] Valor recebido para quantidade_separada: 13
+[2025-10-16 10:07:30] Valor convertido para float: 13
+[2025-10-16 10:07:30] Valor formatado: 13.000
+[2025-10-16 10:07:30] Atualização bem-sucedida para item ID 3438
+[2025-10-16 10:07:31] atualizar_pedido.php - Dados brutos recebidos: {"id":603,"status":"Pedido Separado","quantidade_caixas":2}
+[2025-10-16 10:07:31] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 603
+    [status] => Pedido Separado
+    [quantidade_caixas] => 2
+)
+
+[2025-10-16 10:07:31] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 603: 870.7
+[2025-10-16 10:07:31] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 603, Novo Status: Pedido Separado
+[2025-10-16 10:07:31] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-16 10:07:31] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-16 10:07:31] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-17 12:11:55] atualizar_pedido.php - Dados brutos recebidos: {"id":604,"status":"Em Separação"}
+[2025-10-17 12:11:55] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 604
+    [status] => Em Separação
+)
+
+[2025-10-17 12:11:55] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 604: 0
+[2025-10-17 12:11:55] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 604, Novo Status: Em Separação
+[2025-10-17 12:11:55] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-17 12:11:55] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-17 12:11:55] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-17 12:38:03] Valor recebido para quantidade_separada: 15
+[2025-10-17 12:38:03] Valor convertido para float: 15
+[2025-10-17 12:38:03] Valor formatado: 15.000
+[2025-10-17 12:38:03] Atualização bem-sucedida para item ID 3439
+[2025-10-17 12:38:05] Valor recebido para quantidade_separada: 15
+[2025-10-17 12:38:05] Valor convertido para float: 15
+[2025-10-17 12:38:05] Valor formatado: 15.000
+[2025-10-17 12:38:05] Atualização bem-sucedida para item ID 3440
+[2025-10-17 12:38:07] Valor recebido para quantidade_separada: 15
+[2025-10-17 12:38:07] Valor convertido para float: 15
+[2025-10-17 12:38:07] Valor formatado: 15.000
+[2025-10-17 12:38:07] Atualização bem-sucedida para item ID 3441
+[2025-10-17 12:38:10] Valor recebido para quantidade_separada: 10
+[2025-10-17 12:38:10] Valor convertido para float: 10
+[2025-10-17 12:38:10] Valor formatado: 10.000
+[2025-10-17 12:38:10] Atualização bem-sucedida para item ID 3442
+[2025-10-17 12:38:11] Valor recebido para quantidade_separada: 10
+[2025-10-17 12:38:11] Valor convertido para float: 10
+[2025-10-17 12:38:11] Valor formatado: 10.000
+[2025-10-17 12:38:11] Atualização bem-sucedida para item ID 3443
+[2025-10-17 12:38:15] Valor recebido para quantidade_separada: 10
+[2025-10-17 12:38:15] Valor convertido para float: 10
+[2025-10-17 12:38:15] Valor formatado: 10.000
+[2025-10-17 12:38:15] Atualização bem-sucedida para item ID 3444
+[2025-10-17 12:38:17] Valor recebido para quantidade_separada: 10
+[2025-10-17 12:38:17] Valor convertido para float: 10
+[2025-10-17 12:38:17] Valor formatado: 10.000
+[2025-10-17 12:38:17] Atualização bem-sucedida para item ID 3445
+[2025-10-17 12:38:19] Valor recebido para quantidade_separada: 10
+[2025-10-17 12:38:19] Valor convertido para float: 10
+[2025-10-17 12:38:19] Valor formatado: 10.000
+[2025-10-17 12:38:19] Atualização bem-sucedida para item ID 3446
+[2025-10-17 12:38:20] Valor recebido para quantidade_separada: 10
+[2025-10-17 12:38:20] Valor convertido para float: 10
+[2025-10-17 12:38:20] Valor formatado: 10.000
+[2025-10-17 12:38:20] Atualização bem-sucedida para item ID 3447
+[2025-10-17 12:38:23] atualizar_pedido.php - Dados brutos recebidos: {"id":604,"status":"Pedido Separado","quantidade_caixas":5}
+[2025-10-17 12:38:23] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 604
+    [status] => Pedido Separado
+    [quantidade_caixas] => 5
+)
+
+[2025-10-17 12:38:23] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 604: 1462.8
+[2025-10-17 12:38:23] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 604, Novo Status: Pedido Separado
+[2025-10-17 12:38:23] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-17 12:38:23] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-17 12:38:23] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:34] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:34] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:34] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:34] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:34] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:34] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:34] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:34] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:34] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:34] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:34] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:34] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:34] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:34] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:35] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:35] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:35] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:35] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:35] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:35] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:35] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:36] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:36] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:36] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:36] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:36] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:36] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:36] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:36] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:36] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:36] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:36] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:36] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:36] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:36] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:36] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:36] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:36] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:36] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:36] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:36] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:36] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:41] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:41] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:41] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:41] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:41] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:41] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:41] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:41] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:41] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:41] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:41] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:41] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:41] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:41] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:45] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:45] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:45] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:45] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:45] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:45] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:45] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:49] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:49] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:49] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:49] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:49] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:49] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:49] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:49] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:49] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:49] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:49] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:49] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:49] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:49] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:49] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:50] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:50] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:50] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:50] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:50] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:50] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:50] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:50] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:50] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:50] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:50] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:50] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:50] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:50] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:50] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:50] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:50] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:50] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:51] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:51] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:51] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:51] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:51] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:51] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:51] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:51] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:51] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:51] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:51] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:51] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:52] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:52] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:52] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:52] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:52] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:52] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:52] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:52] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:52] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:52] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:53] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:53] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:53] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:53] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:53] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:29:54] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Em Separação"}
+[2025-10-21 09:29:54] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Em Separação
+)
+
+[2025-10-21 09:29:54] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 0
+[2025-10-21 09:29:54] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Em Separação
+[2025-10-21 09:29:54] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:29:54] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:29:54] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 09:45:27] Valor recebido para quantidade_separada: 60
+[2025-10-21 09:45:27] Valor convertido para float: 60
+[2025-10-21 09:45:27] Valor formatado: 60.000
+[2025-10-21 09:45:27] Atualização bem-sucedida para item ID 3448
+[2025-10-21 09:45:29] Valor recebido para quantidade_separada: 20
+[2025-10-21 09:45:29] Valor convertido para float: 20
+[2025-10-21 09:45:29] Valor formatado: 20.000
+[2025-10-21 09:45:29] Atualização bem-sucedida para item ID 3449
+[2025-10-21 09:45:31] Valor recebido para quantidade_separada: 20
+[2025-10-21 09:45:31] Valor convertido para float: 20
+[2025-10-21 09:45:31] Valor formatado: 20.000
+[2025-10-21 09:45:31] Atualização bem-sucedida para item ID 3450
+[2025-10-21 09:45:32] Valor recebido para quantidade_separada: 25
+[2025-10-21 09:45:32] Valor convertido para float: 25
+[2025-10-21 09:45:32] Valor formatado: 25.000
+[2025-10-21 09:45:32] Atualização bem-sucedida para item ID 3451
+[2025-10-21 09:45:33] atualizar_pedido.php - Dados brutos recebidos: {"id":605,"status":"Pedido Separado","quantidade_caixas":6}
+[2025-10-21 09:45:33] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 605
+    [status] => Pedido Separado
+    [quantidade_caixas] => 6
+)
+
+[2025-10-21 09:45:33] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 605: 2283.5
+[2025-10-21 09:45:33] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 605, Novo Status: Pedido Separado
+[2025-10-21 09:45:33] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 09:45:33] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 09:45:33] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Em Separação"}
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Em Separação
+)
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 0
+[2025-10-21 12:31:00] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Em Separação
+[2025-10-21 12:31:00] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 12:31:00] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Em Separação"}
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Em Separação
+)
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 0
+[2025-10-21 12:31:00] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Em Separação
+[2025-10-21 12:31:00] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 12:31:00] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Em Separação"}
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Em Separação
+)
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 0
+[2025-10-21 12:31:00] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Em Separação
+[2025-10-21 12:31:00] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 12:31:00] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Em Separação"}
+[2025-10-21 12:31:00] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Em Separação
+)
+
+[2025-10-21 12:31:00] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 0
+[2025-10-21 12:31:00] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Em Separação
+[2025-10-21 12:31:01] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 12:31:01] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 12:31:01] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 12:31:01] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Em Separação"}
+[2025-10-21 12:31:01] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Em Separação
+)
+
+[2025-10-21 12:31:01] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 0
+[2025-10-21 12:31:01] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Em Separação
+[2025-10-21 12:31:01] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 12:31:01] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 12:31:01] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 13:08:48] Valor recebido para quantidade_separada: 100
+[2025-10-21 13:08:48] Valor convertido para float: 100
+[2025-10-21 13:08:48] Valor formatado: 100.000
+[2025-10-21 13:08:48] Atualização bem-sucedida para item ID 3452
+[2025-10-21 13:08:49] Valor recebido para quantidade_separada: 100
+[2025-10-21 13:08:49] Valor convertido para float: 100
+[2025-10-21 13:08:49] Valor formatado: 100.000
+[2025-10-21 13:08:49] Atualização bem-sucedida para item ID 3453
+[2025-10-21 13:08:50] Valor recebido para quantidade_separada: 25
+[2025-10-21 13:08:50] Valor convertido para float: 25
+[2025-10-21 13:08:50] Valor formatado: 25.000
+[2025-10-21 13:08:50] Atualização bem-sucedida para item ID 3454
+[2025-10-21 13:08:52] Valor recebido para quantidade_separada: 25
+[2025-10-21 13:08:52] Valor convertido para float: 25
+[2025-10-21 13:08:52] Valor formatado: 25.000
+[2025-10-21 13:08:52] Atualização bem-sucedida para item ID 3455
+[2025-10-21 13:08:54] Valor recebido para quantidade_separada: 25
+[2025-10-21 13:08:54] Valor convertido para float: 25
+[2025-10-21 13:08:54] Valor formatado: 25.000
+[2025-10-21 13:08:54] Atualização bem-sucedida para item ID 3456
+[2025-10-21 13:08:56] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Pedido Separado","quantidade_caixas":11}
+[2025-10-21 13:08:56] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Pedido Separado
+    [quantidade_caixas] => 11
+)
+
+[2025-10-21 13:08:56] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 4882.5
+[2025-10-21 13:08:56] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Pedido Separado
+[2025-10-21 13:08:56] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 13:08:56] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 13:08:56] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 13:09:37] Valor recebido para quantidade_separada: 100
+[2025-10-21 13:09:37] Valor convertido para float: 100
+[2025-10-21 13:09:37] Valor formatado: 100.000
+[2025-10-21 13:09:37] Atualização bem-sucedida para item ID 3452
+[2025-10-21 13:09:38] Valor recebido para quantidade_separada: 100
+[2025-10-21 13:09:38] Valor convertido para float: 100
+[2025-10-21 13:09:38] Valor formatado: 100.000
+[2025-10-21 13:09:38] Atualização bem-sucedida para item ID 3453
+[2025-10-21 13:09:39] Valor recebido para quantidade_separada: 25
+[2025-10-21 13:09:39] Valor convertido para float: 25
+[2025-10-21 13:09:39] Valor formatado: 25.000
+[2025-10-21 13:09:39] Atualização bem-sucedida para item ID 3454
+[2025-10-21 13:09:39] Valor recebido para quantidade_separada: 25
+[2025-10-21 13:09:39] Valor convertido para float: 25
+[2025-10-21 13:09:39] Valor formatado: 25.000
+[2025-10-21 13:09:39] Atualização bem-sucedida para item ID 3455
+[2025-10-21 13:09:40] Valor recebido para quantidade_separada: 25
+[2025-10-21 13:09:40] Valor convertido para float: 25
+[2025-10-21 13:09:40] Valor formatado: 25.000
+[2025-10-21 13:09:40] Atualização bem-sucedida para item ID 3456
+[2025-10-21 13:09:41] atualizar_pedido.php - Dados brutos recebidos: {"id":606,"status":"Pedido Separado","quantidade_caixas":11}
+[2025-10-21 13:09:41] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 606
+    [status] => Pedido Separado
+    [quantidade_caixas] => 11
+)
+
+[2025-10-21 13:09:41] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 606: 4882.5
+[2025-10-21 13:09:41] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 606, Novo Status: Pedido Separado
+[2025-10-21 13:09:41] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 13:09:41] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 13:09:41] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 15:52:31] atualizar_pedido.php - Dados brutos recebidos: {"id":608,"status":"Em Separação"}
+[2025-10-21 15:52:31] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 608
+    [status] => Em Separação
+)
+
+[2025-10-21 15:52:31] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 608: 0
+[2025-10-21 15:52:31] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 608, Novo Status: Em Separação
+[2025-10-21 15:52:31] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 15:52:31] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 15:52:31] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-21 16:03:44] Valor recebido para quantidade_separada: 50
+[2025-10-21 16:03:44] Valor convertido para float: 50
+[2025-10-21 16:03:44] Valor formatado: 50.000
+[2025-10-21 16:03:44] Atualização bem-sucedida para item ID 3469
+[2025-10-21 16:03:45] Valor recebido para quantidade_separada: 25
+[2025-10-21 16:03:45] Valor convertido para float: 25
+[2025-10-21 16:03:45] Valor formatado: 25.000
+[2025-10-21 16:03:45] Atualização bem-sucedida para item ID 3470
+[2025-10-21 16:03:45] Valor recebido para quantidade_separada: 25
+[2025-10-21 16:03:45] Valor convertido para float: 25
+[2025-10-21 16:03:45] Valor formatado: 25.000
+[2025-10-21 16:03:45] Atualização bem-sucedida para item ID 3471
+[2025-10-21 16:03:46] atualizar_pedido.php - Dados brutos recebidos: {"id":608,"status":"Pedido Separado","quantidade_caixas":4}
+[2025-10-21 16:03:46] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 608
+    [status] => Pedido Separado
+    [quantidade_caixas] => 4
+)
+
+[2025-10-21 16:03:46] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 608: 1995
+[2025-10-21 16:03:46] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 608, Novo Status: Pedido Separado
+[2025-10-21 16:03:46] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-21 16:03:46] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-21 16:03:46] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-22 09:04:29] atualizar_pedido.php - Dados brutos recebidos: {"id":609,"status":"Em Separação"}
+[2025-10-22 09:04:29] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 609
+    [status] => Em Separação
+)
+
+[2025-10-22 09:04:29] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 609: 0
+[2025-10-22 09:04:29] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 609, Novo Status: Em Separação
+[2025-10-22 09:04:30] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-22 09:04:30] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-22 09:04:30] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-22 10:58:23] Valor recebido para quantidade_separada: 14.8
+[2025-10-22 10:58:23] Valor convertido para float: 14.8
+[2025-10-22 10:58:23] Valor formatado: 14.800
+[2025-10-22 10:58:23] Atualização bem-sucedida para item ID 3472
+[2025-10-22 10:58:24] Valor recebido para quantidade_separada: 14.5
+[2025-10-22 10:58:24] Valor convertido para float: 14.5
+[2025-10-22 10:58:24] Valor formatado: 14.500
+[2025-10-22 10:58:24] Atualização bem-sucedida para item ID 3473
+[2025-10-22 10:58:25] Valor recebido para quantidade_separada: 42.5
+[2025-10-22 10:58:25] Valor convertido para float: 42.5
+[2025-10-22 10:58:25] Valor formatado: 42.500
+[2025-10-22 10:58:25] Atualização bem-sucedida para item ID 3474
+[2025-10-22 10:58:25] Valor recebido para quantidade_separada: 50
+[2025-10-22 10:58:25] Valor convertido para float: 50
+[2025-10-22 10:58:25] Valor formatado: 50.000
+[2025-10-22 10:58:25] Atualização bem-sucedida para item ID 3475
+[2025-10-22 10:58:26] Valor recebido para quantidade_separada: 50
+[2025-10-22 10:58:26] Valor convertido para float: 50
+[2025-10-22 10:58:26] Valor formatado: 50.000
+[2025-10-22 10:58:26] Atualização bem-sucedida para item ID 3476
+[2025-10-22 10:58:27] Valor recebido para quantidade_separada: 10
+[2025-10-22 10:58:27] Valor convertido para float: 10
+[2025-10-22 10:58:27] Valor formatado: 10.000
+[2025-10-22 10:58:27] Atualização bem-sucedida para item ID 3477
+[2025-10-22 10:58:28] Valor recebido para quantidade_separada: 15
+[2025-10-22 10:58:28] Valor convertido para float: 15
+[2025-10-22 10:58:28] Valor formatado: 15.000
+[2025-10-22 10:58:28] Atualização bem-sucedida para item ID 3478
+[2025-10-22 10:58:28] Valor recebido para quantidade_separada: 10.22
+[2025-10-22 10:58:28] Valor convertido para float: 10.22
+[2025-10-22 10:58:28] Valor formatado: 10.220
+[2025-10-22 10:58:28] Atualização bem-sucedida para item ID 3479
+[2025-10-22 10:58:29] Valor recebido para quantidade_separada: 9.5
+[2025-10-22 10:58:29] Valor convertido para float: 9.5
+[2025-10-22 10:58:29] Valor formatado: 9.500
+[2025-10-22 10:58:29] Atualização bem-sucedida para item ID 3480
+[2025-10-22 10:58:30] Valor recebido para quantidade_separada: 9.4
+[2025-10-22 10:58:30] Valor convertido para float: 9.4
+[2025-10-22 10:58:30] Valor formatado: 9.400
+[2025-10-22 10:58:30] Atualização bem-sucedida para item ID 3481
+[2025-10-22 10:58:31] Valor recebido para quantidade_separada: 6.158
+[2025-10-22 10:58:31] Valor convertido para float: 6.158
+[2025-10-22 10:58:31] Valor formatado: 6.158
+[2025-10-22 10:58:31] Atualização bem-sucedida para item ID 3482
+[2025-10-22 10:58:32] atualizar_pedido.php - Dados brutos recebidos: {"id":609,"status":"Pedido Separado","quantidade_caixas":14}
+[2025-10-22 10:58:32] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 609
+    [status] => Pedido Separado
+    [quantidade_caixas] => 14
+)
+
+[2025-10-22 10:58:32] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 609: 8888.6122
+[2025-10-22 10:58:32] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 609, Novo Status: Pedido Separado
+[2025-10-22 10:58:32] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-22 10:58:32] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-22 10:58:32] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-22 16:06:13] atualizar_pedido.php - Dados brutos recebidos: {"id":611,"status":"Em Separação"}
+[2025-10-22 16:06:13] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 611
+    [status] => Em Separação
+)
+
+[2025-10-22 16:06:13] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 611: 0
+[2025-10-22 16:06:13] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 611, Novo Status: Em Separação
+[2025-10-22 16:06:13] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-22 16:06:13] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-22 16:06:13] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-22 16:06:14] atualizar_pedido.php - Dados brutos recebidos: {"id":611,"status":"Em Separação"}
+[2025-10-22 16:06:14] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 611
+    [status] => Em Separação
+)
+
+[2025-10-22 16:06:14] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 611: 0
+[2025-10-22 16:06:14] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 611, Novo Status: Em Separação
+[2025-10-22 16:06:14] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-22 16:06:14] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-22 16:06:14] atualizar_pedido.php - Notificações enviadas. Sucesso: false
+[2025-10-22 16:30:42] Valor recebido para quantidade_separada: 25
+[2025-10-22 16:30:42] Valor convertido para float: 25
+[2025-10-22 16:30:42] Valor formatado: 25.000
+[2025-10-22 16:30:42] Atualização bem-sucedida para item ID 3499
+[2025-10-22 16:30:43] Valor recebido para quantidade_separada: 25
+[2025-10-22 16:30:43] Valor convertido para float: 25
+[2025-10-22 16:30:43] Valor formatado: 25.000
+[2025-10-22 16:30:43] Atualização bem-sucedida para item ID 3500
+[2025-10-22 16:30:44] Valor recebido para quantidade_separada: 25
+[2025-10-22 16:30:44] Valor convertido para float: 25
+[2025-10-22 16:30:44] Valor formatado: 25.000
+[2025-10-22 16:30:44] Atualização bem-sucedida para item ID 3501
+[2025-10-22 16:30:44] Valor recebido para quantidade_separada: 50
+[2025-10-22 16:30:44] Valor convertido para float: 50
+[2025-10-22 16:30:44] Valor formatado: 50.000
+[2025-10-22 16:30:44] Atualização bem-sucedida para item ID 3502
+[2025-10-22 16:30:45] Valor recebido para quantidade_separada: 25
+[2025-10-22 16:30:45] Valor convertido para float: 25
+[2025-10-22 16:30:45] Valor formatado: 25.000
+[2025-10-22 16:30:45] Atualização bem-sucedida para item ID 3503
+[2025-10-22 16:30:46] Valor recebido para quantidade_separada: 25
+[2025-10-22 16:30:46] Valor convertido para float: 25
+[2025-10-22 16:30:46] Valor formatado: 25.000
+[2025-10-22 16:30:46] Atualização bem-sucedida para item ID 3504
+[2025-10-22 16:30:47] Valor recebido para quantidade_separada: 15
+[2025-10-22 16:30:47] Valor convertido para float: 15
+[2025-10-22 16:30:47] Valor formatado: 15.000
+[2025-10-22 16:30:47] Atualização bem-sucedida para item ID 3505
+[2025-10-22 16:30:48] atualizar_pedido.php - Dados brutos recebidos: {"id":611,"status":"Pedido Separado","quantidade_caixas":8}
+[2025-10-22 16:30:48] atualizar_pedido.php - Dados decodificados: Array
+(
+    [id] => 611
+    [status] => Pedido Separado
+    [quantidade_caixas] => 8
+)
+
+[2025-10-22 16:30:48] atualizar_pedido.php - Novo valor_total calculado para Pedido ID 611: 3283.5
+[2025-10-22 16:30:48] atualizar_pedido.php - Pedido atualizado com sucesso no banco de dados. Pedido ID: 611, Novo Status: Pedido Separado
+[2025-10-22 16:30:48] atualizar_pedido.php - Erro ao enviar notificação FCM para token fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{"error":"invalid_grant","error_description":"Invalid JWT Signature."}
+
+[2025-10-22 16:30:48] atualizar_pedido.php - Falha ao enviar notificação para o token: fhgidM8-CkSBgWtExRUfVM:APA91bHj3_7iJUEqF-5a0tQggsYxQLJbucQ5Gyf63XWrhy9K9fknb-EkagNRqO3qzr6wenVCF3AXKrQ6NGRNhcFu1cUdq9XOSrH17d8yCbW-Nml-3yg4Qsk
+[2025-10-22 16:30:48] atualizar_pedido.php - Notificações enviadas. Sucesso: false

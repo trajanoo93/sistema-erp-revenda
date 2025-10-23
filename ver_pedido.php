@@ -1,3 +1,4 @@
+
 <?php
 opcache_reset();
 session_start();
@@ -8,25 +9,26 @@ error_reporting(E_ALL);
 
 // Arquivo de log
 $logFile = 'logs/pedidos_log.txt';
+
 function registrarLog($mensagem, $nivel = 'INFO') {
     global $logFile;
     $dataHora = date('Y-m-d H:i:s');
     $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
     $usuarioId = isset($_SESSION['usuario_id']) ? $_SESSION['usuario_id'] : 'unknown';
     $logEntry = "[$dataHora] [$nivel] [IP: $ip] [Usuário ID: $usuarioId] $mensagem\n";
-   
+  
     // Criar diretório logs/ se não existir
     $logDir = dirname($logFile);
     if (!is_dir($logDir)) {
         mkdir($logDir, 0755, true);
     }
-   
+  
     // Criar arquivo de log se não existir
     if (!file_exists($logFile)) {
         touch($logFile);
         chmod($logFile, 0664);
     }
-   
+  
     // Escrever log apenas se o arquivo for gravável
     if (is_writable($logFile)) {
         file_put_contents($logFile, $logEntry, FILE_APPEND);
@@ -67,7 +69,6 @@ try {
     $stmt->bindParam(':id', $pedido_id, PDO::PARAM_INT);
     $stmt->execute();
     $pedido = $stmt->fetch(PDO::FETCH_ASSOC);
-
     if (!$pedido) {
         registrarLog("Erro: Pedido não encontrado. ID: $pedido_id", 'ERROR');
         if (isset($_GET['ajax'])) {
@@ -77,7 +78,6 @@ try {
         }
         exit;
     }
-
     registrarLog("Pedido encontrado. Status: {$pedido['status']}", 'INFO');
 
     // Consulta para obter os itens do pedido
@@ -127,8 +127,8 @@ try {
                 return [
                     'produto_id' => $item['produto_id'],
                     'produto_nome' => $item['produto_nome'],
-                    'quantidade' => $item['produto_tipo'] === 'UND' ? number_format($item['quantidade'], 0, ',', '.') : number_format($item['quantidade'], 3, ',', '.'),
-                    'quantidade_separada' => $item['quantidade_separada'] !== null ? ($item['produto_tipo'] === 'UND' ? number_format($item['quantidade_separada'], 0, ',', '.') : number_format($item['quantidade_separada'], 3, ',', '.')) : null,
+                    'quantidade' => $item['produto_tipo'] === 'UND' ? number_format($item['quantidade'], 0, '.', '') : number_format($item['quantidade'], 3, '.', ''),
+                    'quantidade_separada' => $item['quantidade_separada'] !== null ? ($item['produto_tipo'] === 'UND' ? number_format($item['quantidade_separada'], 0, '.', '') : number_format($item['quantidade_separada'], 3, '.', '')) : null,
                     'valor_unitario' => number_format($item['valor_unitario'], 2, '.', ''),
                     'produto_tipo' => $item['produto_tipo']
                 ];
@@ -229,18 +229,18 @@ try {
                             ?>
                             <tr class="<?= $temDivergencia ? 'highlight-divergencia' : '' ?>">
                                 <td><?= htmlspecialchars($item['produto_nome']) ?></td>
-                                <td><?= $item['produto_tipo'] === "UND" ? number_format($quantidade, 0, ',', '.') : number_format($quantidade, 3, ',', '.') ?></td>
+                                <td><?= $item['produto_tipo'] === "UND" ? number_format($quantidade, 0, '.', '') : number_format($quantidade, 3, '.', '') ?></td>
                                 <?php if ($exibirQuantidadeSeparada): ?>
-                                    <td><?= !is_null($quantidadeSeparada) ? ($item['produto_tipo'] === "UND" ? number_format($quantidadeSeparada, 0, ',', '.') : number_format($quantidadeSeparada, 3, ',', '.')) : "N/A" ?></td>
+                                    <td><?= !is_null($quantidadeSeparada) ? ($item['produto_tipo'] === "UND" ? number_format($quantidadeSeparada, 0, '.', '') : number_format($quantidadeSeparada, 3, '.', '')) : "N/A" ?></td>
                                 <?php endif; ?>
-                                <td>R$ <?= number_format($item['valor_unitario'], 2, ',', '.') ?></td>
-                                <td>R$ <?= number_format($totalItem, 2, ',', '.') ?></td>
+                                <td>R$ <?= number_format($item['valor_unitario'], 2, '.', '') ?></td>
+                                <td>R$ <?= number_format($totalItem, 2, '.', '') ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
                 <div class="nf-total">
-                    <p><strong>Valor Total:</strong> R$ <span id="valorTotalView"><?= number_format($pedido['valor_total'], 2, ',', '.') ?></span></p>
+                    <p><strong>Valor Total:</strong> R$ <span id="valorTotalView"><?= number_format($pedido['valor_total'], 2, '.', '') ?></span></p>
                     <p><strong>Forma de Pagamento:</strong> <?= htmlspecialchars($pedido['forma_pagamento'] ?? 'Não especificada') ?></p>
                 </div>
                 <?php if (!empty($comprovantes)): ?>
@@ -312,12 +312,12 @@ try {
                             <input type="hidden" name="produto_id[]" value="<?= $item['produto_id'] ?>">
                             <div class="quantidade-wrapper">
                                 <label for="quantidade_<?= $item['produto_id'] ?>" class="quantidade-label">Qtd. Solicitada:</label>
-                                <input type="text" id="quantidade_<?= $item['produto_id'] ?>" name="quantidade[]" value="<?= $item['produto_tipo'] === 'UND' ? number_format($item['quantidade'], 0, ',', '.') : number_format($item['quantidade'], 3, ',', '.') ?>" class="form-control quantidade-input" placeholder="<?= $item['produto_tipo'] === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1,500)' ?>">
+                                <input type="text" id="quantidade_<?= $item['produto_id'] ?>" name="quantidade[]" value="<?= $item['produto_tipo'] === 'UND' ? number_format($item['quantidade'], 0, '.', '') : number_format($item['quantidade'], 3, '.', '') ?>" class="form-control quantidade-input" placeholder="<?= $item['produto_tipo'] === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1.500)' ?>">
                             </div>
                             <?php if ($isAfterPedidoSeparado): ?>
                                 <div class="quantidade-separada-wrapper">
                                     <label for="quantidade_separada_<?= $item['produto_id'] ?>" class="quantidade-separada-label">Qtd. Disponível:</label>
-                                    <input type="text" id="quantidade_separada_<?= $item['produto_id'] ?>" name="quantidade_separada[]" value="<?= !is_null($item['quantidade_separada']) ? ($item['produto_tipo'] === 'UND' ? number_format($item['quantidade_separada'], 0, ',', '.') : number_format($item['quantidade_separada'], 3, ',', '.')) : '0' ?>" class="form-control quantidade-separada-input" placeholder="<?= $item['produto_tipo'] === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1,500)' ?>">
+                                    <input type="text" id="quantidade_separada_<?= $item['produto_id'] ?>" name="quantidade_separada[]" value="<?= !is_null($item['quantidade_separada']) ? ($item['produto_tipo'] === 'UND' ? number_format($item['quantidade_separada'], 0, '.', '') : number_format($item['quantidade_separada'], 3, '.', '')) : '0' ?>" class="form-control quantidade-separada-input" placeholder="<?= $item['produto_tipo'] === 'UND' ? 'Qtd. Disponível (inteiro)' : 'Qtd. Disponível (ex.: 1.500)' ?>">
                                 </div>
                             <?php endif; ?>
                             <button type="button" class="btn btn-danger btn-sm remove-produto">Remover</button>
@@ -375,212 +375,331 @@ try {
             </div>
         </div>
         <script>
-            console.log("ver_pedido.php: Script inline executado.");
-            // Código do ver_pedido.js embutido aqui
-            // Array para armazenar os arquivos selecionados (para comprovantes)
-            let selectedFiles = [];
+        console.log("ver_pedido.php: Script inline executado.");
 
-            // Função para configurar a busca de produtos
-            function configurarBuscaProdutos() {
-                const buscarProdutoInput = document.getElementById('buscarProdutoEdit');
-                const listaProdutos = document.getElementById('listaProdutosEdit');
-                const produtosSelecionados = document.getElementById('produtosSelecionadosEdit');
-                if (!buscarProdutoInput || !listaProdutos || !produtosSelecionados) {
-                    console.error('Elementos de busca de produtos não encontrados.');
+        // Array para armazenar os arquivos selecionados (para comprovantes)
+        let selectedFiles = [];
+
+        // Função para carregar jQuery Mask dinamicamente
+        function loadJQueryMask() {
+            return new Promise((resolve, reject) => {
+                if (typeof $.fn.mask === 'function') {
+                    console.log("Método mask do jQuery Mask já disponível.");
+                    resolve();
+                } else {
+                    console.log("Método mask não encontrado. Carregando jQuery Mask dinamicamente...");
+                    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js")
+                        .done(function() {
+                            console.log("jQuery Mask carregado dinamicamente com sucesso.");
+                            resolve();
+                        })
+                        .fail(function(jqxhr, settings, exception) {
+                            console.error("Erro ao carregar jQuery Mask dinamicamente:", exception);
+                            reject(exception);
+                        });
+                }
+            });
+        }
+
+        // Função para carregar SweetAlert2 dinamicamente
+        function loadSweetAlert2() {
+            return new Promise((resolve, reject) => {
+                if (typeof Swal === 'object') {
+                    console.log("SweetAlert2 já disponível.");
+                    resolve();
+                } else {
+                    console.log("SweetAlert2 não encontrado. Carregando dinamicamente...");
+                    $.getScript("https://cdn.jsdelivr.net/npm/sweetalert2@11")
+                        .done(function() {
+                            console.log("SweetAlert2 carregado dinamicamente com sucesso.");
+                            resolve();
+                        })
+                        .fail(function(jqxhr, settings, exception) {
+                            console.error("Erro ao carregar SweetAlert2 dinamicamente:", exception);
+                            reject(exception);
+                        });
+                }
+            });
+        }
+
+        // Função para configurar a busca de produtos
+        function configurarBuscaProdutos() {
+            const buscarProdutoInput = document.getElementById('buscarProdutoEdit');
+            const listaProdutos = document.getElementById('listaProdutosEdit');
+            const produtosSelecionados = document.getElementById('produtosSelecionadosEdit');
+            if (!buscarProdutoInput || !listaProdutos || !produtosSelecionados) {
+                console.error('Elementos de busca de produtos não encontrados.');
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Elementos de busca de produtos não encontrados.',
+                    });
+                });
+                return;
+            }
+            buscarProdutoInput.addEventListener('input', function() {
+                const query = this.value.trim();
+                if (query.length < 2) {
+                    listaProdutos.innerHTML = '';
                     return;
                 }
-                buscarProdutoInput.addEventListener('input', function() {
-                    const query = this.value.trim();
-                    if (query.length < 2) {
-                        listaProdutos.innerHTML = '';
-                        return;
-                    }
-                    console.log('Buscando produtos com query:', query);
-                    fetch(`/atacado/buscar_produtos.php?query=${encodeURIComponent(query)}`)
-                        .then(response => {
-                            if (!response.ok) throw new Error('Erro na requisição: ' + response.statusText);
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log('Produtos retornados:', data);
-                            listaProdutos.innerHTML = '';
-                            if (data.status === 'error') {
-                                listaProdutos.innerHTML = `<div class="list-group-item text-danger">${data.message}</div>`;
-                                return;
-                            }
-                            if (!Array.isArray(data) || data.length === 0) {
-                                listaProdutos.innerHTML = '<div class="list-group-item">Nenhum produto encontrado.</div>';
-                                return;
-                            }
-                            data.forEach(produto => {
-                                if (!produto.id || !produto.nome || !produto.tipo) {
-                                    console.warn('Produto inválido:', produto);
-                                    return;
-                                }
-                                const item = document.createElement('div');
-                                item.className = 'list-group-item list-group-item-action';
-                                item.textContent = `${produto.nome} (${produto.tipo})`;
-                                item.dataset.produtoId = produto.id;
-                                item.dataset.produtoNome = produto.nome;
-                                item.dataset.produtoTipo = produto.tipo;
-                                item.addEventListener('click', function() {
-                                    const produtoItem = document.createElement('div');
-                                    produtoItem.className = 'produto-item';
-                                    produtoItem.dataset.produtoId = produto.id;
-                                    produtoItem.innerHTML = `
-                                        <span>${produto.nome} (${produto.tipo})</span>
-                                        <input type="hidden" name="produto_id[]" value="${produto.id}">
-                                        <div class="quantidade-wrapper">
-                                            <label for="quantidade_${produto.id}" class="quantidade-label">Qtd. Solicitada:</label>
-                                            <input type="text" id="quantidade_${produto.id}" name="quantidade[]" value="${produto.tipo === 'UND' ? '1' : '1,000'}" class="form-control quantidade-input" placeholder="${produto.tipo === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1,500)'}">
-                                        </div>
-                                        <button type="button" class="btn btn-danger btn-sm remove-produto">Remover</button>
-                                    `;
-                                    produtosSelecionados.appendChild(produtoItem);
-                                    listaProdutos.innerHTML = '';
-                                    buscarProdutoInput.value = '';
-                                    const $quantidadeInput = $(produtoItem).find('.quantidade-input');
-                                    if (produto.tipo === 'UND') {
-                                        $quantidadeInput.mask('000', { placeholder: "Qtd. (inteiro)" });
-                                    } else {
-                                        $quantidadeInput.mask('000,000', { reverse: true, placeholder: "Qtd. (ex.: 1,500)" });
-                                    }
-                                });
-                                listaProdutos.appendChild(item);
-                            });
-                        })
-                        .catch(error => {
-                            console.error('Erro ao buscar produtos:', error);
-                            listaProdutos.innerHTML = '<div class="list-group-item text-danger">Erro ao buscar produtos. Tente novamente.</div>';
-                        });
-                });
-                // Remover produtos no modo de edição
-                produtosSelecionados.addEventListener('click', function(e) {
-                    if (e.target.classList.contains('remove-produto')) {
-                        e.target.parentElement.remove();
-                    }
-                });
-            }
-
-            // Função para carregar produtos existentes
-            function carregarProdutosExistentes(pedidoId) {
-                console.log('Carregando produtos existentes para Pedido ID:', pedidoId);
-                fetch(`/atacado/ver_pedido.php?id=${pedidoId}&ajax=1`)
-                    .then(response => response.json())
+                console.log('Buscando produtos com query:', query);
+                fetch(`/atacado/buscar_produtos.php?query=${encodeURIComponent(query)}`)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Erro na requisição: ' + response.statusText);
+                        return response.json();
+                    })
                     .then(data => {
-                        if (data.status === 'success' && data.itens && Array.isArray(data.itens)) {
-                            const produtosSelecionados = document.getElementById('produtosSelecionadosEdit');
-                            produtosSelecionados.innerHTML = '';
-                            data.itens.forEach(item => {
+                        console.log('Produtos retornados:', data);
+                        listaProdutos.innerHTML = '';
+                        if (data.status === 'error') {
+                            listaProdutos.innerHTML = `<div class="list-group-item text-danger">${data.message}</div>`;
+                            return;
+                        }
+                        if (!Array.isArray(data) || data.length === 0) {
+                            listaProdutos.innerHTML = '<div class="list-group-item">Nenhum produto encontrado.</div>';
+                            return;
+                        }
+                        data.forEach(produto => {
+                            if (!produto.id || !produto.nome) {
+                                console.warn('Produto inválido:', produto);
+                                return;
+                            }
+                            const tipo = produto.tipo || 'KG';
+                            const item = document.createElement('div');
+                            item.className = 'list-group-item list-group-item-action';
+                            item.textContent = `${produto.nome} (${tipo})`;
+                            item.dataset.produtoId = produto.id;
+                            item.dataset.produtoNome = produto.nome;
+                            item.dataset.produtoTipo = tipo;
+                            item.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                e.stopPropagation();
                                 const produtoItem = document.createElement('div');
                                 produtoItem.className = 'produto-item';
-                                produtoItem.dataset.produtoId = item.produto_id;
-                                const quantidade = item.produto_tipo === 'UND' ? parseInt(item.quantidade) : parseFloat(item.quantidade).toFixed(3).replace('.', ',');
-                                const quantidadeSeparada = item.quantidade_separada ? (item.produto_tipo === 'UND' ? parseInt(item.quantidade_separada) : parseFloat(item.quantidade_separada).toFixed(3).replace('.', ',')) : '0';
-                                const isAfterSeparado = data.pedido.status !== 'pendente' && data.pedido.status !== 'Em Separação';
+                                produtoItem.dataset.produtoId = produto.id;
+                                const isAfterSeparado = document.querySelector('#notaFiscal')?.dataset?.status !== 'pendente' && document.querySelector('#notaFiscal')?.dataset?.status !== 'Em Separação';
                                 produtoItem.innerHTML = `
-                                    <span>${item.produto_nome} (${item.produto_tipo})</span>
-                                    <input type="hidden" name="produto_id[]" value="${item.produto_id}">
+                                    <span>${produto.nome} (${tipo})</span>
+                                    <input type="hidden" name="produto_id[]" value="${produto.id}">
                                     <div class="quantidade-wrapper">
-                                        <label for="quantidade_${item.produto_id}" class="quantidade-label">Qtd. Solicitada:</label>
-                                        <input type="text" id="quantidade_${item.produto_id}" name="quantidade[]" value="${quantidade}" class="form-control quantidade-input" placeholder="${item.produto_tipo === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1,500)'}">
+                                        <label for="quantidade_${produto.id}" class="quantidade-label">Qtd. Solicitada:</label>
+                                        <input type="text" id="quantidade_${produto.id}" name="quantidade[]" value="${tipo === 'UND' ? '1' : '1.000'}" class="form-control quantidade-input" placeholder="${tipo === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1.500)'}">
                                     </div>
                                     ${isAfterSeparado ? `
                                     <div class="quantidade-separada-wrapper">
-                                        <label for="quantidade_separada_${item.produto_id}" class="quantidade-separada-label">Qtd. Disponível:</label>
-                                        <input type="text" id="quantidade_separada_${item.produto_id}" name="quantidade_separada[]" value="${quantidadeSeparada}" class="form-control quantidade-separada-input" placeholder="${item.produto_tipo === 'UND' ? 'Qtd. Disponível (inteiro)' : 'Qtd. Disponível (ex.: 1,500)'}">
+                                        <label for="quantidade_separada_${produto.id}" class="quantidade-separada-label">Qtd. Disponível:</label>
+                                        <input type="text" id="quantidade_separada_${produto.id}" name="quantidade_separada[]" value="0" class="form-control quantidade-separada-input" placeholder="${tipo === 'UND' ? 'Qtd. Disponível (inteiro)' : 'Qtd. Disponível (ex.: 1.500)'}">
                                     </div>` : ''}
                                     <button type="button" class="btn btn-danger btn-sm remove-produto">Remover</button>
                                 `;
                                 produtosSelecionados.appendChild(produtoItem);
-                                const $quantidadeInput = $(produtoItem).find('.quantidade-input');
-                                const $quantidadeSeparadaInput = $(produtoItem).find('.quantidade-separada-input');
-                                if (item.produto_tipo === 'UND') {
-                                    $quantidadeInput.mask('000', { placeholder: "Qtd. (inteiro)" });
-                                    if ($quantidadeSeparadaInput.length) {
-                                        $quantidadeSeparadaInput.mask('000', { placeholder: "Qtd. Disponível (inteiro)" });
+                                listaProdutos.innerHTML = '';
+                                buscarProdutoInput.value = '';
+                                loadJQueryMask().then(() => {
+                                    const $quantidadeInput = $(produtoItem).find('.quantidade-input');
+                                    if (tipo === 'UND') {
+                                        $quantidadeInput.mask('000', { placeholder: "Qtd. (inteiro)" });
+                                    } else {
+                                        $quantidadeInput.mask('000.000', { reverse: true, placeholder: "Qtd. (ex.: 1.500)" });
                                     }
-                                } else {
-                                    $quantidadeInput.mask('000,000', { reverse: true, placeholder: "Qtd. (ex.: 1,500)" });
+                                    const $quantidadeSeparadaInput = $(produtoItem).find('.quantidade-separada-input');
                                     if ($quantidadeSeparadaInput.length) {
-                                        $quantidadeSeparadaInput.mask('000,000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1,500)" });
+                                        if (tipo === 'UND') {
+                                            $quantidadeSeparadaInput.mask('000', { placeholder: "Qtd. Disponível (inteiro)" });
+                                        } else {
+                                            $quantidadeSeparadaInput.mask('000.000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1.500)" });
+                                        }
+                                    }
+                                }).catch(error => {
+                                    console.error('Erro ao carregar jQuery Mask:', error);
+                                    loadSweetAlert2().then(() => {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'Erro',
+                                            text: 'Erro ao carregar a formatação de quantidades.',
+                                        });
+                                    });
+                                });
+                            });
+                            listaProdutos.appendChild(item);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Erro ao buscar produtos:', error);
+                        listaProdutos.innerHTML = '<div class="list-group-item text-danger">Erro ao buscar produtos. Tente novamente.</div>';
+                    });
+            });
+
+            // Remover produtos no modo de edição
+            produtosSelecionados.addEventListener('click', function(e) {
+                if (e.target.classList.contains('remove-produto')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const produtoItem = e.target.closest('.produto-item');
+                    if (produtoItem) {
+                        produtoItem.remove();
+                        console.log('Produto removido do DOM:', produtoItem.dataset.produtoId);
+                    } else {
+                        console.error('Elemento .produto-item não encontrado para remoção.');
+                    }
+                }
+            });
+        }
+
+        // Função para carregar produtos existentes
+        function carregarProdutosExistentes(pedidoId) {
+            console.log('Carregando produtos existentes para Pedido ID:', pedidoId);
+            fetch(`/atacado/ver_pedido.php?id=${pedidoId}&ajax=1`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Erro na requisição: ' + response.statusText);
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'success' && data.itens && Array.isArray(data.itens)) {
+                        const produtosSelecionados = document.getElementById('produtosSelecionadosEdit');
+                        produtosSelecionados.innerHTML = '';
+                        data.itens.forEach(item => {
+                            const tipo = item.produto_tipo || 'KG';
+                            const produtoItem = document.createElement('div');
+                            produtoItem.className = 'produto-item';
+                            produtoItem.dataset.produtoId = item.produto_id;
+                            const quantidade = tipo === 'UND' ? parseInt(item.quantidade) : parseFloat(item.quantidade).toFixed(3);
+                            const quantidadeSeparada = item.quantidade_separada ? (tipo === 'UND' ? parseInt(item.quantidade_separada) : parseFloat(item.quantidade_separada).toFixed(3)) : '0';
+                            const isAfterSeparado = data.pedido.status !== 'pendente' && data.pedido.status !== 'Em Separação';
+                            produtoItem.innerHTML = `
+                                <span>${item.produto_nome} (${tipo})</span>
+                                <input type="hidden" name="produto_id[]" value="${item.produto_id}">
+                                <div class="quantidade-wrapper">
+                                    <label for="quantidade_${item.produto_id}" class="quantidade-label">Qtd. Solicitada:</label>
+                                    <input type="text" id="quantidade_${item.produto_id}" name="quantidade[]" value="${quantidade}" class="form-control quantidade-input" placeholder="${tipo === 'UND' ? 'Qtd. (inteiro)' : 'Qtd. (ex.: 1.500)'}">
+                                </div>
+                                ${isAfterSeparado ? `
+                                <div class="quantidade-separada-wrapper">
+                                    <label for="quantidade_separada_${item.produto_id}" class="quantidade-separada-label">Qtd. Disponível:</label>
+                                    <input type="text" id="quantidade_separada_${item.produto_id}" name="quantidade_separada[]" value="${quantidadeSeparada}" class="form-control quantidade-separada-input" placeholder="${tipo === 'UND' ? 'Qtd. Disponível (inteiro)' : 'Qtd. Disponível (ex.: 1.500)'}">
+                                </div>` : ''}
+                                <button type="button" class="btn btn-danger btn-sm remove-produto">Remover</button>
+                            `;
+                            produtosSelecionados.appendChild(produtoItem);
+                        });
+                        loadJQueryMask().then(() => {
+                            const $produtosSelecionados = $("#produtosSelecionadosEdit .produto-item");
+                            $produtosSelecionados.each(function() {
+                                const $item = $(this);
+                                const tipoProduto = $item.find('span').text().includes('(UND)') ? 'UND' : 'KG';
+                                const $quantidadeInput = $item.find('.quantidade-input');
+                                if (tipoProduto === 'UND') {
+                                    $quantidadeInput.mask('000', { placeholder: "Qtd. (inteiro)" });
+                                } else {
+                                    $quantidadeInput.mask('000.000', { reverse: true, placeholder: "Qtd. (ex.: 1.500)" });
+                                }
+                                const $quantidadeSeparadaInput = $item.find('.quantidade-separada-input');
+                                if ($quantidadeSeparadaInput.length) {
+                                    if (tipoProduto === 'UND') {
+                                        $quantidadeSeparadaInput.mask('000', { placeholder: "Qtd. Disponível (inteiro)" });
+                                    } else {
+                                        $quantidadeSeparadaInput.mask('000.000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1.500)" });
                                     }
                                 }
                             });
                             console.log('Produtos existentes carregados:', data.itens);
-                        } else {
-                            console.warn('Nenhum item retornado para o pedido:', pedidoId);
-                        }
-                    })
-                    .catch(error => console.error('Erro ao carregar produtos:', error));
-            }
+                        }).catch(error => {
+                            console.error('Erro ao carregar jQuery Mask:', error);
+                            loadSweetAlert2().then(() => {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Erro',
+                                    text: 'Erro ao carregar a formatação de quantidades.',
+                                });
+                            });
+                        });
+                    } else {
+                        console.warn('Nenhum item retornado para o pedido:', pedidoId);
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar produtos:', error));
+        }
 
-            // Função para configurar os eventos de upload de comprovantes
-            function configurarUploadComprovantes() {
-                const formaPagamentoSelect = document.getElementById('formaPagamento');
-                const uploadComprovanteDiv = document.getElementById('uploadComprovante');
-                const pagamentoEntregaDiv = document.getElementById('pagamentoEntrega');
-                const comprovanteUploadInput = document.getElementById('comprovanteUpload');
-                if (!formaPagamentoSelect || !uploadComprovanteDiv || !pagamentoEntregaDiv || !comprovanteUploadInput) {
-                    console.error('Elementos de upload de comprovantes não encontrados.');
-                    return;
-                }
-                formaPagamentoSelect.addEventListener('change', function() {
-                    var formaPagamento = this.value;
-                    uploadComprovanteDiv.style.display = formaPagamento === 'Pix' ? 'block' : 'none';
-                    pagamentoEntregaDiv.style.display = formaPagamento === 'Dinheiro' ? 'block' : 'none';
+        // Função para configurar os eventos de upload de comprovantes
+        function configurarUploadComprovantes() {
+            const formaPagamentoSelect = document.getElementById('formaPagamento');
+            const uploadComprovanteDiv = document.getElementById('uploadComprovante');
+            const pagamentoEntregaDiv = document.getElementById('pagamentoEntrega');
+            const comprovanteUploadInput = document.getElementById('comprovanteUpload');
+            if (!formaPagamentoSelect || !uploadComprovanteDiv || !pagamentoEntregaDiv || !comprovanteUploadInput) {
+                console.error('Elementos de upload de comprovantes não encontrados.');
+                return;
+            }
+            formaPagamentoSelect.addEventListener('change', function() {
+                var formaPagamento = this.value;
+                uploadComprovanteDiv.style.display = formaPagamento === 'Pix' ? 'block' : 'none';
+                pagamentoEntregaDiv.style.display = formaPagamento === 'Dinheiro' ? 'block' : 'none';
+            });
+            comprovanteUploadInput.addEventListener('change', function(event) {
+                const files = Array.from(event.target.files);
+                files.forEach(file => {
+                    if (!selectedFiles.some(f => f.name === file.name)) {
+                        selectedFiles.push(file);
+                    }
                 });
-                comprovanteUploadInput.addEventListener('change', function(event) {
-                    const files = Array.from(event.target.files);
-                    files.forEach(file => {
-                        if (!selectedFiles.some(f => f.name === file.name)) {
-                            selectedFiles.push(file);
-                        }
+                updateFileList();
+                event.target.value = '';
+            });
+        }
+
+        function updateFileList(listId = 'fileList') {
+            const fileList = document.getElementById(listId);
+            if (!fileList) {
+                console.error(`Elemento ${listId} não encontrado.`);
+                return;
+            }
+            fileList.innerHTML = '';
+            if (selectedFiles.length === 0) {
+                return;
+            }
+            const ul = document.createElement('ul');
+            selectedFiles.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.textContent = file.name;
+                const removeBtn = document.createElement('button');
+                removeBtn.textContent = 'Remover';
+                removeBtn.className = 'remove-file';
+                removeBtn.onclick = () => {
+                    selectedFiles.splice(index, 1);
+                    updateFileList(listId);
+                };
+                li.appendChild(removeBtn);
+                ul.appendChild(li);
+            });
+            fileList.appendChild(ul);
+        }
+
+        function toggleEditMode(edit) {
+            const viewMode = document.getElementById('viewMode');
+            const editMode = document.getElementById('editMode');
+            const actionsView = document.getElementById('actionsView');
+            const editButton = document.querySelector('.btn-edit-pedido');
+            if (!viewMode || !editMode || !actionsView || !editButton) {
+                console.error('Elementos do modal não encontrados:', { viewMode, editMode, actionsView, editButton });
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Elementos do modal não encontrados.',
                     });
-                    updateFileList();
-                    event.target.value = '';
                 });
+                return;
             }
-
-            function updateFileList(listId = 'fileList') {
-                const fileList = document.getElementById(listId);
-                if (!fileList) {
-                    console.error(`Elemento ${listId} não encontrado.`);
-                    return;
-                }
-                fileList.innerHTML = '';
-                if (selectedFiles.length === 0) {
-                    return;
-                }
-                const ul = document.createElement('ul');
-                selectedFiles.forEach((file, index) => {
-                    const li = document.createElement('li');
-                    li.textContent = file.name;
-                    const removeBtn = document.createElement('button');
-                    removeBtn.textContent = 'Remover';
-                    removeBtn.className = 'remove-file';
-                    removeBtn.onclick = () => {
-                        selectedFiles.splice(index, 1);
-                        updateFileList(listId);
-                    };
-                    li.appendChild(removeBtn);
-                    ul.appendChild(li);
-                });
-                fileList.appendChild(ul);
-            }
-
-            function toggleEditMode(edit) {
-                const viewMode = document.getElementById('viewMode');
-                const editMode = document.getElementById('editMode');
-                const actionsView = document.getElementById('actionsView');
-                const editButton = document.querySelector('.btn-edit-pedido');
-                if (edit) {
-                    viewMode.style.display = 'none';
-                    editMode.style.display = 'block';
-                    actionsView.style.display = 'none';
-                    editButton.style.display = 'none';
-                    const $dataRetiradaEdit = $("#data_retirada_edit");
-                    console.log('Valor inicial de data_retirada_edit:', $dataRetiradaEdit.val());
+            if (edit) {
+                viewMode.style.display = 'none';
+                editMode.style.display = 'block';
+                actionsView.style.display = 'none';
+                editButton.style.display = 'none';
+                const $dataRetiradaEdit = $("#data_retirada_edit");
+                console.log('Valor inicial de data_retirada_edit:', $dataRetiradaEdit.val());
+                loadJQueryMask().then(() => {
                     try {
                         $dataRetiradaEdit.datepicker({
                             dateFormat: 'dd/mm/yy',
@@ -591,10 +710,28 @@ try {
                         console.log('Datepicker inicializado para data_retirada_edit.');
                     } catch (error) {
                         console.error('Erro ao inicializar Datepicker:', error);
+                        loadSweetAlert2().then(() => {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Erro',
+                                text: 'Erro ao carregar o calendário.',
+                            });
+                        });
                     }
-                    const pedidoId = $('#notaFiscal').data('id');
-                    if (pedidoId) carregarProdutosExistentes(pedidoId);
-                    configurarBuscaProdutos();
+                }).catch(error => {
+                    console.error('Erro ao carregar jQuery Mask:', error);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Erro ao carregar a formatação de data.',
+                        });
+                    });
+                });
+                const pedidoId = $('#notaFiscal').data('id');
+                if (pedidoId) carregarProdutosExistentes(pedidoId);
+                configurarBuscaProdutos();
+                loadJQueryMask().then(() => {
                     const $produtosSelecionados = $("#produtosSelecionadosEdit .produto-item");
                     $produtosSelecionados.each(function() {
                         const $item = $(this);
@@ -603,242 +740,496 @@ try {
                         if (tipoProduto === 'UND') {
                             $quantidadeInput.mask('000', { placeholder: "Qtd. (inteiro)" });
                         } else {
-                            $quantidadeInput.mask('000,000', { reverse: true, placeholder: "Qtd. (ex.: 1,500)" });
+                            $quantidadeInput.mask('000.000', { reverse: true, placeholder: "Qtd. (ex.: 1.500)" });
                         }
                         const $quantidadeSeparadaInput = $item.find('.quantidade-separada-input');
                         if ($quantidadeSeparadaInput.length) {
                             if (tipoProduto === 'UND') {
                                 $quantidadeSeparadaInput.mask('000', { placeholder: "Qtd. Disponível (inteiro)" });
                             } else {
-                                $quantidadeSeparadaInput.mask('000,000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1,500)" });
+                                $quantidadeSeparadaInput.mask('000.000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1.500)" });
                             }
                         }
                     });
-                    $("#listaProdutosEdit").on('click', '.list-group-item', function() {
+                }).catch(error => {
+                    console.error('Erro ao carregar jQuery Mask:', error);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Erro ao carregar a formatação de quantidades.',
+                        });
+                    });
+                });
+                $("#listaProdutosEdit").on('click', '.list-group-item', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    loadJQueryMask().then(() => {
                         const $novoItem = $("#produtosSelecionadosEdit .produto-item").last();
                         const tipoProduto = $novoItem.find('span').text().includes('(UND)') ? 'UND' : 'KG';
                         const $quantidadeInput = $novoItem.find('.quantidade-input');
                         if (tipoProduto === 'UND') {
                             $quantidadeInput.mask('000', { placeholder: "Qtd. (inteiro)" });
                         } else {
-                            $quantidadeInput.mask('000,000', { reverse: true, placeholder: "Qtd. (ex.: 1,500)" });
+                            $quantidadeInput.mask('000.000', { reverse: true, placeholder: "Qtd. (ex.: 1.500)" });
                         }
                         const $quantidadeSeparadaInput = $novoItem.find('.quantidade-separada-input');
                         if ($quantidadeSeparadaInput.length) {
                             if (tipoProduto === 'UND') {
                                 $quantidadeSeparadaInput.mask('000', { placeholder: "Qtd. Disponível (inteiro)" });
                             } else {
-                                $quantidadeSeparadaInput.mask('000,000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1,500)" });
+                                $quantidadeSeparadaInput.mask('000.000', { reverse: true, placeholder: "Qtd. Disponível (ex.: 1.500)" });
+                            }
+                        }
+                    }).catch(error => {
+                        console.error('Erro ao carregar jQuery Mask:', error);
+                        loadSweetAlert2().then(() => {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Erro',
+                                text: 'Erro ao carregar a formatação de quantidades.',
+                            });
+                        });
+                    });
+                });
+                const comprovanteUploadInputEdit = document.getElementById('comprovanteUploadEdit');
+                if (comprovanteUploadInputEdit) {
+                    comprovanteUploadInputEdit.addEventListener('change', function(event) {
+                        const files = Array.from(event.target.files);
+                        files.forEach(file => {
+                            if (!selectedFiles.some(f => f.name === file.name)) {
+                                selectedFiles.push(file);
+                            }
+                        });
+                        updateFileList('fileListEdit');
+                        event.target.value = '';
+                    });
+                }
+            } else {
+                viewMode.style.display = 'block';
+                editMode.style.display = 'none';
+                actionsView.style.display = 'block';
+                editButton.style.display = 'block';
+                configurarUploadComprovantes();
+                const dataRetiradaValue = document.getElementById('data_retirada_edit').value;
+                console.log('Atualizando dataRetiradaView com:', dataRetiradaValue);
+                document.getElementById('dataRetiradaView').textContent = dataRetiradaValue;
+                document.getElementById('observacoesView').textContent = document.getElementById('observacoesEdit').value || 'Nenhuma observação.';
+            }
+        }
+
+        function salvarAlteracoes(pedidoId) {
+            console.log('Iniciando salvarAlteracoes para Pedido ID:', pedidoId);
+            const dataRetirada = document.getElementById('data_retirada_edit')?.value?.trim();
+            const observacoes = document.getElementById('observacoesEdit')?.value || '';
+            const status = document.getElementById('status_edit')?.value;
+            const produtosSelecionados = Array.from(document.querySelectorAll('#produtosSelecionadosEdit .produto-item'));
+           
+            if (!dataRetirada || !/^\d{2}\/\d{2}\/\d{4}$/.test(dataRetirada)) {
+                console.error('Data de retirada inválida:', dataRetirada);
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Por favor, insira a data de retirada no formato DD/MM/YYYY (ex.: 08/05/2025).',
+                    });
+                });
+                return;
+            }
+            if (!status || status === '') {
+                console.error('Status não selecionado.');
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Por favor, selecione um status.',
+                    });
+                });
+                return;
+            }
+            if (produtosSelecionados.length === 0) {
+                console.error('Nenhum produto selecionado.');
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'O pedido deve conter pelo menos um produto. Adicione um produto para continuar.',
+                        didOpen: () => {
+                            const buscarProdutoInput = document.getElementById('buscarProdutoEdit');
+                            if (buscarProdutoInput) {
+                                buscarProdutoInput.focus();
+                                buscarProdutoInput.classList.add('border-primary', 'ring-2', 'ring-primary/30');
+                                setTimeout(() => {
+                                    buscarProdutoInput.classList.remove('border-primary', 'ring-2', 'ring-primary/30');
+                                }, 2000);
                             }
                         }
                     });
-                    const comprovanteUploadInputEdit = document.getElementById('comprovanteUploadEdit');
-                    if (comprovanteUploadInputEdit) {
-                        comprovanteUploadInputEdit.addEventListener('change', function(event) {
-                            const files = Array.from(event.target.files);
-                            files.forEach(file => {
-                                if (!selectedFiles.some(f => f.name === file.name)) {
-                                    selectedFiles.push(file);
-                                }
+                });
+                return;
+            }
+            const produtos = produtosSelecionados.map(item => {
+                const quantidadeInput = item.querySelector('input[name="quantidade[]"]');
+                const quantidadeSeparadaInput = item.querySelector('input[name="quantidade_separada[]"]');
+                if (!quantidadeInput) {
+                    console.error('Campo quantidade não encontrado para item:', item);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Campo de quantidade não encontrado para um produto.',
+                        });
+                    });
+                    return null;
+                }
+                const quantidade = quantidadeInput.value.trim();
+                const quantidadeSeparada = quantidadeSeparadaInput ? quantidadeSeparadaInput.value.trim() : null;
+                if (!quantidade || isNaN(quantidade) || parseFloat(quantidade) <= 0) {
+                    console.error('Quantidade inválida para item:', item);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Por favor, insira quantidades válidas para todos os produtos.',
+                        });
+                    });
+                    return null;
+                }
+                if (quantidadeSeparadaInput && (quantidadeSeparada === '' || isNaN(quantidadeSeparada) || parseFloat(quantidadeSeparada) < 0)) {
+                    console.error('Quantidade separada inválida para item:', item);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Por favor, insira quantidades separadas válidas para todos os produtos.',
+                        });
+                    });
+                    return null;
+                }
+                return {
+                    produto_id: item.querySelector('input[name="produto_id[]"]').value,
+                    quantidade: quantidade,
+                    quantidade_separada: quantidadeSeparada
+                };
+            }).filter(item => item !== null);
+            if (produtos.length !== produtosSelecionados.length) {
+                console.error('Erro na validação dos produtos:', produtos);
+                return;
+            }
+            const statusOrder = [
+                'pendente', 'Em Separação', 'Pedido Separado', 'Aguardando Cliente',
+                'Aguardando Pagamento', 'Aguardando Retirada', 'Pagamento na Retirada', 'Concluído'
+            ];
+            const statusAtual = document.querySelector('#notaFiscal')?.dataset?.status || 'pendente';
+            const statusIndexAtual = statusOrder.indexOf(statusAtual);
+            const statusIndexNovo = statusOrder.indexOf(status);
+            loadSweetAlert2().then(() => {
+                if (statusIndexNovo !== statusIndexAtual) {
+                    Swal.fire({
+                        title: 'Atenção',
+                        text: statusIndexNovo > statusIndexAtual
+                            ? 'Você está avançando o status do pedido. Isso pode afetar o fluxo do processo. Deseja continuar?'
+                            : 'Você está retrocedendo o status do pedido. Isso pode afetar o fluxo do processo. Deseja continuar?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#FC4813',
+                        cancelButtonColor: '#6B7280',
+                        confirmButtonText: 'Sim, continuar',
+                        cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (!result.isConfirmed) {
+                            console.log('Alteração cancelada pelo usuário.');
+                            return;
+                        }
+                        enviarAlteracoes(pedidoId, dataRetirada, observacoes, status, produtos);
+                    });
+                } else {
+                    enviarAlteracoes(pedidoId, dataRetirada, observacoes, status, produtos);
+                }
+            });
+        }
+
+        function enviarAlteracoes(pedidoId, dataRetirada, observacoes, status, produtos) {
+    const formData = new FormData();
+    formData.append('id', pedidoId);
+    formData.append('data_retirada', dataRetirada);
+    formData.append('observacoes', observacoes);
+    formData.append('status', status);
+    formData.append('produtos', JSON.stringify(produtos));
+    selectedFiles.forEach(file => {
+        formData.append('comprovantes[]', file);
+    });
+    console.log('Enviando dados para editar_pedido.php:', { pedidoId, dataRetirada, observacoes, status, produtos });
+    $('#loadingOverlay').removeClass('hidden').text('Aguarde, processando upload...');
+    fetch('/atacado/editar_pedido.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Erro HTTP ${response.status}: ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        $('#loadingOverlay').addClass('hidden').text('');
+        loadSweetAlert2().then(() => {
+            if (data.success) {
+                selectedFiles = [];
+                updateFileList('fileListEdit');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sucesso',
+                    text: 'Pedido atualizado com sucesso!',
+                }).then(() => {
+                    // Recarregar o modal com dados atualizados
+                    console.log("Recarregando modal para pedido ID:", pedidoId);
+                    fetch(`/atacado/ver_pedido.php?id=${pedidoId}&ajax=1&_t=${new Date().getTime()}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Erro ao recarregar detalhes do pedido: ' + response.statusText);
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            if (data.status === 'success') {
+                                console.log("Dados do pedido recarregados:", data);
+                                // Atualizar o DOM com os novos dados
+                                $('#dataRetiradaView').text(data.pedido.data_retirada);
+                                $('#valorTotalView').text(Number(data.pedido.valor_total).toFixed(2).replace('.', ','));
+                                $('#observacoesView').text(data.pedido.observacoes || 'Nenhuma observação.');
+                                $('#itensView').empty();
+                                data.itens.forEach(item => {
+                                    const quantidade = item.produto_tipo === 'UND' ? Number(item.quantidade).toFixed(0) : Number(item.quantidade).toFixed(3);
+                                    const quantidadeSeparada = item.quantidade_separada !== null ? (item.produto_tipo === 'UND' ? Number(item.quantidade_separada).toFixed(0) : Number(item.quantidade_separada).toFixed(3)) : 'N/A';
+                                    const totalItem = (item.quantidade_separada !== null ? item.quantidade_separada : item.quantidade) * item.valor_unitario;
+                                    const temDivergencia = item.quantidade_separada !== null && Math.abs(item.quantidade - item.quantidade_separada) > 0.001;
+                                    $('#itensView').append(`
+                                        <tr class="${temDivergencia ? 'highlight-divergencia' : ''}">
+                                            <td>${item.produto_nome}</td>
+                                            <td>${quantidade.replace('.', ',')}</td>
+                                            ${$('#notaFiscal').data('status') !== 'pendente' && $('#notaFiscal').data('status') !== 'Em Separação' ? `<td>${quantidadeSeparada.replace('.', ',')}</td>` : ''}
+                                            <td>R$ ${Number(item.valor_unitario).toFixed(2).replace('.', ',')}</td>
+                                            <td>R$ ${Number(totalItem).toFixed(2).replace('.', ',')}</td>
+                                        </tr>
+                                    `);
+                                });
+                                toggleEditMode(false); // Voltar para modo de visualização
+                            } else {
+                                console.error("Erro ao recarregar dados do pedido:", data.message);
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Erro',
+                                    text: 'Erro ao recarregar detalhes do pedido: ' + data.message,
+                                });
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Erro ao recarregar modal:", error);
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Erro',
+                                text: 'Erro ao recarregar detalhes do pedido: ' + error.message,
                             });
-                            updateFileList('fileListEdit');
-                            event.target.value = '';
+                        });
+                });
+            } else {
+                console.error('Erro retornado pelo servidor:', data.message);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro',
+                    text: 'Erro ao atualizar o pedido: ' + data.message,
+                });
+            }
+        });
+    })
+    .catch(error => {
+        $('#loadingOverlay').addClass('hidden').text('');
+        console.error('Erro na requisição:', error);
+        loadSweetAlert2().then(() => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Erro ao atualizar o pedido: ' + error.message,
+            });
+        });
+    });
+}
+
+        function baixarPedido(pedidoId) {
+            $('#loadingOverlay').removeClass('hidden');
+            fetch('/atacado/baixar_pedido.php?id=' + pedidoId + '&status=Aguardando+Cliente')
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(data => {
+                            throw new Error(data.message || 'Erro ao processar o pedido');
                         });
                     }
-                } else {
-                    viewMode.style.display = 'block';
-                    editMode.style.display = 'none';
-                    actionsView.style.display = 'block';
-                    editButton.style.display = 'block';
-                    configurarUploadComprovantes();
-                    const dataRetiradaValue = document.getElementById('data_retirada_edit').value;
-                    console.log('Atualizando dataRetiradaView com:', dataRetiradaValue);
-                    document.getElementById('dataRetiradaView').textContent = dataRetiradaValue;
-                    document.getElementById('observacoesView').textContent = document.getElementById('observacoesEdit').value || 'Nenhuma observação.';
-                }
-            }
-
-            function salvarAlteracoes(pedidoId) {
-                let dataRetirada = document.getElementById('data_retirada_edit').value;
-                const observacoes = document.getElementById('observacoesEdit').value;
-                const status = document.getElementById('status_edit').value;
-                const produtosSelecionados = Array.from(document.querySelectorAll('#produtosSelecionadosEdit .produto-item'));
-                dataRetirada = dataRetirada.trim();
-                console.log('Data de retirada antes do envio:', dataRetirada);
-                const dataRegex = /^\d{2}\/\d{2}\/\d{4}$/;
-                if (!dataRegex.test(dataRetirada)) {
-                    alert('Por favor, insira a data de retirada no formato DD/MM/YYYY (ex.: 08/05/2025).');
-                    return;
-                }
-                if (!status || status === '') {
-                    alert('Por favor, selecione um status.');
-                    return;
-                }
-                const produtos = produtosSelecionados.map(item => {
-                    const quantidadeSeparadaInput = item.querySelector('input[name="quantidade_separada[]"]');
-                    return {
-                        produto_id: item.querySelector('input[name="produto_id[]"]').value,
-                        quantidade: item.querySelector('input[name="quantidade[]"]').value.replace(',', '.'),
-                        quantidade_separada: quantidadeSeparadaInput ? quantidadeSeparadaInput.value.replace(',', '.') : null
-                    };
-                });
-                console.log('Produtos enviados para salvarAlteracoes:', produtos);
-                const statusOrder = [
-                    'pendente', 'Em Separação', 'Pedido Separado', 'Aguardando Cliente',
-                    'Aguardando Pagamento', 'Aguardando Retirada', 'Pagamento na Retirada', 'Concluído'
-                ];
-                const statusAtual = document.querySelector('#notaFiscal')?.dataset?.status || 'pendente';
-                const statusIndexAtual = statusOrder.indexOf(statusAtual);
-                const statusIndexNovo = statusOrder.indexOf(status);
-                if (statusIndexNovo !== statusIndexAtual) {
-                    const mensagem = statusIndexNovo > statusIndexAtual
-                        ? 'Atenção: Você está avançando o status do pedido. Isso pode afetar o fluxo do processo. Deseja continuar?'
-                        : 'Atenção: Você está retrocedendo o status do pedido. Isso pode afetar o fluxo do processo. Deseja continuar?';
-                    if (!confirm(mensagem)) {
-                        return;
-                    }
-                }
-                const formData = new FormData();
-                formData.append('id', pedidoId);
-                formData.append('data_retirada', dataRetirada);
-                formData.append('observacoes', observacoes);
-                formData.append('status', status);
-                formData.append('produtos', JSON.stringify(produtos));
-                selectedFiles.forEach(file => {
-                    formData.append('comprovantes[]', file);
-                });
-                fetch('/atacado/editar_pedido.php', {
-                    method: 'POST',
-                    body: formData
+                    return response.blob();
                 })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        selectedFiles = [];
-                        updateFileList('fileListEdit');
-                        alert('Pedido atualizado com sucesso!');
-                        location.reload();
-                    } else {
-                        alert('Erro ao atualizar o pedido: ' + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                    alert('Erro ao atualizar o pedido: ' + error.message);
-                });
-            }
-
-            function baixarPedido(pedidoId) {
-                fetch('/atacado/baixar_pedido.php?id=' + pedidoId + '&status=Aguardando+Cliente')
-                    .then(response => {
-                        if (!response.ok) {
-                            return response.json().then(data => {
-                                throw new Error(data.message || 'Erro ao processar o pedido');
-                            });
-                        }
-                        return response.blob();
-                    })
-                    .then(blob => {
-                        const url = window.URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = 'Pedido_' + pedidoId + '.pdf';
-                        document.body.appendChild(a);
-                        a.click();
-                        a.remove();
-                        window.URL.revokeObjectURL(url);
-                        alert('Status atualizado para Aguardando Cliente.');
-                        location.reload();
-                    })
-                    .catch(error => {
-                        console.error('Erro:', error);
-                        alert('Erro ao baixar o pedido: ' + error.message);
+                .then(blob => {
+                    $('#loadingOverlay').addClass('hidden');
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Pedido_' + pedidoId + '.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    window.URL.revokeObjectURL(url);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: 'Status atualizado para Aguardando Cliente.',
+                        }).then(() => {
+                            window.location.reload();
+                        });
                     });
-            }
-
-            function marcarComoPago(pedidoId) {
-                const formData = new FormData();
-                formData.append('id', pedidoId);
-                formData.append('status', 'Aguardando Retirada');
-                formData.append('status_pagamento', 'Sim');
-                selectedFiles.forEach(file => {
-                    formData.append('comprovantes[]', file);
-                });
-                fetch('/atacado/marcar_como_pago.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('Pagamento confirmado com sucesso!');
-                        location.reload();
-                    } else {
-                        alert('Erro ao marcar como pago: ' + data.message);
-                    }
                 })
                 .catch(error => {
+                    $('#loadingOverlay').addClass('hidden');
                     console.error('Erro:', error);
-                    alert('Erro ao marcar como pago: ' + error.message);
+                    loadSweetAlert2().then(() => {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Erro ao baixar o pedido: ' + error.message,
+                        });
+                    });
                 });
-            }
+        }
 
-            function pagamentoNaEntrega(pedidoId) {
-                const formData = new FormData();
-                formData.append('id', pedidoId);
-                formData.append('status', 'Pagamento na Retirada');
-                formData.append('status_pagamento', 'Não');
-                fetch('/atacado/marcar_como_pago.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
+        function marcarComoPago(pedidoId) {
+            const formData = new FormData();
+            formData.append('id', pedidoId);
+            formData.append('status', 'Aguardando Retirada');
+            formData.append('status_pagamento', 'Sim');
+            selectedFiles.forEach(file => {
+                formData.append('comprovantes[]', file);
+            });
+            $('#loadingOverlay').removeClass('hidden');
+            fetch('/atacado/marcar_como_pago.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                $('#loadingOverlay').addClass('hidden');
+                loadSweetAlert2().then(() => {
                     if (data.success) {
-                        alert('Pagamento marcado como "na entrega".');
-                        location.reload();
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: 'Pagamento confirmado com sucesso!',
+                        }).then(() => {
+                            window.location.reload();
+                        });
                     } else {
-                        alert('Erro ao processar pagamento na entrega: ' + data.message);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Erro ao marcar como pago: ' + data.message,
+                        });
                     }
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                    alert('Erro ao processar pagamento na entrega: ' + error.message);
                 });
-            }
+            })
+            .catch(error => {
+                $('#loadingOverlay').addClass('hidden');
+                console.error('Erro:', error);
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Erro ao marcar como pago: ' + error.message,
+                    });
+                });
+            });
+        }
 
-            // Funções para fechar o modal
-            function configurarFechamentoModal() {
-                document.addEventListener('click', function(e) {
-                    if (e.target.classList.contains('pedido-close')) {
-                        const modal = document.getElementById('verPedidoModal');
-                        if (modal) {
-                            modal.style.display = 'none';
-                        }
+        function pagamentoNaEntrega(pedidoId) {
+            const formData = new FormData();
+            formData.append('id', pedidoId);
+            formData.append('status', 'Pagamento na Retirada');
+            formData.append('status_pagamento', 'Não');
+            $('#loadingOverlay').removeClass('hidden');
+            fetch('/atacado/marcar_como_pago.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                $('#loadingOverlay').addClass('hidden');
+                loadSweetAlert2().then(() => {
+                    if (data.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: 'Pagamento marcado como "na entrega".',
+                        }).then(() => {
+                            window.location.reload();
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: 'Erro ao processar pagamento na entrega: ' + data.message,
+                        });
                     }
                 });
-                document.addEventListener('click', function(e) {
+            })
+            .catch(error => {
+                $('#loadingOverlay').addClass('hidden');
+                console.error('Erro:', error);
+                loadSweetAlert2().then(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Erro ao processar pagamento na entrega: ' + error.message,
+                    });
+                });
+            });
+        }
+
+        // Funções para fechar o modal
+        function configurarFechamentoModal() {
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('pedido-close')) {
                     const modal = document.getElementById('verPedidoModal');
-                    if (modal && modal.style.display !== 'none') {
-                        const modalContent = modal.querySelector('.modal-content');
-                        if (modalContent && !modalContent.contains(e.target)) {
-                            modal.style.display = 'none';
-                        }
+                    if (modal) {
+                        modal.style.display = 'none';
+                        $('.modal-backdrop').remove();
+                        $('body').removeClass('modal-open');
+                        console.log('Modal fechado via botão .pedido-close.');
                     }
-                });
-            }
+                }
+            });
+            document.addEventListener('click', function(e) {
+                const modal = document.getElementById('verPedidoModal');
+                if (modal && modal.style.display !== 'none') {
+                    const modalContent = modal.querySelector('.modal-content');
+                    const listaProdutos = document.getElementById('listaProdutosEdit');
+                    if (modalContent && !modalContent.contains(e.target) && (!listaProdutos || !listaProdutos.contains(e.target))) {
+                        modal.style.display = 'none';
+                        $('.modal-backdrop').remove();
+                        $('body').removeClass('modal-open');
+                        console.log('Modal fechado por clique fora do conteúdo.');
+                    }
+                }
+            });
+        }
 
-            // Função pública para inicializar os eventos quando o modal é aberto
-            function inicializarVerPedido() {
-                console.log("inicializarVerPedido: Inicializando eventos do modal.");
-                configurarBuscaProdutos();
-                configurarUploadComprovantes();
-                configurarFechamentoModal();
-            }
+        // Função pública para inicializar os eventos quando o modal é aberto
+        function inicializarVerPedido() {
+            console.log("inicializarVerPedido: Inicializando eventos do modal.");
+            configurarBuscaProdutos();
+            configurarUploadComprovantes();
+            configurarFechamentoModal();
+        }
 
-            // Expor a função para ser chamada por outros scripts
-            window.inicializarVerPedido = inicializarVerPedido;
-            console.log("ver_pedido.js: Função inicializarVerPedido definida.");
+        // Expor a função para ser chamada por outros scripts
+        window.inicializarVerPedido = inicializarVerPedido;
+        console.log("ver_pedido.js: Função inicializarVerPedido definida.");
         </script>
     </body>
     </html>
