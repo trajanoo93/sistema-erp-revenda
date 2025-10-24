@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['usuario_id'])) {
-    header('Location: /atacado/login.php');
+    echo '<script>window.location.href = "/atacado/index.php?erro=acesso_negado";</script>';
     exit;
 }
 require_once 'backend/config/db.php';
@@ -14,11 +14,11 @@ $busca = isset($_GET['busca']) ? trim($_GET['busca']) : null;
 
 // Definir a data inicial e final para o mês atual se não houver intervalo selecionado
 if (!$dataInicio && !$dataFim) {
-    $dataInicio = date('Y-m-01'); // Primeiro dia do mês atual
-    $dataFim = date('Y-m-d'); // Hoje
+    $dataInicio = date('Y-m-01');
+    $dataFim = date('Y-m-d');
 }
 
-// Consulta principal para buscar os pedidos
+// Consulta principal
 $query = "
     SELECT p.id, c.nome AS cliente, c.cidade, p.status, p.status_pagamento, p.valor_total, p.observacoes, p.data_pedido
     FROM pedidos p
@@ -43,6 +43,8 @@ if ($busca) {
     }
 }
 
+$query .= " ORDER BY p.data_pedido DESC, p.id DESC";
+
 $stmtPedidos = $conn->prepare($query);
 foreach ($params as $key => $value) {
     $stmtPedidos->bindValue($key, $value);
@@ -51,11 +53,11 @@ try {
     $stmtPedidos->execute();
     $pedidos = $stmtPedidos->fetchAll(PDO::FETCH_ASSOC);
 
-    // Para cada pedido, verificar se há divergência e ajustar o valor_total
+    // Processar cada pedido
     foreach ($pedidos as &$pedido) {
         $pedidoId = $pedido['id'];
         $pedidoStatus = $pedido['status'];
-        // Consulta para buscar os itens do pedido
+        
         $queryItens = "
             SELECT i.quantidade, i.quantidade_separada, i.valor_unitario
             FROM itens_pedido i
@@ -66,7 +68,6 @@ try {
         $stmtItens->execute();
         $itens = $stmtItens->fetchAll(PDO::FETCH_ASSOC);
 
-        // Verificar se há divergência
         $temDivergencia = false;
         foreach ($itens as $item) {
             $quantidade = floatval($item['quantidade']);
@@ -76,16 +77,13 @@ try {
                 break;
             }
         }
-        // O ícone de alerta só aparece se houver divergência e o status não for "pendente" ou "Em Separação"
+        
         $statusSemDivergencia = ['pendente', 'Em Separação'];
         $pedido['tem_divergencia'] = $temDivergencia && !in_array($pedidoStatus, $statusSemDivergencia);
 
-        // Forçar o valor_total a ser 0 para status "pendente" e "Em Separação"
         if (in_array($pedidoStatus, ['pendente', 'Em Separação'])) {
             $pedido['valor_total'] = 0;
-        }
-        // Recalcular o valor_total para pedidos no status "Pedido Separado"
-        elseif ($pedidoStatus === 'Pedido Separado') {
+        } elseif ($pedidoStatus === 'Pedido Separado') {
             $valorTotalCalculado = 0;
             foreach ($itens as $item) {
                 $quantidadeUsada = !is_null($item['quantidade_separada']) ? floatval($item['quantidade_separada']) : floatval($item['quantidade']);
@@ -93,11 +91,7 @@ try {
                 $valorTotalCalculado += $quantidadeUsada * $valorUnitario;
             }
             if (round($valorTotalCalculado, 2) != round($pedido['valor_total'], 2)) {
-                $updateQuery = "
-                    UPDATE pedidos
-                    SET valor_total = :valor_total
-                    WHERE id = :pedido_id
-                ";
+                $updateQuery = "UPDATE pedidos SET valor_total = :valor_total WHERE id = :pedido_id";
                 $stmtUpdate = $conn->prepare($updateQuery);
                 $stmtUpdate->bindParam(':valor_total', $valorTotalCalculado);
                 $stmtUpdate->bindParam(':pedido_id', $pedidoId);
@@ -106,274 +100,699 @@ try {
             }
         }
     }
-    unset($pedido); // Desfazer a referência para evitar problemas
+    unset($pedido);
 } catch (PDOException $e) {
     echo "Erro ao carregar pedidos: " . $e->getMessage();
     exit;
 }
 
+// Se for AJAX, retornar apenas a tabela
 if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     include 'pedidos_table.php';
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-   <style>
-    /* Estilizar os filtros para ficarem em uma única linha */
-    .filter-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 20px;
+
+<!-- Container de Pedidos -->
+<div class="pedidos-page-wrapper">
+    <div class="pedidos-container">
+        <div class="pedidos-header">
+            <h1><i class="fas fa-file-alt"></i> Pedidos</h1>
+        </div>
+
+        <!-- Filtros -->
+        <div class="pedidos-filtros-wrapper">
+            <div class="filter-row">
+                <!-- Busca -->
+                <div class="filter-item">
+                    <label for="busca">
+                        <i class="fas fa-search"></i> Buscar
+                    </label>
+                    <input 
+                        type="text" 
+                        id="busca" 
+                        name="busca" 
+                        value="<?= htmlspecialchars($busca ?? '') ?>" 
+                        placeholder="Cliente ou ID do pedido"
+                    >
+                </div>
+
+                <!-- Status -->
+                <div class="filter-item">
+                    <label for="statusFilter">
+                        <i class="fas fa-filter"></i> Status
+                    </label>
+                    <select id="statusFilter" name="status">
+                        <option value="">Todos</option>
+                        <option value="pendente" <?= $status == 'pendente' ? 'selected' : '' ?>>Pendente</option>
+                        <option value="Em Separação" <?= $status == 'Em Separação' ? 'selected' : '' ?>>Em Separação</option>
+                        <option value="Pedido Separado" <?= $status == 'Pedido Separado' ? 'selected' : '' ?>>Pedido Separado</option>
+                        <option value="Aguardando Cliente" <?= $status == 'Aguardando Cliente' ? 'selected' : '' ?>>Aguardando Cliente</option>
+                        <option value="Aguardando Retirada" <?= $status == 'Aguardando Retirada' ? 'selected' : '' ?>>Aguardando Retirada</option>
+                        <option value="Pagamento na Retirada" <?= $status == 'Pagamento na Retirada' ? 'selected' : '' ?>>Pagamento na Retirada</option>
+                        <option value="Concluído" <?= $status == 'Concluído' ? 'selected' : '' ?>>Concluído</option>
+                    </select>
+                </div>
+
+                <!-- Data Início -->
+                <div class="filter-item">
+                    <label for="data_inicio">
+                        <i class="fas fa-calendar-alt"></i> Data Início
+                    </label>
+                    <input 
+                        type="date" 
+                        id="data_inicio" 
+                        value="<?= htmlspecialchars($dataInicio) ?>"
+                    >
+                </div>
+
+                <!-- Data Fim -->
+                <div class="filter-item">
+                    <label for="data_fim">
+                        <i class="fas fa-calendar-check"></i> Data Fim
+                    </label>
+                    <input 
+                        type="date" 
+                        id="data_fim" 
+                        value="<?= htmlspecialchars($dataFim) ?>"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Container dos Pedidos -->
+        <div id="pedidosContainer">
+            <?php include 'pedidos_table.php'; ?>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Visualização de Pedido -->
+<div class="modal fade" id="verPedidoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-eye"></i> Visualizar Pedido
+                </h5>
+                <button type="button" class="close pedido-close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="verPedidoContent"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Observações -->
+<div class="modal-overlay-custom" id="modalOverlay"></div>
+<div id="observacoesModal" class="custom-modal-obs">
+    <div class="modal-content-obs">
+        <span class="close-modal-obs">&times;</span>
+        <h2><i class="fas fa-comment"></i> Observações</h2>
+        <div id="observacoesContent"></div>
+    </div>
+</div>
+
+<!-- Botão Flutuante -->
+<button id="btnNovoPedido" class="floating-button-pedidos" title="Novo Pedido">
+    <i class="fas fa-plus"></i>
+</button>
+
+<!-- Notificação -->
+<div id="notificacaoPedidos" class="notificacao-pedidos"></div>
+
+<style>
+
+    
+/* CSS INLINE CORRIGIDO PARA SPA */
+.pedidos-page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.pedidos-container {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.pedidos-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* FILTROS */
+.pedidos-filtros-wrapper {
+    margin-bottom: 25px;
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.filter-item label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-item input,
+.filter-item select {
+    padding: 10px 12px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1F2937;
+    background-color: #F9FAFB;
+    transition: all 0.3s ease;
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+    outline: none;
+    border-color: #FC4813;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(252, 72, 19, 0.1);
+}
+
+.filter-item:first-child {
+    flex: 2;
+    min-width: 220px;
+}
+
+/* CARDS MOBILE */
+.pedidos-cards-mobile {
+    display: none;
+}
+
+.pedido-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pedido-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.pedido-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #F3F4F6;
+}
+
+.pedido-id {
+    font-size: 13px;
+    font-weight: 700;
+    color: #FC4813;
+    background-color: rgba(252, 72, 19, 0.1);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.pedido-cliente {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.pedido-cidade {
+    font-size: 13px;
+    color: #6B7280;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pedido-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+}
+
+.pedido-card-body {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.pedido-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.pedido-info-label {
+    font-size: 13px;
+    color: #6B7280;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pedido-info-value {
+    font-size: 14px;
+    color: #1F2937;
+    font-weight: 600;
+    text-align: right;
+}
+
+.pedido-valor {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FC4813;
+}
+
+.pedido-card-actions {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #F3F4F6;
+}
+
+.pedido-card-actions .btn {
+    flex: 1;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pedido-card-actions .btn-view {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.pedido-card-actions .btn-view:hover {
+    background-color: #2563EB;
+    transform: translateY(-2px);
+}
+
+.pedido-card-actions .btn-delete {
+    background-color: #EF4444;
+    color: white;
+}
+
+.pedido-card-actions .btn-delete:hover {
+    background-color: #DC2626;
+    transform: translateY(-2px);
+}
+
+/* STATUS BADGES */
+.status-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.status-label.pendente {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #F59E0B;
+}
+
+.status-label.em-separacao {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #3B82F6;
+}
+
+.status-label.pedido-separado {
+    background-color: rgba(139, 92, 246, 0.15);
+    color: #8B5CF6;
+}
+
+.status-label.aguardando-cliente {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #F59E0B;
+}
+
+.status-label.aguardando-retirada {
+    background-color: rgba(6, 182, 212, 0.15);
+    color: #06B6D4;
+}
+
+.status-label.pagamento-na-retirada {
+    background-color: rgba(234, 179, 8, 0.15);
+    color: #EAB308;
+}
+
+.status-label.concluido {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10B981;
+}
+
+/* PAYMENT STATUS */
+.payment-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.payment-status.payment-yes {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10B981;
+}
+
+.payment-status.payment-no {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #EF4444;
+}
+
+/* BOTÃO FLUTUANTE */
+.floating-button-pedidos {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #FC4813;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(252, 72, 19, 0.4);
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.floating-button-pedidos:hover {
+    background-color: #EA580C;
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(252, 72, 19, 0.5);
+}
+
+/* MODAL OBSERVAÇÕES */
+.modal-overlay-custom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2040;
+}
+
+.modal-overlay-custom.show {
+    display: block;
+}
+
+.custom-modal-obs {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 2050;
+    max-width: 90%;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.custom-modal-obs.show {
+    display: block;
+}
+
+.custom-modal-obs h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-modal-obs {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #6B7280;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal-obs:hover {
+    color: #EF4444;
+}
+
+/* NOTIFICAÇÃO */
+.notificacao-pedidos {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 22px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    z-index: 9999;
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    min-width: 280px;
+    text-align: center;
+}
+
+.notificacao-pedidos.show {
+    top: 30px;
+}
+
+.notificacao-pedidos.success {
+    background-color: #10B981;
+}
+
+.notificacao-pedidos.error {
+    background-color: #EF4444;
+}
+
+/* LOADING */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #E5E7EB;
+    border-top-color: #FC4813;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .pedidos-container {
+        padding: 15px;
+    }
+
+    .pedidos-header h1 {
+        font-size: 22px;
         margin-bottom: 20px;
-        width: 100%;
     }
+
+    .filter-row {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+
     .filter-item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        flex: 1;
-        min-width: 150px;
-    }
-    .filter-item label {
-        font-weight: 500;
-        white-space: nowrap;
-    }
-    .filter-item select,
-    .filter-item input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 14px;
         width: 100%;
-        box-sizing: border-box;
+        min-width: auto;
     }
-    .filter-item:nth-child(1) {
-        flex: 1.5;
-        min-width: 180px;
-    }
-    .filter-item:nth-child(2) {
-        flex: 1.5;
-        min-width: 180px;
-    }
-    .filter-item:nth-child(3),
-    .filter-item:nth-child(4) {
+
+    .filter-item:first-child {
         flex: 1;
-        min-width: 150px;
     }
-    .floating-button {
-        position: fixed;
+
+    .filter-item input,
+    .filter-item select {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Mostrar cards, esconder tabela */
+    .tabela-container {
+        display: none !important;
+    }
+
+    .pedidos-cards-mobile {
+        display: block;
+    }
+
+    .floating-button-pedidos {
+        width: 52px;
+        height: 52px;
         bottom: 20px;
         right: 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        cursor: pointer;
+        font-size: 20px;
     }
-    .floating-button:hover {
-        background-color: #0056b3;
-    }
-    .custom-modal {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
+
+    .custom-modal-obs {
+        width: 95%;
         padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        z-index: 1050;
-        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pedidos-header h1 {
+        font-size: 20px;
+    }
+
+    .pedido-card {
+        padding: 15px;
+    }
+
+    .pedido-cliente {
+        font-size: 16px;
+    }
+
+    .pedido-valor {
+        font-size: 20px;
+    }
+
+    .pedido-card-actions {
+        flex-direction: column;
+    }
+
+    .pedido-card-actions .btn {
         width: 100%;
     }
-    .custom-modal .modal-content {
-        position: relative;
-    }
-    .close-modal-observacoes {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    #notificacao {
-        position: fixed;
-        top: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px 20px;
-        border-radius: 5px;
-        color: white;
-        z-index: 1060;
-        transition: all 0.3s ease;
-    }
-    #notificacao.success {
-        background-color: #28a745;
-    }
-    #notificacao.error {
-        background-color: #dc3545;
-    }
-    /* Correção para o datepicker */
-    .ui-datepicker {
-        z-index: 1070 !important; /* Acima do modal (1050) e backdrop (1060) */
-    }
+}
 </style>
-</head>
-<body>
-    <div id="notificacao"></div>
-    <h1>Pedidos</h1>
-    <!-- Filtro de pedidos -->
-    <div class="filter-row">
-        <!-- Filtro por Busca (Cliente ou ID) -->
-        <div class="filter-item">
-            <label for="busca">Buscar por Cliente ou ID:</label>
-            <input type="text" id="busca" name="busca" value="<?= htmlspecialchars($busca ?? '') ?>" placeholder="Nome do cliente ou ID">
-        </div>
-        <!-- Filtro por Status -->
-        <div class="filter-item">
-            <label for="statusFilter">Filtrar por Status:</label>
-            <select id="statusFilter" name="status">
-                <option value="">Todos</option>
-                <option value="pendente" <?= $status == 'pendente' ? 'selected' : '' ?>>Pendente</option>
-                <option value="Em Separação" <?= $status == 'Em Separação' ? 'selected' : '' ?>>Em Separação</option>
-                <option value="Pedido Separado" <?= $status == 'Pedido Separado' ? 'selected' : '' ?>>Pedido Separado</option>
-                <option value="Aguardando Cliente" <?= $status == 'Aguardando Cliente' ? 'selected' : '' ?>>Aguardando Cliente</option>
-                <option value="Aguardando Retirada" <?= $status == 'Aguardando Retirada' ? 'selected' : '' ?>>Aguardando Retirada</option>
-                <option value="Pagamento na Retirada" <?= $status == 'Pagamento na Retirada' ? 'selected' : '' ?>>Pagamento na Retirada</option>
-                <option value="Concluído" <?= $status == 'Concluído' ? 'selected' : '' ?>>Concluído</option>
-            </select>
-        </div>
-        <!-- Filtros de Intervalo de Datas -->
-        <div class="filter-item">
-            <label for="data_inicio">Data Início:</label>
-            <input type="date" id="data_inicio" value="<?= htmlspecialchars($dataInicio) ?>">
-        </div>
-        <div class="filter-item">
-            <label for="data_fim">Data Fim:</label>
-            <input type="date" id="data_fim" value="<?= htmlspecialchars($dataFim) ?>">
-        </div>
-    </div>
-    <!-- Contêiner para a tabela de pedidos -->
-    <div id="pedidosContainer">
-        <?php include 'pedidos_table.php'; ?>
-    </div>
-    <!-- Modal para criar pedido -->
-    <div class="modal fade" id="modalPedido" tabindex="-1" role="dialog" aria-labelledby="modalPedidoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header custom-modal-header">
-                    <h5 class="modal-title" id="modalPedidoLabel">Criar Pedido</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="formPedido" method="POST">
-                        <!-- Seção Selecionar Cliente -->
-                        <div class="form-group">
-                            <label for="buscarCliente">Cliente <span class="text-danger">*</span></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                </div>
-                                <input type="text" id="buscarCliente" class="form-control" placeholder="Buscar clientes...">
-                                <div class="invalid-feedback">Por favor, selecione um cliente.</div>
-                                <input type="hidden" name="cliente" id="cliente_id">
-                            </div>
-                            <div id="listaClientes" class="list-group"></div>
-                        </div>
-                        <!-- Seção Adicionar Produtos -->
-                        <div class="form-group">
-                            <label for="buscarProduto">Produtos</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-box"></i></span>
-                                </div>
-                                <input type="text" id="buscarProduto" class="form-control" placeholder="Buscar produtos...">
-                            </div>
-                            <div id="listaProdutos" class="list-group"></div>
-                        </div>
-                        <!-- Lista de Produtos Selecionados -->
-                        <div id="produtosSelecionados" class="mb-3"></div>
-                        <!-- Data de Retirada -->
-                        <div class="form-group">
-                            <label for="data_retirada">Data de Retirada <span class="text-danger">*</span></label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                                </div>
-                                <input type="text" name="data_retirada" id="data_retirada" class="form-control datepicker" placeholder="DD/MM/YYYY" required>
-                            </div>
-                        </div>
-                        <!-- Observações -->
-                        <div class="form-group">
-                            <label for="observacoes">Observações</label>
-                            <textarea name="observacoes" id="observacoes" class="form-control" placeholder="Adicionar observações..."></textarea>
-                        </div>
-                        <!-- Botão de Salvar Pedido -->
-                  <div class="text-right">
-    <button type="button" id="btnSalvarPedido" class="btn btn-primary">Salvar Pedido</button>
-</div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de Visualização de Pedido -->
-    <div class="modal fade" id="verPedidoModal" tabindex="-1" role="dialog" aria-labelledby="modalPedidoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalPedidoLabel">Visualizar Pedido</h5>
-                    <button type="button" class="close pedido-close" data-dismiss="modal" aria-label="Fechar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="verPedidoContent">
-                        <!-- O conteúdo do pedido será carregado aqui via AJAX -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de Observações -->
-    <div id="observacoesModal" class="custom-modal">
-        <div class="modal-content">
-            <span class="close-modal-observacoes">&times;</span>
-            <h2>Observações</h2>
-            <div id="observacoesContent">
-                <!-- As observações serão carregadas aqui via JavaScript -->
-            </div>
-        </div>
-    </div>
-    <!-- Botão para abrir o modal de criação de pedido -->
-    <button id="btnNovoPedido" class="floating-button">
-        <i class="fas fa-plus"></i>
-    </button>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="/atacado/public/js/pedidos.js?v=<?= time() ?>"></script>
-</body>
-</html>
+
+<script>
+// JavaScript para funcionar dentro do SPA
+$(document).ready(function() {
+    console.log('Pedidos carregado no SPA');
+
+    // Aplicar filtros
+    function aplicarFiltrosPedidos() {
+        const busca = $('#busca').val();
+        const status = $('#statusFilter').val();
+        const dataInicio = $('#data_inicio').val();
+        const dataFim = $('#data_fim').val();
+
+        const url = `pedidos.php?ajax=1&busca=${encodeURIComponent(busca)}&status=${encodeURIComponent(status)}&data_inicio=${dataInicio}&data_fim=${dataFim}`;
+
+        $('#pedidosContainer').html('<div class="loading-spinner"><div class="spinner"></div></div>');
+
+        $.ajax({
+            url: url,
+            method: 'GET',
+            success: function(data) {
+                $('#pedidosContainer').html(data);
+                reaplicarEventosPedidos();
+            },
+            error: function() {
+                $('#pedidosContainer').html('<p style="color: #EF4444; text-align: center;">Erro ao carregar pedidos.</p>');
+            }
+        });
+    }
+
+    // Reaplicar eventos após AJAX
+    function reaplicarEventosPedidos() {
+        // Botões de observação
+        $('.btn-observacao, .btn-alerta').off('click').on('click', function() {
+            const obs = $(this).data('observacoes');
+            $('#observacoesContent').html(obs);
+            $('#observacoesModal').addClass('show');
+            $('#modalOverlay').addClass('show');
+        });
+
+        // Fechar modal
+        $('.close-modal-obs, #modalOverlay').off('click').on('click', function() {
+            $('#observacoesModal').removeClass('show');
+            $('#modalOverlay').removeClass('show');
+        });
+    }
+
+    // Eventos dos filtros
+    $('#busca, #statusFilter, #data_inicio, #data_fim').on('change keyup', function() {
+        clearTimeout(window.filtroTimeoutPedidos);
+        window.filtroTimeoutPedidos = setTimeout(aplicarFiltrosPedidos, 500);
+    });	
+
+    // Inicializar eventos
+    reaplicarEventosPedidos();
+
+    // Fechar modal com ESC
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape') {
+            $('#observacoesModal').removeClass('show');
+            $('#modalOverlay').removeClass('show');
+        }
+    });
+});
+</script>

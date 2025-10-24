@@ -1,7 +1,16 @@
 <?php
 session_start();
-session_unset(); // Limpa todas as variáveis de sessão
-session_destroy(); // Destrói a sessão atual
-header('Location: https://aogosto.com.br/atacado'); // Redireciona para a página de login
-exit();
+
+// Destruir sessão
+session_unset();
+session_destroy();
+
+// Remover cookies (se existirem)
+if (isset($_COOKIE['remember_token'])) {
+    setcookie('remember_token', '', time() - 3600, '/');
+}
+
+// Redirecionar para login
+header('Location: /atacado/index.php?sucesso=logout');
+exit;
 ?>

@@ -1,0 +1,265 @@
+/**
+ * pedidos-override.css
+ * CSS para sobrescrever conflitos do Bootstrap na tabela de pedidos
+ */
+
+/* RESET DE BOOTSTRAP PARA TABELA */
+.tabela-container table,
+.tabela-container thead,
+.tabela-container tbody,
+.tabela-container th,
+.tabela-container td {
+    all: unset !important;
+    box-sizing: border-box !important;
+}
+
+/* CONTAINER DA TABELA */
+.tabela-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    background-color: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    margin-bottom: 20px !important;
+}
+
+/* TABELA */
+.tabela-container table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    display: table !important;
+}
+
+/* CABEÇALHO */
+.tabela-container thead {
+    display: table-header-group !important;
+    background: linear-gradient(135deg, #FC4813 0%, #EA580C 100%) !important;
+}
+
+.tabela-container thead tr {
+    display: table-row !important;
+}
+
+.tabela-container thead th {
+    display: table-cell !important;
+    padding: 16px 12px !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* CORPO DA TABELA */
+.tabela-container tbody {
+    display: table-row-group !important;
+}
+
+.tabela-container tbody tr {
+    display: table-row !important;
+    border-bottom: 1px solid #E5E7EB !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.tabela-container tbody tr:hover {
+    background-color: #F9FAFB !important;
+}
+
+.tabela-container tbody td {
+    display: table-cell !important;
+    padding: 14px 12px !important;
+    vertical-align: middle !important;
+    font-size: 14px !important;
+    color: #374151 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* COLUNAS ESPECÍFICAS */
+.tabela-container tbody td:first-child {
+    font-weight: 600 !important;
+    color: #1F2937 !important;
+}
+
+/* BADGES DE STATUS */
+.status-badge {
+    display: inline-block !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    white-space: nowrap !important;
+}
+
+.status-badge.status-pendente {
+    background-color: rgba(251, 191, 36, 0.15) !important;
+    color: #F59E0B !important;
+}
+
+.status-badge.status-em-separacao {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    color: #3B82F6 !important;
+}
+
+.status-badge.status-pedido-separado {
+    background-color: rgba(139, 92, 246, 0.15) !important;
+    color: #8B5CF6 !important;
+}
+
+.status-badge.status-aguardando-cliente {
+    background-color: rgba(236, 72, 153, 0.15) !important;
+    color: #EC4899 !important;
+}
+
+.status-badge.status-aguardando-retirada {
+    background-color: rgba(14, 165, 233, 0.15) !important;
+    color: #0EA5E9 !important;
+}
+
+.status-badge.status-pagamento-retirada {
+    background-color: rgba(168, 85, 247, 0.15) !important;
+    color: #A855F7 !important;
+}
+
+.status-badge.status-concluido {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: #10B981 !important;
+}
+
+/* VALOR TOTAL */
+.pedido-valor {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #FC4813 !important;
+}
+
+/* BOTÕES DE AÇÃO */
+.action-buttons {
+    display: flex !important;
+    gap: 8px !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+}
+
+.action-buttons .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    gap: 6px !important;
+}
+
+.action-buttons .btn-view {
+    background-color: #6B7280 !important;
+    color: white !important;
+}
+
+.action-buttons .btn-view:hover {
+    background-color: #4B5563 !important;
+    transform: translateY(-2px) !important;
+}
+
+.action-buttons .btn-delete {
+    background-color: #EF4444 !important;
+    color: white !important;
+}
+
+.action-buttons .btn-delete:hover {
+    background-color: #DC2626 !important;
+    transform: translateY(-2px) !important;
+}
+
+.action-buttons .btn-observacao,
+.action-buttons .btn-alerta {
+    background-color: #FC4813 !important;
+    color: white !important;
+    padding: 8px !important;
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.action-buttons .btn-observacao:hover,
+.action-buttons .btn-alerta:hover {
+    background-color: #EA580C !important;
+    transform: translateY(-2px) rotate(15deg) !important;
+}
+
+/* ÍCONE DE ALERTA */
+.btn-alerta {
+    animation: pulse 2s infinite !important;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* PAGAMENTO */
+.payment-status {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    gap: 6px !important;
+}
+
+.payment-status.payment-yes {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    color: #10B981 !important;
+}
+
+.payment-status.payment-no {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #EF4444 !important;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .tabela-container {
+        display: none !important;
+    }
+}
+
+/* CORREÇÕES EXTRAS PARA SOBRESCREVER BOOTSTRAP */
+.tabela-container .table,
+.tabela-container .table-striped,
+.tabela-container .table-bordered {
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+.tabela-container .table thead th {
+    border-bottom: none !important;
+}
+
+.tabela-container .table td,
+.tabela-container .table th {
+    padding: inherit !important;
+    vertical-align: inherit !important;
+    border-top: none !important;
+}
+
+.tabela-container .table-hover tbody tr:hover {
+    background-color: #F9FAFB !important;
+}

@@ -1,93 +1,602 @@
 /* =========================
-   Página de Login
+   LOGIN.CSS - Modular e Responsivo
+   Sistema: ERP Web
    ========================= */
+
+/* =========================
+   Variáveis CSS
+   ========================= */
+   :root {
+    --primary-color: #FC4813;
+    --primary-hover: #EA580C;
+    --primary-light: #F97316;
+    --accent-color: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --gray-bg: #F9FAFB;
+    --input-border: #D1D5DB;
+    --input-focus: #FC4813;
+    --error-color: #EF4444;
+    --success-color: #10B981;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.3s;
+}
+
+/* =========================
+   Reset e Base
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background: url('https://aogosto.com.br/atacado/uploads/background.jpg') no-repeat center center fixed;
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    font-family: 'Roboto', 'Inter', sans-serif;
+    background: linear-gradient(135deg, #FC4813 0%, #F97316 100%);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background animado (opcional) */
+body::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveBackground 20s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* =========================
+   Container Principal
+   ========================= */
+.login-page {
+    position: relative;
 }
 
 .login-container {
-    background: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para contraste */
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    padding: 50px 40px;
+    max-width: 450px;
     width: 100%;
-    max-width: 400px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.5s ease-out;
 }
 
-/* Estilo para o contêiner da logo */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Logo
+   ========================= */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .logo-container img {
     max-width: 150px;
     height: auto;
-    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: transform var(--transition-speed) ease;
 }
 
-/* Título do formulário */
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   Formulário de Login
+   ========================= */
 .login-form h2 {
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 20px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* Grupos de formulário */
+.login-form p {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Form Groups */
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
 }
 
 .form-group label {
     display: block;
     font-size: 14px;
-    color: #ddd;
-    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    transition: color var(--transition-speed) ease;
 }
 
-/* Campos de entrada */
 .form-group input {
     width: 100%;
-    padding: 12px 15px;
-    border: none;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 2px solid var(--input-border);
     border-radius: 10px;
-    font-size: 16px;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all var(--transition-speed) ease;
+    background-color: var(--gray-bg);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: #9CA3AF;
 }
 
-/* Botão de login */
+.form-group input:focus {
+    outline: none;
+    border-color: var(--input-focus);
+    background-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(252, 72, 19, 0.1);
+}
+
+.form-group input:focus + label {
+    color: var(--input-focus);
+}
+
+/* Ícones nos inputs (opcional) */
+.form-group.with-icon {
+    position: relative;
+}
+
+.form-group.with-icon input {
+    padding-left: 45px;
+}
+
+.form-group.with-icon i {
+    position: absolute;
+    left: 16px;
+    top: 42px;
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+.form-group.with-icon input:focus ~ i {
+    color: var(--input-focus);
+}
+
+/* =========================
+   Botão de Login
+   ========================= */
 .btn-login {
-    background-color: #FC4813;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(252, 72, 19, 0.4);
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 10px;
 }
 
 .btn-login:hover {
-    background-color: #E33D10;
-    box-shadow: 0 4px 10px rgba(252, 72, 19, 0.5);
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Loading state */
+.btn-login.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-login.loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    border: 2px solid var(--accent-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   Links e Extras
+   ========================= */
+.login-extras {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Checkbox "Lembrar-me" */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.remember-me label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    margin: 0;
+}
+
+/* =========================
+   Mensagens de Erro/Sucesso
+   ========================= */
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* =========================
+   Rodapé
+   ========================= */
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.login-footer p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVIDADE - TABLET
+   ========================= */
+@media (max-width: 1024px) {
+    .login-container {
+        max-width: 420px;
+        padding: 45px 35px;
+    }
+
+    .logo-container img {
+        max-width: 130px;
+    }
+
+    .login-form h2 {
+        font-size: 26px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE - MOBILE
+   ========================= */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: 40px 30px;
+        border-radius: 16px;
+    }
+
+    .logo-container {
+        margin-bottom: 35px;
+    }
+
+    .logo-container img {
+        max-width: 120px;
+    }
+
+    .login-form h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .login-form p {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 13px 14px;
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+
+    .btn-login {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .login-footer {
+        margin-top: 25px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE - MOBILE PEQUENO
+   ========================= */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+        border-radius: 12px;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
+    .logo-container img {
+        max-width: 100px;
+    }
+
+    .login-form h2 {
+        font-size: 22px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .btn-login {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .forgot-password {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   ACESSIBILIDADE
+   ========================= */
+
+/* Melhor contraste para modo escuro (se necessário no futuro) */
+@media (prefers-color-scheme: dark) {
+    /* Pode ser implementado futuramente */
+}
+
+/* Animações reduzidas para usuários que preferem */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    body::before {
+        animation: none;
+    }
+}
+
+/* Foco visível para navegação por teclado */
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* =========================
+   UTILITÁRIOS
+   ========================= */
+
+/* Texto centralizado */
+.text-center {
+    text-align: center;
+}
+
+/* Espaçamento superior */
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 30px; }
+
+/* Espaçamento inferior */
+.mb-1 { margin-bottom: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+
+/* Esconder elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Mostrar apenas no mobile */
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .show-mobile {
+        display: block;
+    }
+    
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/* =========================
+   ESTADOS DE VALIDAÇÃO
+   ========================= */
+
+/* Input com erro */
+.form-group.error input {
+    border-color: var(--error-color);
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.form-group.error label {
+    color: var(--error-color);
+}
+
+.error-message {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--error-color);
+}
+
+/* Input com sucesso */
+.form-group.success input {
+    border-color: var(--success-color);
+}
+
+.form-group.success label {
+    color: var(--success-color);
+}
+
+/* =========================
+   LOADING OVERLAY
+   ========================= */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
 }

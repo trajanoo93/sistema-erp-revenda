@@ -200,7 +200,7 @@ $(document).ready(function () {
                     loadBootstrap().then(() => {
                         if (typeof $.fn.modal === 'function') {
                             console.log("Método modal disponível. Abrindo modal...");
-                            $('#modalPedido').modal('show');
+                            $('#novoPedidoContainer').addClass('active');
                             console.log("Modal #modalPedido aberto.");
                         } else {
                             console.error("Método modal AINDA não disponível após carregamento dinâmico!");

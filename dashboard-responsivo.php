@@ -27,12 +27,11 @@ $nome_usuario = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : '
     <!-- CSS Modular do Dashboard - NOVO -->
     <link rel="stylesheet" href="/atacado/public/css/dashboard.css?v=<?= time() ?>">
     
-    <!-- CSS Global (apenas se necessário para outros componentes)
-    <link rel="stylesheet" href="/atacado/public/css/style.css?v=<?= time() ?>"> -->
+    <!-- CSS Global (apenas se necessário para outros componentes) -->
+    <link rel="stylesheet" href="/atacado/public/css/style.css?v=<?= time() ?>">
     
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" onload="console.log('jQuery UI CSS carregado com sucesso.')" onerror="console.error('Erro ao carregar jQuery UI CSS.');">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" onload="console.log('Bootstrap CSS carregado com sucesso.')" onerror="console.error('Erro ao carregar Bootstrap CSS.');">
-    <link rel="stylesheet" href="/atacado/public/css/pedidos-override.css?v=<?= time() ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" onload="console.log('Toastr CSS carregado com sucesso.')" onerror="console.error('Erro ao carregar Toastr CSS.');">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" onload="console.log('jQuery carregado com sucesso.')" onerror="console.error('Erro ao carregar jQuery.')"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" onload="console.log('jQuery UI JS carregado com sucesso.')" onerror="console.error('Erro ao carregar jQuery UI JS.')"></script>

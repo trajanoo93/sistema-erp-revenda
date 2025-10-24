@@ -1,0 +1,500 @@
+/* =========================
+   DASHBOARD.CSS - Modular e Responsivo
+   Sistema: ERP Web
+   ========================= */
+
+/* =========================
+   Variáveis CSS
+   ========================= */
+   :root {
+    --primary-color: #FC4813;
+    --accent-color: #FFFFFF;
+    --hover-bg-color: #F97316;
+    --active-bg-color: #EA580C;
+    --submenu-bg-color: #F97316;
+    --divider-color: rgba(255, 255, 255, 0.15);
+    --gray-bg: #F9FAFB;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --sidebar-width: 240px;
+    --header-height: 60px;
+    --transition-speed: 0.3s;
+}
+
+/* =========================
+   Reset e Base
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-bg);
+    transition: background-color var(--transition-speed) ease;
+}
+
+/* =========================
+   Container Principal Dashboard
+   ========================= */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* =========================
+   Menu Lateral (Sidebar)
+   ========================= */
+.sidebar {
+    background-color: var(--primary-color);
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 1000;
+    transition: transform var(--transition-speed) ease;
+}
+
+/* Logo */
+.logo-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 110px;
+    height: auto;
+}
+
+/* Menu Items */
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--accent-color);
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(5px);
+}
+
+.sidebar ul li a.active {
+    background-color: var(--active-bg-color);
+    font-weight: 600;
+}
+
+.sidebar ul li a i {
+    margin-right: 15px;
+    font-size: 22px;
+    width: 30px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.sidebar ul li a span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Botão Logout */
+.sidebar ul li a.logout {
+    margin-top: auto;
+    margin-bottom: 30px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: calc(100% - 60px);
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.sidebar ul li a.logout:hover {
+    background-color: #F3F4F6;
+    transform: scale(1.02);
+}
+
+/* =========================
+   SubMenus
+   ========================= */
+.menu-relatorios {
+    position: relative;
+}
+
+.menu-relatorios .submenu {
+    display: none;
+    background-color: var(--submenu-bg-color);
+    list-style: none;
+}
+
+.menu-relatorios .submenu li {
+    width: 100%;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.menu-relatorios .submenu li a {
+    padding: 12px 30px 12px 60px;
+    display: block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 15px;
+    background-color: var(--submenu-bg-color);
+    transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.menu-relatorios .submenu li a:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(3px);
+}
+
+.menu-relatorios:hover .submenu {
+    display: block;
+}
+
+/* =========================
+   Botão Mobile Menu (Hamburguer)
+   ========================= */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: var(--hover-bg-color);
+}
+
+.mobile-menu-toggle i {
+    font-size: 20px;
+}
+
+/* =========================
+   Área de Conteúdo
+   ========================= */
+.dashboard-page {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    transition: margin-left var(--transition-speed) ease;
+}
+
+.content {
+    padding: 40px;
+    transition: padding var(--transition-speed) ease;
+}
+
+.content h1 {
+    font-size: 32px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   Containers de Edição (Modais/Painéis)
+   ========================= */
+.edit-container,
+.edit-produto-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color var(--transition-speed) ease;
+}
+
+.close-btn:hover {
+    color: var(--primary-color);
+}
+
+/* =========================
+   RESPONSIVIDADE - TABLET
+   ========================= */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 200px;
+    }
+
+    .sidebar {
+        width: var(--sidebar-width);
+        padding: 30px 0;
+    }
+
+    .logo {
+        max-width: 90px;
+    }
+
+    .sidebar ul li a {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .sidebar ul li a i {
+        font-size: 20px;
+        width: 26px;
+        margin-right: 12px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .panel-content {
+        max-width: 95%;
+        padding: 25px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE - MOBILE
+   ========================= */
+@media (max-width: 768px) {
+    /* Mostrar botão hamburguer */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Sidebar escondida por padrão no mobile */
+    .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+        border-radius: 0;
+    }
+
+    /* Sidebar ativa no mobile */
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    /* Overlay quando sidebar está aberta */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+
+    /* Conteúdo ocupa largura total */
+    .dashboard-page {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content {
+        padding: 80px 20px 20px 20px; /* Espaço para o botão hamburguer */
+    }
+
+    .content h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    /* Logo menor no mobile */
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
+    .logo {
+        max-width: 80px;
+    }
+
+    /* Menu items com melhor toque */
+    .sidebar ul li a {
+        padding: 16px 25px;
+        font-size: 15px;
+    }
+
+    .sidebar ul li a i {
+        font-size: 20px;
+        margin-right: 12px;
+    }
+
+    /* Submenu no mobile */
+    .menu-relatorios .submenu {
+        position: static;
+    }
+
+    .menu-relatorios.active .submenu {
+        display: block;
+    }
+
+    /* Painéis de edição em tela cheia no mobile */
+    .panel-content {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 32px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE - MOBILE PEQUENO
+   ========================= */
+@media (max-width: 480px) {
+    .mobile-menu-toggle {
+        top: 10px;
+        left: 10px;
+        padding: 10px 12px;
+    }
+
+    .content {
+        padding: 70px 15px 15px 15px;
+    }
+
+    .content h1 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        width: 260px;
+    }
+
+    .sidebar ul li a {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .logo {
+        max-width: 70px;
+    }
+}
+
+/* =========================
+   UTILITÁRIOS
+   ========================= */
+
+/* Esconder elementos no mobile */
+.hide-mobile {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/* Mostrar apenas no mobile */
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .show-mobile {
+        display: block;
+    }
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Melhorias de acessibilidade para toque */
+@media (hover: none) and (pointer: coarse) {
+    .sidebar ul li a {
+        min-height: 48px; /* Tamanho mínimo recomendado para toque */
+    }
+
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
